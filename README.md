@@ -1,4 +1,4 @@
-# OpenAI .NET Kütüphanesi ile Yapay Zeka Uygulamaları: Kapsamlı Bir Kılavuz
+# OpenAI .NET API: Türkçe Kılavuz
 
 OpenAI .NET kütüphanesi, .NET uygulamalarında OpenAI'nin REST API'sine pratik bir erişim imkânı sunmaktadır. Bu kütüphane, Microsoft ile ortak çalışarak OpenAPI spesifikasyonuna dayanılarak oluşturulmuştur.
 
