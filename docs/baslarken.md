@@ -42,4 +42,29 @@ var response = await client.Completions.CreateCompletionAsync(new CompletionRequ
 Console.WriteLine(response.Choices[0].Text);
 ```
 
+## NuGet Paketini Kurma
+
+
+## NuGet Paketini Kurma
+
+OpenAI .NET kütüphanesini projenize eklemek için aşağıdaki adımları izleyebilirsiniz:
+
+### IDE Kullanarak Paket Ekleme
+
+1. Visual Studio veya kullandığınız başka bir .NET IDE'yi açın.
+2. Projenizi açın.
+3. **Solution Explorer** panelinde, projenizin üzerine sağ tıklayın ve **Manage NuGet Packages** seçeneğini seçin.
+4. **Browse** sekmesine gidin ve **OpenAI** paketini arayın.
+5. **OpenAI** paketini seçin ve **Install** butonuna tıklayın.
+
+### dotnet CLI Kullanarak Paket Ekleme
+
+Alternatif olarak, .NET CLI kullanarak paketi ekleyebilirsiniz:
+
+```bash
+dotnet add package OpenAI --prerelease
+
+```
+
+Kod örnekleri [Open AI Dotnet API Dokümanında](https://github.com/openai/openai-dotnet). .NET 8 kullanılarak yazılmıştır. OpenAI .NET kütüphanesi tüm .NET Standard 2.0 uygulamaları ile uyumludur, ancak bazı kod örnekleri daha yeni dil özelliklerine bağlı olabilir.
 
