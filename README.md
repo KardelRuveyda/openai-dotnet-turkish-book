@@ -17,6 +17,7 @@ Bu kitap, https://github.com/openai/openai-dotnet ve https://learn.microsoft.com
    - [Akış ile Sohbet Tamamlamalarını Kullanma](./openaiclient.md#akis-sohbet-tamamlama)
    - [Araçlar ve Fonksiyon Çağırma ile Sohbet Tamamlamalarını Kullanma](./openaiclient.md#araclar-fonksiyon-cagirma)
    - [Yapılandırılmış Çıktıları Kullanma](./openaiclient.md#yapilandirilmis-cikti)
+   - [Text Embeddings(Metin Gömme) Nedir?] [./baslarken.md#text-embedding]
    - [Metin Gömme (Text Embeddings) Oluşturma](./openaiclient.md#metin-gomme)
 
 3. [Görseller Oluşturma](./goruntuler.md)
