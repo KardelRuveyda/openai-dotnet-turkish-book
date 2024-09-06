@@ -162,3 +162,97 @@ Ve mutlu son! Ekrana yazdırma işlemi gerçekleşir. Ama tekrardan hatırlatmak
 
 
 ## Async API Kullanma
+
+Bir istemcinin senkron API isteğini uyguladığı her durumda, aynı istemci sınıfında istek için geçerli bir asenkron çağrı sürümü vardır. Asenkron yöntemler, API çağrılarının arka planda bloklama olmadan çalışmasına olanak tanıyarak uygulamanızın daha hızlı ve daha duyarlı olmasını sağlayabilir.
+
+### Asenkron API'nin Temel Kullanımı
+
+Örneğin, **ChatClient** sınıfının **CompleteChat** yönteminin asenkron versiyonu **CompleteChatAsync** olarak adlandırılır. Senkron API çağrısını asenkron versiyonuyla yeniden yazmak oldukça basittir. Tek yapmanız gereken, **await** anahtar kelimesini kullanarak ilgili asenkron yöntem çağrısını yapmak, sonrası zaten kolay :)
+
+### Senkron Örneği
+
+```csharp
+using OpenAI.Chat;
+
+// API anahtarınızı bir ortam değişkeninden alarak bir ChatClient oluşturun
+ChatClient client = new(model: "gpt-4o", Environment.GetEnvironmentVariable("OPENAI_API_KEY"));
+
+// Sohbet tamamlaması oluşturun
+ChatCompletion completion = client.CompleteChat("Şu cümleyi söyle: 'bu bir test.'");
+
+// Sonucu ekrana yazdırın
+Console.WriteLine($"[ASİSTAN]: {completion}");
+```
+
+### Asenkron Örneği
+
+Asenkron API çağrısını kullanmak için, çağırmak istediğiniz asenkron yöntemi await anahtar kelimesiyle kullanarak API çağrısının arka planda çalışmasını ve uygulamanızın yanıt vermeye devam etmesini sağlayabilirsiniz. Bu yöntemi çağırdığınız metodu ise async olarak işaretlemeniz gerekmektedir. Bu şekilde, uzun süren işlemler uygulamanızın ana iş parçacığını bloklamadan yürütülür ve kullanıcı deneyimi daha akıcı hale gelir.
+
+
+```csharp
+using OpenAI.Chat;
+using System.Threading.Tasks;
+
+public async Task CreateChatCompletion()
+{
+    // API anahtarınızı bir ortam değişkeninden alarak bir ChatClient oluşturun
+    ChatClient client = new(model: "gpt-4o", Environment.GetEnvironmentVariable("OPENAI_API_KEY"));
+
+    // Asenkron olarak sohbet tamamlaması oluşturun
+    ChatCompletion completion = await client.CompleteChatAsync("Şu cümleyi söyle: 'bu bir test.'");
+
+    // Sonucu ekrana yazdırın
+    Console.WriteLine($"[ASİSTAN]: {completion}");
+}
+```
+
+### Neden Asenkron Kullanmalısınız?
+
+Asenkron API çağrıları, uygulamanızın performansını önemli ölçüde artırabilir. Bu yöntemler, uzun süreli işlemleri ana iş parçacığını bloklamadan arka planda yürütmenizi sağlar, böylece kullanıcı arayüzünüz donmaz ve uygulamanız daha hızlı yanıt verir. Özellikle ağ üzerinden veri çekerken bu yöntem, kullanıcıların daha akıcı bir deneyim yaşamasını sağlar çünkü kullanıcı arayüzü, veri yüklenirken donma veya gecikme yaşamaz. Ayrıca, asenkron API'ler, sistem kaynaklarının daha verimli bir şekilde kullanılmasına yardımcı olur; çünkü işlem tamamlanana kadar diğer görevler işlenebilir. Bu yaklaşımlar, performansı artırmak ve kullanıcı deneyimini iyileştirmek için etkili bir yöntemdir.
+
+
+Diyelim ki bir uygulama geliştirdiniz ve bu uygulama internetten veri çekiyor. Örneğin, hava durumu bilgilerini bir API'den alıyorsunuz. Synchronous (senkron) ve asynchronous (asenkron) API çağrıları arasında nasıl fark olduğunu göstermek için aşağıdaki örneği ele alalım:
+
+
+
+```csharp
+public void GetWeatherData()
+{
+    // API'den hava durumu verilerini senkron şekilde al
+    var client = new HttpClient();
+    var response = client.GetStringAsync("https://api.weather.com/current").Result;
+    
+    // Veriyi işleyin
+    Console.WriteLine(response);
+}
+
+```
+Yukarıdaki kodda, **GetStringAsync** yöntemi veriyi almak için çağrılır, ancak **.Result** özelliği ile senkron bir şekilde beklenir. Yani, uygulama bu veri alınana kadar donar ve kullanıcı arayüzü yanıt vermez.
+
+```csharp
+public async Task GetWeatherDataAsync()
+{
+    // API'den hava durumu verilerini asenkron şekilde al
+    var client = new HttpClient();
+    var response = await client.GetStringAsync("https://api.weather.com/current");
+    
+    // Veriyi işleyin
+    Console.WriteLine(response);
+}
+```
+GetStringAsync kodda ise await anahtar kelimesi kullanılarak veri alınıncaya kadar arka planda beklenir. Bu, uygulamanın diğer işlemleri yapmaya devam etmesini sağlar ve kullanıcı arayüzü donmaz.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
