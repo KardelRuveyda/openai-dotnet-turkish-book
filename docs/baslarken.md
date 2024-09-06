@@ -65,7 +65,7 @@ dotnet add package OpenAI --prerelease
 
 Kod örnekleri [Open AI Dotnet API Dokümanında](https://github.com/openai/openai-dotnet). .NET 8 kullanılarak yazılmıştır. OpenAI .NET kütüphanesi tüm .NET Standard 2.0 uygulamaları ile uyumludur, ancak bazı kod örnekleri daha yeni dil özelliklerine bağlı olabilir.
 
-## İstemci Kütüphanesini Kullanma
+## İstemci Kutuphanesini Kullanma
 
 Bu örnek, OpenAI'nin chat API'sini kullanarak bir sohbet tamamlaması gerçekleştirir. Kod parçacığını inceleyerek temel bir kullanım senaryosunu görebilirsiniz.
 
