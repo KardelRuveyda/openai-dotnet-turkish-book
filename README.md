@@ -9,7 +9,7 @@ https://kardelruveyda.github.io/openai-dotnet-turkish-book
 # İçindekiler
 
 1. [Başlarken](./docs/baslarken.md)
-   - [Ön Koşullar](./docs/baslarken.md#on-kosullar)
+   - [Ön Koşullar](./docs/baslarken.md#Ön-koşullar)
    - [NuGet Paketini Kurma](./docs/baslarken.md#nuget-paketini-kurma)
    - [İstemci Kütüphanesini Kullanma](./docs/baslarken.md#istemci-kutuphanesini-kullanma)
    - [Namespace Organizasyonu](./docs/baslarken.md#namespace-organizasyonu)
