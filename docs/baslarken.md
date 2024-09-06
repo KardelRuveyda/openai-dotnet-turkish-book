@@ -44,9 +44,6 @@ Console.WriteLine(response.Choices[0].Text);
 
 ## NuGet Paketini Kurma
 
-
-## NuGet Paketini Kurma
-
 OpenAI .NET kütüphanesini projenize eklemek için aşağıdaki adımları izleyebilirsiniz:
 
 ### IDE Kullanarak Paket Ekleme
