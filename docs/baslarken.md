@@ -113,4 +113,52 @@ Ve mutlu son! Ekrana yazdırma işlemi gerçekleşir. Ama tekrardan hatırlatmak
 
 ## Namespace Organizasyonu
 
+`OpenAI` kütüphanesi, OpenAI'nin çeşitli özellik alanlarını yönetmek için bir dizi isim alanına ayrılmıştır. Her bir isim alanı, belirli bir işlevi yerine getiren bir istemci sınıfı içerir. Ben aşağıdaki namespacelerden çoğunu kullandım diyebilirim. Bunları aşağıdaki gibi açıklayabiliriz:
+
+### `OpenAI.Assistants`
+- **Sınıf:** `AssistantClient`
+- **Açıklama:** OpenAI'nin asistan özelliklerini yönetir. Genellikle deneysel özellikler içerir. **`AssistantClient`**, bu tür işlevleri uygulamak için kullanılır. Ancak web sitesinde `[Deneysel]` etiketi ile yer alıyor yani bu da demek oluyor ki bu sınıfın hala geliştirilme aşamasındadır.
+
+### `OpenAI.Audio`
+- **Sınıf:** `AudioClient`
+- **Açıklama:** Sesle ilgili işlemleri yönetir. Ses verilerini işlemek veya analiz etmek için kullanılır. **`AudioClient`**, sesle ilgili API çağrılarını yönetir.
+[buradan ses örneklerine ulaşabliirsiniz]( https://platform.openai.com/docs/guides/text-to-speech/overview). Oyun seslendirme gibi işlemlerde özellikle kullanılabilir gibi geldi.
+
+### `OpenAI.Batch`
+- **Sınıf:** `BatchClient`
+- **Açıklama:** Toplu işlemleri yönetir. Birden fazla veriyi veya işlemi topluca işlemek için uygundur. **`BatchClient`**, büyük veri setleri üzerinde toplu işlem yapmayı sağlar.
+
+### `OpenAI.Chat`
+- **Sınıf:** `ChatClient`
+- **Açıklama:** Sohbet uygulamaları ve sohbet tabanlı API'ler için kullanılır. **`ChatClient`**, chat tabanlı tamamlamalar ve etkileşimler için kullanılır. Örneğin, bir kullanıcıya mesaj göndermek veya bir sohbet başlatmak için kullanılabilir.
+
+### `OpenAI.Embeddings`
+- **Sınıf:** `EmbeddingClient`
+- **Açıklama:** Metin verilerini gömme **(embedding)** işlemleri için kullanılır. _Metinleri vektörlere dönüştürmek_ ve _metin verilerini daha anlamlı hale getirmek için_ kullanılır.** `EmbeddingClient`**, bu tür gömme işlemlerini gerçekleştirir.
+
+### `OpenAI.FineTuning`
+- **Sınıf:** `FineTuningClient`
+- **Açıklama:** Model ince ayarları (fine-tuning) yapmak için kullanılır. Mevcut modelleri belirli bir uygulama veya veri seti için özelleştirmek üzere kullanılabilir. **`FineTuningClient**`, ince ayar işlemleri için API çağrılarını yönetir.
+
+### `OpenAI.Files`
+- **Sınıf:** `FileClient`
+- **Açıklama:** Dosya yönetimi işlemleri için kullanılır. Dosyaları yüklemek, indirmek veya yönetmek için kullanılır. **`FileClient`**, dosyalarla ilgili işlemleri yönetir.
+
+### `OpenAI.Images`
+- **Sınıf:** `ImageClient`
+- **Açıklama:** Görüntü işleme ve yönetimi ile ilgili işlemleri yönetir. Görüntü oluşturma veya düzenleme gibi işlevler sağlar. **`ImageClient`**, görüntü verileri ile çalışmak için kullanılır.
+
+### `OpenAI.Models`
+- **Sınıf:** `ModelClient`
+- **Açıklama:** Modellerle ilgili işlemleri yönetir. Mevcut modelleri listeleme, model oluşturma veya model bilgilerini yönetmek için kullanılır. **`ModelClient`**, model yönetimi işlemleri için kullanılır.
+
+### `OpenAI.Moderations`
+- **Sınıf:** `ModerationClient`
+- **Açıklama:** İçerik moderasyonu işlemleri için kullanılır. İçeriklerin uygunluğunu kontrol etmek ve filtrelemek için kullanılır. **`ModerationClient`**, içerik moderasyonunu yönetir.
+
+### `OpenAI.VectorStores`
+- **Sınıf:** `VectorStoreClient`
+- **Açıklama:** Vektör verilerini depolama ve yönetme işlemleri için kullanılır. Vektör tabanlı veri yapıları ve sorgulamalar için kullanılır. `VectorStoreClient`, bu tür verileri yönetmek için kullanılır. Ancak web sitesinde hala`[Deneysel]` etiketi ile yer alıyor o yüzden şu anda deneysel olarak kullanıldığını belirtebiliriz.
+
+
 ## Async API Kullanma
