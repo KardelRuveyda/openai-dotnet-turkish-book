@@ -65,3 +65,49 @@ dotnet add package OpenAI --prerelease
 
 Kod örnekleri [Open AI Dotnet API Dokümanında](https://github.com/openai/openai-dotnet). .NET 8 kullanılarak yazılmıştır. OpenAI .NET kütüphanesi tüm .NET Standard 2.0 uygulamaları ile uyumludur, ancak bazı kod örnekleri daha yeni dil özelliklerine bağlı olabilir.
 
+## İstemci Kütüphanesini Kullanma
+
+Bu örnek, OpenAI'nin chat API'sini kullanarak bir sohbet tamamlaması gerçekleştirir. Kod parçacığını inceleyerek temel bir kullanım senaryosunu görebilirsiniz.
+
+```csharp
+using OpenAI.Chat;
+
+// ChatClient nesnesini oluşturuyoruz, model ve API anahtarını belirtiyoruz.
+ChatClient client = new(model: "gpt-4o", Environment.GetEnvironmentVariable("OPENAI_API_KEY"));
+
+// Model ile bir sohbet tamamlaması gerçekleştiriyoruz.
+ChatCompletion completion = client.CompleteChat("Şu cümleyi söyle: 'bu bir test.'");
+
+// Sonucu ekrana yazdırıyoruz.
+Console.WriteLine($"[ASİSTAN]: {completion}");
+```
+### Kodu biraz açıklayalım!
+
+```csharp
+using OpenAI.Chat;
+```
+
+- OpenAI.Chat ad alanını içe aktarır, böylece ChatClient ve diğer chat ile ilgili sınıflara erişim sağlanır.Kurduğumuz paketi burada ekliyoruz. 
+
+
+```csharp
+ChatClient client = new(model: "gpt-4o", Environment.GetEnvironmentVariable("OPENAI_API_KEY"));
+```
+
+- ChatClient sınıfından bir client nesnesi oluşturur.
+- **model:** **"gpt-4o"** parametresi, kullanılacak **OpenAI** modelini belirtir.
+- Environment.GetEnvironmentVariable("OPENAI_API_KEY") ifadesi, API anahtarını bir ortam değişkeninden alır.
+
+```csharp
+ChatCompletion completion = client.CompleteChat("Şu cümleyi söyle: 'bu bir test.'");
+```
+
+- **CompleteChat** metodu, belirtilen mesaj ile sohbet tamamlaması gerçekleştirir.
+- Dönen **ChatCompletion** nesnesi, modelin yanıtını içerir.
+
+```csharp
+Console.WriteLine($"[ASİSTAN]: {completion}");
+```
+
+Ve mutlu son! Ekrana yazdırma işlemi gerçekleşir. Ama tekrardan hatırlatmak gerekirse API anahtarını doğrudan kodda kullanmak yerine, güvenli bir yerde saklayarak ortam değişkeni veya yapılandırma dosyası aracılığıyla erişmek önemlidir. Bu, API anahtarının kaybolmasını veya kötüye kullanılmasını önler.
+
