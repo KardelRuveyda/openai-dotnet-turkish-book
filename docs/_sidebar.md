@@ -1,7 +1,7 @@
 * Başlarken
-    * [Ön Koşullar](baslarken.md#on-kosullar)
+    * [Ön Koşullar](baslarken.md#Ön-koşullar)
     * [NuGet Paketini Kurma](baslarken.md#nuget-paketini-kurma)
-    * [İstemci Kütüphanesini Kullanma](baslarken.md#istemci-kutuphanesini-kullanma)
+    * [İstemci Kütüphanesini Kullanma](baslarken.md#İstemci-kutuphanesini-kullanma)
     * [Namespace Organizasyonu](baslarken.md#namespace-organizasyonu)
     * [Async API'yi Kullanma](baslarken.md#async-api-kullanma)
 
