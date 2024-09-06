@@ -1,8 +1,3 @@
----
-layout: default
-title: "Başlarken"
----
-
 # Başlarken
 
 ## Ön Koşullar
