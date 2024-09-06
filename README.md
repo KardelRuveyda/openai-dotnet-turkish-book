@@ -6,8 +6,6 @@ Bu kitap, https://github.com/openai/openai-dotnet ve https://learn.microsoft.com
 
 # İçindekiler
 
-# İçindekiler
-
 1. [Başlarken](./docs/baslarken.md)
    - [Ön Koşullar](./docs/baslarken.md#on-kosullar)
    - [NuGet Paketini Kurma](./docs/baslarken.md#nuget-paketini-kurma)
