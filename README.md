@@ -34,3 +34,6 @@ Bu kitap, https://github.com/openai/openai-dotnet ve https://learn.microsoft.com
    - [Hataları Otomatik Yeniden Deneme](./gelismis-senaryolar.md#hatalari-yeniden-deneme)
    - [Gözlemlenebilirlik (Observability)](./gelismis-senaryolar.md#gozlemlenebilirlik)
 
+
+![image](https://github.com/user-attachments/assets/9a71d76d-15a7-45e9-8bf9-78f6ead3a3cc)
+
