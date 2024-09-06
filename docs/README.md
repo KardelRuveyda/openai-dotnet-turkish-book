@@ -6,33 +6,33 @@ Bu kitap, https://github.com/openai/openai-dotnet ve https://learn.microsoft.com
 
 # İçindekiler
 
-1. [Başlarken](./docs/baslarken.md)
-   - [Ön Koşullar](./docs/baslarken.md#on-kosullar)
-   - [NuGet Paketini Kurma](./docs/baslarken.md#nuget-paketini-kurma)
-   - [İstemci Kütüphanesini Kullanma](./docs/baslarken.md#istemci-kutuphanesini-kullanma)
-   - [Namespace Organizasyonu](./docs/baslarken.md#namespace-organizasyonu)
-   - [Async API'yi Kullanma](./docs/baslarken.md#async-api-kullanma)
+1. [Başlarken](baslarken.md)
+   - [Ön Koşullar](baslarken.md#on-kosullar)
+   - [NuGet Paketini Kurma](baslarken.md#nuget-paketini-kurma)
+   - [İstemci Kütüphanesini Kullanma](baslarken.md#istemci-kutuphanesini-kullanma)
+   - [Namespace Organizasyonu](baslarken.md#namespace-organizasyonu)
+   - [Async API'yi Kullanma](baslarken.md#async-api-kullanma)
 
-2. [OpenAIClient Sınıfını Kullanma](./docs/openaiclient.md)
-   - [Akış ile Sohbet Tamamlamalarını Kullanma](./docs/openaiclient.md#akis-sohbet-tamamlama)
-   - [Araçlar ve Fonksiyon Çağırma ile Sohbet Tamamlamalarını Kullanma](./docs/openaiclient.md#araclar-fonksiyon-cagirma)
-   - [Yapılandırılmış Çıktıları Kullanma](./docs/openaiclient.md#yapilandirilmis-cikti)
-   - [Metin Gömme (Text Embeddings) Oluşturma](./docs/openaiclient.md#metin-gomme)
+2. [OpenAIClient Sınıfını Kullanma](openaiclient.md)
+   - [Akış ile Sohbet Tamamlamalarını Kullanma](openaiclient.md#akis-sohbet-tamamlama)
+   - [Araçlar ve Fonksiyon Çağırma ile Sohbet Tamamlamalarını Kullanma](openaiclient.md#araclar-fonksiyon-cagirma)
+   - [Yapılandırılmış Çıktıları Kullanma](openaiclient.md#yapilandirilmis-cikti)
+   - [Metin Gömme (Text Embeddings) Oluşturma](openaiclient.md#metin-gomme)
 
-3. [Görseller Oluşturma](./docs/goruntuler.md)
+3. [Görseller Oluşturma](goruntuler.md)
 
-4. [Ses Dosyalarını Metne Dönüştürme](./docs/sesdosyasi.md)
+4. [Ses Dosyalarını Metne Dönüştürme](sesdosyasi.md)
 
-5. [Bilgi Alma ile Artırılmış Üretim (RAG) ile Asistan Kullanma](./docs/rag-asistan.md)
+5. [Bilgi Alma ile Artırılmış Üretim (RAG) ile Asistan Kullanma](docs/rag-asistan.md)
 
-6. [Akış ve GPT-4o Vizyonu ile Asistanları Kullanma](./docs/gpt4o.md)
+6. [Akış ve GPT-4o Vizyonu ile Asistanları Kullanma](gpt4o.md)
 
-7. [Azure OpenAI ile Çalışma](./docs/azure-openai.md)
+7. [Azure OpenAI ile Çalışma](azure-openai.md)
 
-8. [Gelişmiş Senaryolar](./docs/gelismis-senaryolar.md)
-   - [Protokol Yöntemlerini Kullanma](./docs/gelismis-senaryolar.md#protokol-yontemleri)
-   - [Hataları Otomatik Yeniden Deneme](./docs/gelismis-senaryolar.md#hatalari-yeniden-deneme)
-   - [Gözlemlenebilirlik (Observability)](./docs/gelismis-senaryolar.md#gozlemlenebilirlik)
+8. [Gelişmiş Senaryolar](gelismis-senaryolar.md)
+   - [Protokol Yöntemlerini Kullanma](gelismis-senaryolar.md#protokol-yontemleri)
+   - [Hataları Otomatik Yeniden Deneme](gelismis-senaryolar.md#hatalari-yeniden-deneme)
+   - [Gözlemlenebilirlik (Observability)](gelismis-senaryolar.md#gozlemlenebilirlik)
 
 
 ![image](https://github.com/user-attachments/assets/9a71d76d-15a7-45e9-8bf9-78f6ead3a3cc)
