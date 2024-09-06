@@ -111,3 +111,6 @@ Console.WriteLine($"[ASİSTAN]: {completion}");
 
 Ve mutlu son! Ekrana yazdırma işlemi gerçekleşir. Ama tekrardan hatırlatmak gerekirse API anahtarını doğrudan kodda kullanmak yerine, güvenli bir yerde saklayarak ortam değişkeni veya yapılandırma dosyası aracılığıyla erişmek önemlidir. Bu, API anahtarının kaybolmasını veya kötüye kullanılmasını önler.
 
+## Namespace Organizasyonu
+
+## Async API Kullanma
