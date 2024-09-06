@@ -1,16 +1,45 @@
 # Başlarken
 
 ## Ön Koşullar
-Bu bölümde, projeye başlamadan önce gereken ön koşullar hakkında bilgi verilecektir.
 
-## NuGet Paketini Kurma
-NuGet paketini şu adımlarla kurabilirsiniz:
+OpenAI REST API'yi kullanabilmek için bir API anahtarına ihtiyacınız oluyor. Aman diyeyim Open AI key'i projelerinizde kullanırken Github'a göndermeyiniz. LangChani ile geliştirme yaparken .env dosyasını .gitignore'ye eklemiştim. Fakat DotNet kısmında **secret.json** kavramını kullanabilirsiniz! 
 
-1. Visual Studio’yu açın.
-2. Projenize sağ tıklayıp **Manage NuGet Packages** seçeneğini seçin.
-3. **Browse** sekmesine gidin ve "OpenAI" paketini arayın.
-4. İlgili paketi seçip **Install** butonuna tıklayın.
+Bununla ilgili gerçekten çok güldüğüm bir tweet'i de [buradan görüntüleyebilirsiniz](https://x.com/atarikkarakas/status/1815021390115860873). :) 
 
-## İstemci Kütüphanesini Kullanma
-OpenAI istemci kütüphanesini projede kullanmak için aşağıdaki örneği izleyin:
+
+Bu anahtarı almak için aşağıdaki adımları izleyebilirsiniz:
+
+1. **OpenAI Hesabı Oluşturma veya Giriş Yapma**
+   - Eğer bir OpenAI hesabınız yoksa, [OpenAI'nin web sitesine](https://www.openai.com/) giderek yeni bir hesap oluşturun. Sağ üst köşedeki **Sign Up** (Kaydol) butonuna tıklayarak gerekli bilgileri girin.
+   - Hesabınız varsa, **Log In** (Giriş Yap) butonuna tıklayarak mevcut kullanıcı bilgilerinizle giriş yapın.
+
+2. **API Anahtarları Sayfasına Gitme**
+   - Hesabınıza giriş yaptıktan sonra, [OpenAI API anahtarları sayfasına](https://platform.openai.com/account/api-keys) gitmek için [bu bağlantıyı](https://platform.openai.com/account/api-keys) kullanabilirsiniz. Alternatif olarak, OpenAI ana sayfasında oturum açtıktan sonra, sağ üst köşede bulunan profil simgesine tıklayarak **API Keys** veya **Account** seçeneğine gidin.
+
+3. **Yeni Bir API Anahtarı Oluşturma**
+   - API anahtarları sayfasında, **Create new secret key** (Yeni gizli anahtar oluştur) butonuna tıklayın.
+   - Açılan pencerede, anahtarınıza bir ad verebilirsiniz. Bu adlandırma isteğe bağlıdır; anahtarın kullanım amacını belirlemek için bir ad vermek faydalı olabilir.
+   - Anahtarı oluşturduktan sonra, yeni API anahtarınız ekranda görüntülenecek. **Anahtarı kaydet** (Save) butonuna tıklamadan önce bu anahtarı **güvenli bir yerde saklayın**. Anahtar yalnızca bir kez görüntülenecektir, bu yüzden bu bilgiyi kaybetmemeye dikkat edin.
+
+4. **Anahtarı Güvenli Bir Şekilde Saklama**
+   - Oluşturduğunuz API anahtarını **güvenli bir yerde saklamalısınız**. Anahtarı bilgisayarınızda şifreli bir dosya, parola yöneticisi veya başka bir güvenli yer olarak saklayabilirsiniz.
+   - Anahtarınızı başkalarıyla paylaşmaktan ve anahtarınızın güvenliğini sağlamaktan dikkatli olun. API anahtarını kaybetmek veya paylaşmak, hesabınızın güvenliğini tehlikeye atabilir.
+
+5. **Anahtarı Projenizle Kullanma**
+   - API anahtarını aldıktan sonra, OpenAI API'ye erişmek için bu anahtarı kullanabilirsiniz. Örneğin, bir .NET uygulamasında API anahtarını bir yapılandırma dosyasına ekleyebilir ve bu anahtarı kullanarak API çağrıları yapabilirsiniz.
+
+### Örnek API Anahtarı Kullanımı (C#)
+
+```csharp
+using OpenAI;
+
+var client = new OpenAIClient("YOUR_API_KEY_HERE");
+var response = await client.Completions.CreateCompletionAsync(new CompletionRequest
+{
+    Prompt = "Merhaba, dünya!",
+    MaxTokens = 50
+});
+Console.WriteLine(response.Choices[0].Text);
+```
+
 
