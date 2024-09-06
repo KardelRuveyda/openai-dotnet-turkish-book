@@ -1,0 +1,9 @@
+<aside class="sidebar">
+    <h2>{{ site.sidebar.title }}</h2>
+    <ul>
+      {% for item in site.sidebar.links %}
+        <li><a href="{{ item.url }}">{{ item.text }}</a></li>
+      {% endfor %}
+    </ul>
+  </aside>
+  
