@@ -2,7 +2,7 @@
 
 ## Ön Koşullar
 
-OpenAI REST API'yi kullanabilmek için bir API anahtarına ihtiyacınız oluyor. Aman diyeyim Open AI key'i projelerinizde kullanırken Github'a göndermeyiniz. LangChan ile geliştirme yaparken **.env** dosyasını **.gitignore**'ye eklemiştim. DotNet tarafında ise **secret.json** kavramından faydalanarak hassas verilerinizi koruyabilirsiniz.[ilgili makaleyi görüntüleyebilirsiniz](https://medium.com/@ruveydakardelcetin/asp-net-core-projelerinde-güvenlik-secret-protection-2d0c48654a1b) 
+OpenAI REST API'yi kullanabilmek için bir API anahtarına ihtiyacınız oluyor. Aman diyeyim Open AI key'i projelerinizde kullanırken Github'a göndermeyiniz. LangChain ile geliştirme yaparken **.env** dosyasını **.gitignore**'ye eklemiştim. DotNet tarafında ise **secret.json** kavramından faydalanarak hassas verilerinizi koruyabilirsiniz.[ilgili makaleyi görüntüleyebilirsiniz](https://medium.com/@ruveydakardelcetin/asp-net-core-projelerinde-güvenlik-secret-protection-2d0c48654a1b) 
 
 Ya da .env kısmında **openaikey="<YOUR_API_KEY>"** şeklinde de belirtebilirsiniz. Bununla ilgili gerçekten çok güldüğüm bir tweet'i de [buradan görüntüleyebilirsiniz](https://x.com/atarikkarakas/status/1815021390115860873). :) 
 
