@@ -1,27 +1,32 @@
 * Başlarken
-    * [Prompt Engineering Nedir?](giris.md#prompt-engineering-nedir)
-    * [Kitabın Amacı](giris.md#kitabin-amaci)
-    * [Erdoğan Eker ile İşbirliği](giris.md#erdogan-eker-ile-isbirligi)
-    * [Prompt Engineering'in Önemi](giris.md#prompt-engineeringin-onemi)
-    * [Kitabın İçeriği ve Yapısı](giris.md#kitabin-icerigi-ve-yapisi)
-    * [Hedef Kitle](giris.md#hedef-kitle)
-    * [Prompt Engineering ile Yapay Zeka Kullanımı](giris.md#prompt-engineering-ile-yapay-zeka-kullanimi)
-    * [Kitapta Kullanılan Yaklaşımlar ve Yöntemler](giris.md#kitapta-kullanilan-yaklasimlar-ve-yontemler)
-    * [Okuma Rehberi ve Öneriler](giris.md#okuma-rehberi-ve-oneriler)  
-* Prompt
-    * [Prompt Nedir?](prompt.md)
-    * [Prompt Öğeleri](prompt.md#prompt-ogeleri)
-    * [Prompt Tasarımı](prompt.md#prompt-tasarimi)
-    * [Prompt Örnekleri](prompt.md#prompt-ornekleri)
+    * [Ön Koşullar](baslarken.md#Ön-koşullar)
+    * [NuGet Paketini Kurma](baslarken.md#nuget-paketini-kurma)
+    * [İstemci Kütüphanesini Kullanma](baslarken.md#İstemci-kutuphanesini-kullanma)
+    * [Namespace Organizasyonu](baslarken.md#namespace-organizasyonu)
+    * [Async API'yi Kullanma](baslarken.md#async-api-kullanma)
 
-* Teknikler
-    * [Zero-shot Prompting](teknikler.md#zero-shot-prompting)
-    * [Few-shot Prompting](teknikler.md#few-shot-prompting)
-    * [Chain of Thought Prompting](teknikler.md#chain-of-thought-prompting)
-    * [Meta Prompting](teknikler.md#meta-prompting)
-    * [Self Consistency](teknikler.md#self-consistency)
+* OpenAIClient Sınıfını Kullanma
+    * [Akış ile Sohbet Tamamlamalarını Kullanma](openaiclient.md#akis-sohbet-tamamlama)
+    * [Araçlar ve Fonksiyon Çağırma ile Sohbet Tamamlamalarını Kullanma](openaiclient.md#araclar-fonksiyon-cagirma)
+    * [Yapılandırılmış Çıktıları Kullanma](openaiclient.md#yapilandirilmis-cikti)
+    * [Metin Gömme (Text Embeddings) Oluşturma](openaiclient.md#metin-gomme)
 
-* İleri Düzey Kullanım
-    * [Prompt Tasarım Stratejileri](ileri-duzey.md#prompt-tasarim-stratejileri)
-    * [Başarılı Senaryo Örnekleri](ileri-duzey.md#basarili-senaryo-ornekleri)
+* Görseller Oluşturma
+    * [Görseller Oluşturma](goruntuler.md)
 
+* Ses Dosyalarını Metne Dönüştürme
+    * [Ses Dosyalarını Metne Dönüştürme](docs/sesdosyasi.md)
+
+* Bilgi Alma ile Artırılmış Üretim (RAG) ile Asistan Kullanma
+    * [Bilgi Alma ile Artırılmış Üretim (RAG)](rag-asistan.md)
+
+* Akış ve GPT-4o Vizyonu ile Asistanları Kullanma
+    * [Akış ve GPT-4o Vizyonu](gpt4o.md)
+
+* Azure OpenAI ile Çalışma
+    * [Azure OpenAI ile Çalışma](azure-openai.md)
+
+* Gelişmiş Senaryolar
+    * [Protokol Yöntemlerini Kullanma](gelismis-senaryolar.md#protokol-yontemleri)
+    * [Hataları Otomatik Yeniden Deneme](gelismis-senaryolar.md#hatalari-yeniden-deneme)
+    * [Gözlemlenebilirlik (Observability)](gelismis-senaryolar.md#gozlemlenebilirlik)
