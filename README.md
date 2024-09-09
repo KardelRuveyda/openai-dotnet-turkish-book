@@ -6,6 +6,7 @@ Bu kitap, https://github.com/openai/openai-dotnet ve https://learn.microsoft.com
 
 https://kardelruveyda.github.io/openai-dotnet-turkish-book
 
+
 # İçindekiler
 
 1. [Başlarken](./docs/baslarken.md)
