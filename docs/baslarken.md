@@ -16,16 +16,36 @@ Bu anahtarı almak için aşağıdaki adımları izleyebilirsiniz:
 2. **API Anahtarları Sayfasına Gitme**
    - Hesabınıza giriş yaptıktan sonra, [OpenAI API anahtarları sayfasına](https://platform.openai.com/account/api-keys) gitmek için [bu bağlantıyı](https://platform.openai.com/account/api-keys) kullanabilirsiniz. Alternatif olarak, OpenAI ana sayfasında oturum açtıktan sonra, sağ üst köşede bulunan profil simgesine tıklayarak **API Keys** veya **Account** seçeneğine gidin.
 
+![image](https://github.com/user-attachments/assets/4b82fcb2-24f1-43e4-b565-edddfd6c43ae)
+
 3. **Yeni Bir API Anahtarı Oluşturma**
    - API anahtarları sayfasında, **Create new secret key** (Yeni gizli anahtar oluştur) butonuna tıklayın.
    - Açılan pencerede, anahtarınıza bir ad verebilirsiniz. Bu adlandırma isteğe bağlıdır; anahtarın kullanım amacını belirlemek için bir ad vermek faydalı olabilir.
    - Anahtarı oluşturduktan sonra, yeni API anahtarınız ekranda görüntülenecek. **Anahtarı kaydet** (Save) butonuna tıklamadan önce bu anahtarı **güvenli bir yerde saklayın**. Anahtar yalnızca bir kez görüntülenecektir, bu yüzden bu bilgiyi kaybetmemeye dikkat edin.
+  
+![image](https://github.com/user-attachments/assets/c1e1008a-659d-4af5-80cc-ffc9035538d2)
 
-4. **Anahtarı Güvenli Bir Şekilde Saklama**
+4. **Ödeme**
+![image](https://github.com/user-attachments/assets/e3e1a31e-4862-4ee8-9690-97d97cb47041)
+
+OpenAI platformuna üye olduktan sonra, API hizmetlerini kullanabilmek için ödeme yöntemlerinizi tanımlamanız gerekiyor. Faturalandırma işlemleri, kredi kartı veya diğer desteklenen ödeme yöntemleriyle yapılır. Ödeme bilgilerinizi aşağıdaki adımları takip ederek ekleyebilirsiniz:
+
+- **Hesap Ayarları'na Gitmek:** OpenAI ana sayfasına giriş yaptıktan sonra, sağ üst köşede profil simgenize tıklayarak “Billing (Fatura)” sekmesine gidin.
+- **Ödeme Yöntemi Ekleme:** Bu bölümde, kredi kartı bilgilerinizi ekleyebileceğiniz bir alan bulunur. Bu karta düzenli olarak kullanımlarınıza göre fatura kesilecektir.
+
+OpenAI, API kullanımı için farklı fiyatlandırma planları sunmaktadır. Fiyatlandırma, genellikle kullandığınız hizmet miktarına bağlı olarak "kullandıkça öde" (pay-as-you-go) modeliyle işler. API istekleri başına maliyet hesaplanır ve aylık olarak size bir fatura kesilir. Detaylı fiyatlandırma planları ve kullanım ücretleri, OpenAI web sitesinde yer alır.
+
+Örneğin:
+
+- **GPT-4** kullanımının maliyeti, kullandığınız modelin kapasitesine ve yaptığınız istek sayısına bağlıdır.Diğer hizmetler için de farklı fiyatlandırmalar uygulanabilir.
+
+Hesabınızda, ne kadar kullanım yaptığınızı ve aylık olarak oluşacak faturayı takip edebileceğiniz bir dashboard (gösterge paneli) bulunmaktadır. Bu panelde: toplam kullanım miktarınızı, geçmiş faturalarınızı, gelecek tahmini faturalarınızı görebilirsiniz. Bu sayede, kullanımlarınızı takip edebilir ve harcamalarınızı yönetebilirsiniz.
+
+5. **Anahtarı Güvenli Bir Şekilde Saklama**
    - Oluşturduğunuz API anahtarını **güvenli bir yerde saklamalısınız**. Anahtarı bilgisayarınızda şifreli bir dosya, parola yöneticisi veya başka bir güvenli yer olarak saklayabilirsiniz.
    - Anahtarınızı başkalarıyla paylaşmaktan ve anahtarınızın güvenliğini sağlamaktan dikkatli olun. API anahtarını kaybetmek veya paylaşmak, hesabınızın güvenliğini tehlikeye atabilir.
 
-5. **Anahtarı Projenizle Kullanma**
+6. **Anahtarı Projenizle Kullanma**
    - API anahtarını aldıktan sonra, OpenAI API'ye erişmek için bu anahtarı kullanabilirsiniz. Örneğin, bir .NET uygulamasında API anahtarını bir yapılandırma dosyasına ekleyebilir ve bu anahtarı kullanarak API çağrıları yapabilirsiniz.
 
 ### Örnek API Anahtarı Kullanımı (C#)
