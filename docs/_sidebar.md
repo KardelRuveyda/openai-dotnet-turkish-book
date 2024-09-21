@@ -9,8 +9,8 @@
     * [OpenAIClient Nasıl Kullanılır?](.baslarken.md#openaiclient-nasil-kullanilir)
 
 * OpenAIClient Sınıfını Kullanma
-    * [Sohbet Tamamlamada Streaming Kullanımı](.sohbettamamlama.md#sohbet-tamamlamada-streaming-kullanimi)
-    * [Neden Streaming Kullanılmalı?](.sohbettamamlama.md#neden-streaming-kullanılmalı)
+    * [Sohbet Tamamlamada Streaming Kullanımı](.sohbettamamlama.md#Sohbet-Tamamlama-İşlemleri)
+    * [Neden Streaming Kullanılmalı?](.sohbettamamlama.md#Neden-Streaming-Kullanılmalı)
 
 * Görseller Oluşturma
     * [Görseller Oluşturma](goruntuler.md)
