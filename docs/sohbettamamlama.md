@@ -52,5 +52,16 @@ Bu örnekte, await foreach yapısı kullanılarak her bir kısmi yanıt asenkron
 
 ## Neden Streaming Kullanılmalı?
 
+OpenAI API'nin sunduğu akış (streaming) özelliği, özellikle büyük dil modelleriyle çalışan uygulamalarda performans optimizasyonu sağlarken aynı zamanda kullanıcı deneyimini de önemli ölçüde iyileştirir. Normalde tam bir yanıt oluşturulana kadar beklemek gerekirken, akış özelliği sayesinde yanıtın tamamı beklenmeden, anında gelen kısmi sonuçlar işlenebilir. Bu, uzun ve karmaşık işlemler sırasında kullanıcıların yanıtların hızla geldiğini görmesini sağlayarak, bekleme süresini önemli ölçüde azaltır. Özellikle büyük dil modellerinin yoğun işlem gerektiren yapıları düşünüldüğünde, bu özellik sunucu üzerindeki işlem yükünü hafifletir ve veri işleme sürecini hızlandırır. Akışlı yanıtların senkron veya asenkron yöntemlerle işlenebilmesi, geliştiricilere esneklik sunarak, uygulamaların hem hızını hem de genel verimliliğini artırır. Böylece kullanıcılar daha kesintisiz bir deneyim yaşarken, geliştiriciler de sistem performansından ödün vermeden büyük dil modellerinin gücünden faydalanabilir. Hem hızlı geri dönüş sağlama kapasitesi hem de asenkron işleme ile sunucu kaynaklarının daha etkin kullanılması, bu yöntemi daha verimli ve ölçeklenebilir hale getirir.
+
+
+
+
+
+
+
+
+
+
 
 
