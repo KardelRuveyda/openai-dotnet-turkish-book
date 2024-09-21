@@ -15,12 +15,14 @@ https://kardelruveyda.github.io/openai-dotnet-turkish-book
    - [İstemci Kütüphanesini Kullanma](./docs/baslarken.md#İstemci-Kutuphanesini-Kullanma)
    - [Namespace Organizasyonu](./docs/baslarken.md#Namespace-Organizasyonu)
    - [Async API'yi Kullanma](./docs/baslarken.md#Async-API-Kullanma)
+   - [OpenAIClient Sınıfını Kullanma](./docs/baslarken.md#OpenAIClient-Sınıfını-Kullanma)
+   - [OpenAIClient Nedir ve Neden Kullanılır?](./docs/baslarken.md#OpenAIClient-Nedir-Ve-Neden-Kullanilir)
+   - [OpenAIClient Nasıl Kullanılır?](./docs/baslarken.md#openaiclient-nasil-kullanilir)
+     
 
-2. [OpenAIClient Sınıfını Kullanma](./docs/openaiclient.md)
-   - [Akış ile Sohbet Tamamlamalarını Kullanma](./docs/openaiclient.md#akis-sohbet-tamamlama)
-   - [Araçlar ve Fonksiyon Çağırma ile Sohbet Tamamlamalarını Kullanma](./docs/openaiclient.md#araclar-fonksiyon-cagirma)
-   - [Yapılandırılmış Çıktıları Kullanma](./docs/openaiclient.md#yapilandirilmis-cikti)
-   - [Metin Gömme (Text Embeddings) Oluşturma](./docs/openaiclient.md#metin-gomme)
+2. [Sohbet Tamamlama İşlemleri](./docs/sohbettamamlama.md#sohbet-tamamlama-islemleri)
+   - [Sohbet Tamamlamada Streaming Kullanımı](./docs/sohbettamamlama.md#sohbet-tamamlamada-streaming-kullanimi)
+   - [Neden Streaming Kullanılmalı?](./docs/sohbettamamlama.md#neden-streaming-kullanılmalı)
 
 3. [Görseller Oluşturma](./docs/goruntuler.md)
 
