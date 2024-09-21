@@ -4,12 +4,13 @@
     * [İstemci Kütüphanesini Kullanma](baslarken.md#İstemci-kutuphanesini-kullanma)
     * [Namespace Organizasyonu](baslarken.md#namespace-organizasyonu)
     * [Async API'yi Kullanma](baslarken.md#async-api-kullanma)
+    * [OpenAIClient Sınıfını Kullanma](.baslarken.md#OpenAIClient-Sınıfını-Kullanma)
+    * [OpenAIClient Nedir ve Neden Kullanılır?](.baslarken.md#OpenAIClient-Nedir-Ve-Neden-Kullanilir)
+    * [OpenAIClient Nasıl Kullanılır?](.baslarken.md#openaiclient-nasil-kullanilir)
 
 * OpenAIClient Sınıfını Kullanma
-    * [Akış ile Sohbet Tamamlamalarını Kullanma](openaiclient.md#akis-sohbet-tamamlama)
-    * [Araçlar ve Fonksiyon Çağırma ile Sohbet Tamamlamalarını Kullanma](openaiclient.md#araclar-fonksiyon-cagirma)
-    * [Yapılandırılmış Çıktıları Kullanma](openaiclient.md#yapilandirilmis-cikti)
-    * [Metin Gömme (Text Embeddings) Oluşturma](openaiclient.md#metin-gomme)
+    * [Sohbet Tamamlamada Streaming Kullanımı](.sohbettamamlama.md#sohbet-tamamlamada-streaming-kullanimi)
+    * [Neden Streaming Kullanılmalı?](.sohbettamamlama.md#neden-streaming-kullanılmalı)
 
 * Görseller Oluşturma
     * [Görseller Oluşturma](goruntuler.md)
