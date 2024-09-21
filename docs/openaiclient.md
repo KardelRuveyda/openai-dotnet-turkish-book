@@ -1,37 +1,56 @@
-# OpenAIClient Sınıfını Kullanma
+## Sohbet Tamamlama İşlemleri
 
-OpenAI kütüphanesinin farklı bölümlerini ele alırken, bazen birden fazla alanda işlem yapabilmek için farklı client'larla çalışmak gerekebilir. Ancak, bu client'ların her birini ayrı ayrı yönetmek hem zaman alıcı olabilir hem de verimlilik açısından dezavantaj yaratabilir. Bu noktada OpenAI'nin sunduğu OpenAIClient sınıfı devreye giriyor ve bu süreci önemli ölçüde basitleştiriyor.
+OpenAI REST API, chat tamamlama işlemlerini gerçekleştirirken, varsayılan olarak cevabı tam olarak oluşturarak geri döndürür. Ancak, bu durum özellikle uzun yanıtlar için **birkaç saniyelik** beklemelere yol açabilir. Bu sorunu aşmak için, OpenAI API, oluşturulan yanıtın tamamı bitmeden önce parçalar halinde akış ile geri gönderilmesine olanak tanır. Bu sayede, tam yanıt gelmeden önce kısmi sonuçlar işlenebilir.
 
-## OpenAIClient Nedir ve Neden Kullanılır?
-**OpenAIClient**, temel olarak **OpenAI API** ile etkileşim kurmak için kullanılan merkezi bir nesne gibidir. Birden fazla API alanında çalışırken, aynı uygulama ayrıntılarını birden çok client arasında paylaşarak işlemleri daha verimli hale getirir. Yani, OpenAI’nin farklı özelliklerini (örneğin dil işleme, ses tanıma, vb.) kullanırken her seferinde aynı ayarları yeniden yapmanıza gerek kalmaz. Tüm client'lar ortak bir altyapı üzerinden yönetilir, bu da kodunuzu daha temiz ve yönetilebilir hale getirir.
+**Streaming (akış)** kullanarak chat tamamlama işlemi, API'nin sunduğu oldukça etkili bir özelliktir. Bu özellik, özellikle **büyük dil modelleriyle** çalışırken yanıtların hızlı bir şekilde kullanıcıya iletilmesi ve bekleme süresinin azaltılması adına oldukça avantaj sağlar.
 
-Örneğin, birden fazla modeli hedefleyen farklı client'lar kullanmanız gerektiğinde, **OpenAIClient** tek bir API anahtarı ve aynı uygulama yapılandırması ile bu client'ları oluşturabilir. Bu, her client için aynı adımları tekrar tekrar yapmaktan kaçınmanızı sağlar ve geliştirici açısından iş yükünü azaltır.
+## Sohbet Tamamlamada Streaming(Akış) Kullanımı
+Standart **CompleteChat** metodunun aksine, akış ile çalışan **CompleteChatStreaming** metodunu kullanarak yanıtlarınızı kısmi sonuçlar şeklinde alabilirsiniz. 
 
-## OpenAIClient Nasıl Kullanılır?
-OpenAIClient oluşturmak oldukça basit bir işlemdir. İhtiyacınız olan şey yalnızca OpenAI API anahtarınızı sağlamak. Çoğu projede bu anahtar çevresel değişkenlerde saklanılarak kullanılabilir.
-
-```csharp
-OpenAIClient client = new(Environment.GetEnvironmentVariable("OPENAI_API_KEY"));
-```
-
-Burada, Environment.GetEnvironmentVariable("OPENAI_API_KEY") ifadesi, işletim sisteminizde tanımlı olan bir ortam değişkeninden API anahtarını alır ve bu anahtarı kullanarak bir OpenAIClient nesnesi oluşturur. Bu nesne, artık OpenAI ile etkileşim kurabilen diğer client'ları üretmek için kullanılabilir.
-
-Diyelim ki OpenAI'nin sesle ilgili hizmetlerini kullanarak bir bot geliştiriyorsunuz. Bu noktada, metni sese dönüştürmek veya ses tanıma işlemleri yapmak için **AudioClient** sınıfına ihtiyacınız olacak. İşte bu noktada, OpenAIClient'ın size sunduğu avantajlardan biri devreye girer. Bir AudioClient oluşturmak için, OpenAIClient nesnesinin **GetAudioClient** metodunu kullanabilirsiniz. Bu metod, hangi modeli kullanacağınızı belirterek size bir AudioClient döndürür.
+### Senkron Streaming(Akış) Kullanımı
+Akışlı bir chat tamamlama işlemi başlatmak için önce **CompleteChatStreaming** metodunu çağırmalısınız. Aşağıdaki örnekte, **“Bu bir testtir.”** ifadesini söylemesi istenen bir akış başlatılmaktadır.
 
 ```csharp
-AudioClient ttsClient = client.GetAudioClient("tts-1");
+CollectionResult<StreamingChatCompletionUpdate> updates
+    = client.CompleteChatStreaming("Bu bir testtir.");
 ```
 
-Yukarıdaki örnek, tts-1 modelini kullanarak bir sesli metin (Text-to-Speech) client'ı oluşturur. Bu sayede, yazdığınız metinleri bu client üzerinden sese dönüştürebilirsiniz.
-
-Benzer şekilde, OpenAI'nin diğer ses modellerini kullanmak için de aynı yapıyı kullanabilirsiniz. Örneğin, OpenAI’nin Whisper modeli ile bir ses tanıma client'ı oluşturmak için şu şekilde bir kod yazabilirsiniz:
+Bu işlem sonucunda dönen değer, her biri akış sırasında gelen yanıt parçalarını içeren **CollectionResult<StreamingChatCompletionUpdate>** türünde bir nesnedir. Gelen bu kısmi yanıtlar bir döngü içinde işlenebilir.
 
 ```csharp
-AudioClient whisperClient = client.GetAudioClient("whisper-1");
+Console.WriteLine($"[ASİSTAN]:");
+foreach (StreamingChatCompletionUpdate update in updates)
+{
+    foreach (ChatMessageContentPart updatePart in update.ContentUpdate)
+    {
+        Console.Write(updatePart);
+    }
+}
 ```
 
-Bu yaklaşım, her model için ayrı bir AudioClient oluşturmanıza olanak tanır, böylece farklı kullanım senaryolarına göre çeşitli ses modelleriyle çalışabilirsiniz.
+Yukarıdaki kod parçası, asistanın verdiği yanıtları parça parça ekrana yazdırmaktadır. Yanıt tamamen oluşmadan, gelen her bir parçayı anında işleyebilir ve kullanıcıya gösterebilirsiniz.
 
-OpenAIClient, özellikle birden fazla alanda API'yi kullanırken işlerinizi oldukça kolaylaştırır. Farklı client'larla çalışırken her birini ayrı ayrı oluşturmak yerine, OpenAIClient ile merkezi bir yönetim sağlayabilirsiniz. Bu yapı, hem daha temiz bir kod yapısı oluşturmanıza yardımcı olur hem de performansı optimize eder.
+### Asenkron Streaming(Akış) Kullanımı
 
-Bu nedenle, eğer OpenAI’nin sunduğu çeşitli hizmetleri tek bir projede kullanmayı planlıyorsanız, OpenAIClient sınıfını tercih etmek, uzun vadede işlerinizi hızlandıracak ve yönetimi kolaylaştıracaktır. Özellikle ses, dil işleme veya diğer alanlarda sıkça OpenAI API kullanıyorsanız, bu yaklaşım sizin için ideal olacaktır.
+Asenkron programlama ile, akışlı bir yanıtı CompleteChatStreamingAsync metodu ile de alabilirsiniz. Bu yaklaşım, özellikle **büyük miktarda veri işlendiğinde** veya **eşzamanlı görevler yürütüldüğünde** performans artışı sağlar. Asenkron kullanımı aşağıdaki gibidir.
+
+
+```csharp
+AsyncCollectionResult<StreamingChatCompletionUpdate> updates
+    = client.CompleteChatStreamingAsync("Bu bir testtir.");
+
+Console.WriteLine($"[ASİSTAN]:");
+await foreach (StreamingChatCompletionUpdate update in updates)
+{
+    foreach (ChatMessageContentPart updatePart in update.ContentUpdate)
+    {
+        Console.Write(updatePart.Text);
+    }
+}
+```
+Bu örnekte, await foreach yapısı kullanılarak her bir kısmi yanıt asenkron olarak işlenir ve ekrana yazdırılır. Bu sayede yanıtlar hem asenkron olarak işlenir hem de hızlı bir şekilde kullanıcıya sunulabilir.
+
+## Neden Streaming(Akış) Kullanılmalı?
+
+
+
