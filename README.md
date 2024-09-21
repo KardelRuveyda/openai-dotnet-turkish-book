@@ -15,7 +15,7 @@ https://kardelruveyda.github.io/openai-dotnet-turkish-book
    - [İstemci Kütüphanesini Kullanma](./docs/baslarken.md#İstemci-Kutuphanesini-Kullanma)
    - [Namespace Organizasyonu](./docs/baslarken.md#Namespace-Organizasyonu)
    - [Async API'yi Kullanma](./docs/baslarken.md#Async-API-Kullanma)
-   - [OpenAIClient Sınıfını Kullanma](./docs/baslarken.md#OpenAIClient-Sınıfını-Kullanma)
+   - [OpenAIClient Sınıfını Kullanma](./docs/baslarken.md#openaiclient-sinifini-kullanma)
    - [OpenAIClient Nedir ve Neden Kullanılır?](./docs/baslarken.md#OpenAIClient-Nedir-Ve-Neden-Kullanilir)
    - [OpenAIClient Nasıl Kullanılır?](./docs/baslarken.md#openaiclient-nasil-kullanilir)
      
