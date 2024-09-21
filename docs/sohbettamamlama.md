@@ -4,7 +4,7 @@ OpenAI REST API, chat tamamlama işlemlerini gerçekleştirirken, varsayılan ol
 
 **Streaming (akış)** kullanarak chat tamamlama işlemi, API'nin sunduğu oldukça etkili bir özelliktir. Bu özellik, özellikle **büyük dil modelleriyle** çalışırken yanıtların hızlı bir şekilde kullanıcıya iletilmesi ve bekleme süresinin azaltılması adına oldukça avantaj sağlar.
 
-## Sohbet Tamamlamada Streaming(Akış) Kullanımı
+## Sohbet Tamamlamada Streaming Kullanımı
 Standart **CompleteChat** metodunun aksine, akış ile çalışan **CompleteChatStreaming** metodunu kullanarak yanıtlarınızı kısmi sonuçlar şeklinde alabilirsiniz. 
 
 ### Senkron Streaming(Akış) Kullanımı
@@ -50,7 +50,7 @@ await foreach (StreamingChatCompletionUpdate update in updates)
 ```
 Bu örnekte, await foreach yapısı kullanılarak her bir kısmi yanıt asenkron olarak işlenir ve ekrana yazdırılır. Bu sayede yanıtlar hem asenkron olarak işlenir hem de hızlı bir şekilde kullanıcıya sunulabilir.
 
-## Neden Streaming(Akış) Kullanılmalı?
+## Neden Streaming Kullanılmalı?
 
 
 
