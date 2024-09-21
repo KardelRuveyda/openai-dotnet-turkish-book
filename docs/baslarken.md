@@ -263,7 +263,7 @@ public async Task GetWeatherDataAsync()
 GetStringAsync kodda ise await anahtar kelimesi kullanılarak veri alınıncaya kadar arka planda beklenir. Bu, uygulamanın diğer işlemleri yapmaya devam etmesini sağlar ve kullanıcı arayüzü donmaz.
 
 
-# OpenAIClient Sınıfını Kullanma
+## OpenAIClient Sınıfını Kullanma
 
 OpenAI kütüphanesinin farklı bölümlerini ele alırken, bazen birden fazla alanda işlem yapabilmek için farklı client'larla çalışmak gerekebilir. Ancak, bu client'ların her birini ayrı ayrı yönetmek hem zaman alıcı olabilir hem de verimlilik açısından dezavantaj yaratabilir. Bu noktada OpenAI'nin sunduğu OpenAIClient sınıfı devreye giriyor ve bu süreci önemli ölçüde basitleştiriyor.
 
