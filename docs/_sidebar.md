@@ -36,5 +36,5 @@
    * [Yapılandırılmış Çıktıların Kullanımı](yapilandirilmiscikti.md#yapılandırılmış-çıktıların-kullanımı)
    * [Yapılandırılmış Çıktı Örneği](yapilandirilmiscikti.md#yapılandırılmış-çıktı-örneği)
    * [Sohbet Tamamlama ve Yapılandırılmış Yanıtın Kullanımı](yapilandirilmiscikti.md#sohbet-tamamlama-ve-yapılandırılmış-yanıtın-kullanımı)
-   * [Yapılandırılmış Çıktıların Avantajları](yapilandirilmiscikti.md#yapılandırılmış-çıktıların-avantajları)
+   * [Yapılandırılmış Çıktıların Avantajları](yapilandirilmiscikti.md#yapılandırılmış-Çıktıların-avantajları)
 
