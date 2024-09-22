@@ -25,7 +25,7 @@
       * [API Anahtarının Okunması](araclarlasohbettamamlama.md#api-anahtarının-okunması)
       * [ChatClient Oluşturma](araclarlasohbettamamlama.md#chatclient-oluşturma)
       * [Döngü ile Model Yanıtını İşleme](araclarlasohbettamamlama.md#döngü-ile-model-yanıtını-i̇şleme)
-      * [Araç Çağrısı Yapıldığında](araclarlasohbettamamlama.md#araç-çağrısı-yapıldığında)
+      * [Araç Çağrısı Yapıldığında](araclarlasohbettamamlama.md#araç-Çağrısı-yapıldığında)
       * [Hata Durumları](araclarlasohbettamamlama.md#hata-durumları)
       * [Mesajları Konsola Yazdırma](araclarlasohbettamamlama.md#mesajları-konsola-yazdırma)
       * [Ve ta daa bütün kod!](araclarlasohbettamamlama.md#ve-ta-daa-bütün-kod)
