@@ -43,20 +43,11 @@ https://kardelruveyda.github.io/openai-dotnet-turkish-book
    * [Mesajları Konsola Yazdırma](./docs/araclarlasohbettamamlama.md#mesajları-konsola-yazdırma)
    * [Ve ta daa bütün kod!](./docs/araclarlasohbettamamlama.md#ve-ta-daa-bütün-kod)
 
-3. [Görseller Oluşturma](./docs/goruntuler.md)
-
-4. [Ses Dosyalarını Metne Dönüştürme](./docs/sesdosyasi.md)
-
-5. [Bilgi Alma ile Artırılmış Üretim (RAG) ile Asistan Kullanma](./docs/rag-asistan.md)
-
-6. [Akış ve GPT-4o Vizyonu ile Asistanları Kullanma](./docs/gpt4o.md)
-
-7. [Azure OpenAI ile Çalışma](./docs/azure-openai.md)
-
-8. [Gelişmiş Senaryolar](./docs/gelismis-senaryolar.md)
-   - [Protokol Yöntemlerini Kullanma](./docs/gelismis-senaryolar.md#protokol-yontemleri)
-   - [Hataları Otomatik Yeniden Deneme](./docs/gelismis-senaryolar.md#hatalari-yeniden-deneme)
-   - [Gözlemlenebilirlik (Observability)](./docs/gelismis-senaryolar.md#gozlemlenebilirlik)
+4. [Yapılandırılmış Çıktılar Nasıl Kullanılır](./docs/yapilandirilmiscikti.md)
+* [Yapılandırılmış Çıktıların Kullanımı](./docs/yapilandirilmiscikti.md#yapılandırılmış-çıktıların-kullanımı)
+* [Yapılandırılmış Çıktı Örneği](./docs/yapilandirilmiscikti.md#yapılandırılmış-çıktı-örneği)
+* [Sohbet Tamamlama ve Yapılandırılmış Yanıtın Kullanımı](./docs/yapilandirilmiscikti.md#sohbet-tamamlama-ve-yapılandırılmış-yanıtın-kullanımı)
+* [Yapılandırılmış Çıktıların Avantajları](./docs/yapilandirilmiscikti.md#yapılandırılmış-çıktıların-avantajları)
 
 
 ![image](https://github.com/user-attachments/assets/9a71d76d-15a7-45e9-8bf9-78f6ead3a3cc)
