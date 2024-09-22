@@ -32,7 +32,7 @@
       * [Ve ta daa bütün kod!](araclarlasohbettamamlama.md#ve-ta-daa-bütün-kod)
 
 
-* [Yapılandırılmış Çıktılar Nasıl Kullanılır]
+* Yapılandırılmış Çıktılar Nasıl Kullanılır?
    * [Yapılandırılmış Çıktıların Kullanımı](yapilandirilmiscikti.md#yapılandırılmış-çıktıların-kullanımı)
    * [Yapılandırılmış Çıktı Örneği](yapilandirilmiscikti.md#yapılandırılmış-çıktı-örneği)
    * [Sohbet Tamamlama ve Yapılandırılmış Yanıtın Kullanımı](yapilandirilmiscikti.md#sohbet-tamamlama-ve-yapılandırılmış-yanıtın-kullanımı)
