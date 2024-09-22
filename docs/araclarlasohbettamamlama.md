@@ -394,7 +394,7 @@ foreach (ChatMessage message in messages)
 }
 ```
 
-###  Ve ta ta bütün kod!
+###  Ve ta daa bütün kod!
 
 
 ```csharp
