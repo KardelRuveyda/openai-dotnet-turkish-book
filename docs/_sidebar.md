@@ -31,22 +31,10 @@
       * [Mesajları Konsola Yazdırma](araclarlasohbettamamlama.md#mesajları-konsola-yazdırma)
       * [Ve ta daa bütün kod!](araclarlasohbettamamlama.md#ve-ta-daa-bütün-kod)
 
-* Görseller Oluşturma
-    * [Görseller Oluşturma](goruntuler.md)
 
-* Ses Dosyalarını Metne Dönüştürme
-    * [Ses Dosyalarını Metne Dönüştürme](docs/sesdosyasi.md)
+* [Yapılandırılmış Çıktılar Nasıl Kullanılır]
+   * [Yapılandırılmış Çıktıların Kullanımı](yapilandirilmiscikti.md#yapılandırılmış-çıktıların-kullanımı)
+   * [Yapılandırılmış Çıktı Örneği](yapilandirilmiscikti.md#yapılandırılmış-çıktı-örneği)
+   * [Sohbet Tamamlama ve Yapılandırılmış Yanıtın Kullanımı](yapilandirilmiscikti.md#sohbet-tamamlama-ve-yapılandırılmış-yanıtın-kullanımı)
+   * [Yapılandırılmış Çıktıların Avantajları](yapilandirilmiscikti.md#yapılandırılmış-çıktıların-avantajları)
 
-* Bilgi Alma ile Artırılmış Üretim (RAG) ile Asistan Kullanma
-    * [Bilgi Alma ile Artırılmış Üretim (RAG)](rag-asistan.md)
-
-* Akış ve GPT-4o Vizyonu ile Asistanları Kullanma
-    * [Akış ve GPT-4o Vizyonu](gpt4o.md)
-
-* Azure OpenAI ile Çalışma
-    * [Azure OpenAI ile Çalışma](azure-openai.md)
-
-* Gelişmiş Senaryolar
-    * [Protokol Yöntemlerini Kullanma](gelismis-senaryolar.md#protokol-yontemleri)
-    * [Hataları Otomatik Yeniden Deneme](gelismis-senaryolar.md#hatalari-yeniden-deneme)
-    * [Gözlemlenebilirlik (Observability)](gelismis-senaryolar.md#gozlemlenebilirlik)
