@@ -40,3 +40,7 @@
    * [Sohbet Tamamlama ve Yapılandırılmış Yanıtın Kullanımı](yapilandirilmiscikti.md#sohbet-tamamlama-ve-yapılandırılmış-yanıtın-kullanımı)
    * [Yapılandırılmış Çıktıların Avantajları](yapilandirilmiscikti.md#yapılandırılmış-Çıktıların-avantajları)
 
+* Metin Gömme İşlemleri
+   * [Metin Gömmeleri (Text Embeddings)](textembedding.md#metin-gömmeleri-text-embeddings)
+   * [Metin Gömmelerinin Kullanımı](textembedding.md#metin-gömmelerinin-kullanımı)
+   * [Embedding Boyutlarını Ayarlama](textembedding.md#embedding-boyutlarını-ayarlama)
