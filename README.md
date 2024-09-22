@@ -49,6 +49,11 @@ https://kardelruveyda.github.io/openai-dotnet-turkish-book
 * [Sohbet Tamamlama ve Yapılandırılmış Yanıtın Kullanımı](./docs/yapilandirilmiscikti.md#sohbet-tamamlama-ve-yapılandırılmış-yanıtın-kullanımı)
 * [Yapılandırılmış Çıktıların Avantajları](./docs/yapilandirilmiscikti.md#yapılandırılmış-çıktıların-avantajları)
 
+4. [Metin Gömmeleri (Text Embeddings)](./docs/textembedding.md#metin-gömmeleri-text-embeddings)
+* [Metin Gömmeleri (Text Embeddings)](./docs/textembedding.md#metin-gömmeleri-text-embeddings)
+* [Metin Gömmelerinin Kullanımı](./docs/textembedding.md#metin-gömmelerinin-kullanımı)
+* [Embedding Boyutlarını Ayarlama](./docs/textembedding.md#embedding-boyutlarını-ayarlama)
+
 
 ![image](https://github.com/user-attachments/assets/9a71d76d-15a7-45e9-8bf9-78f6ead3a3cc)
 
