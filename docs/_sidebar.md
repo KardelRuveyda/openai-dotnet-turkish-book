@@ -12,7 +12,8 @@
     * [Sohbet Tamamlamada Streaming Kullanımı](sohbettamamlama.md#Sohbet-Tamamlama-İşlemleri)
     * [Neden Streaming Kullanılmalı?](sohbettamamlama.md#Neden-Streaming-Kullanılmalı)
 
-* Araçlar ve işlev çağrısıyla sohbet tamamlamaları nasıl kullanılır?
+* Araçlar ve işlev çağrısıyla Sohbet tamamlamaları nasıl kullanılır?
+   * [Araçlar ve işlev çağrısıyla Sohbet tamamlamaları nasıl kullanılır?](araclarlasohbettamamlama.md#araçlar-ve-işlev-çağrısıyla-sohbet-tamamlamaları-nasıl-kullanılır)
    * [Adım 1: Fonksiyonları Tanımlama](araclarlasohbettamamlama.md#adım-1-fonksiyonları-tanımlama)
    * [Adım 2: Araçları Tanımlama](araclarlasohbettamamlama.md#adım-2-araçları-tanımlama)
    * [Adım 3: Chat Tamamlayıcı Seçeneklerini Oluşturma](araclarlasohbettamamlama.md#adım-3-chat-tamamlayıcı-seçeneklerini-oluşturma)
@@ -32,7 +33,8 @@
       * [Ve ta daa bütün kod!](araclarlasohbettamamlama.md#ve-ta-daa-bütün-kod)
 
 
-* Yapılandırılmış Çıktılar Nasıl Kullanılır?
+* Yapılandırılmış Çıktılar
+   * [Yapılandırılmış Çıktılar Nasıl Kullanılır?](yapilandirilmiscikti.md#yapılandırılmış-Çıktılar-nasıl-kullanılır)
    * [Yapılandırılmış Çıktıların Kullanımı](yapilandirilmiscikti.md#yapılandırılmış-çıktıların-kullanımı)
    * [Yapılandırılmış Çıktı Örneği](yapilandirilmiscikti.md#yapılandırılmış-çıktı-örneği)
    * [Sohbet Tamamlama ve Yapılandırılmış Yanıtın Kullanımı](yapilandirilmiscikti.md#sohbet-tamamlama-ve-yapılandırılmış-yanıtın-kullanımı)
