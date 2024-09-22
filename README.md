@@ -43,7 +43,7 @@ https://kardelruveyda.github.io/openai-dotnet-turkish-book
    * [Mesajları Konsola Yazdırma](./docs/araclarlasohbettamamlama.md#mesajları-konsola-yazdırma)
    * [Ve ta daa bütün kod!](./docs/araclarlasohbettamamlama.md#ve-ta-daa-bütün-kod)
 
-4. [Yapılandırılmış Çıktılar Nasıl Kullanılır](./docs/yapilandirilmiscikti.md)
+4. [Yapılandırılmış Çıktılar Nasıl Kullanılır](./docs/yapilandirilmiscikti.md#yapılandırılmış-çıktılar-nasıl-kullanılır)
 * [Yapılandırılmış Çıktıların Kullanımı](./docs/yapilandirilmiscikti.md#yapılandırılmış-çıktıların-kullanımı)
 * [Yapılandırılmış Çıktı Örneği](./docs/yapilandirilmiscikti.md#yapılandırılmış-çıktı-örneği)
 * [Sohbet Tamamlama ve Yapılandırılmış Yanıtın Kullanımı](./docs/yapilandirilmiscikti.md#sohbet-tamamlama-ve-yapılandırılmış-yanıtın-kullanımı)
