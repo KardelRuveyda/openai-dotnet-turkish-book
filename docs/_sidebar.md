@@ -8,7 +8,7 @@
     * [OpenAIClient Nedir ve Neden Kullanılır?](baslarken.md#openaiclient-nedir-ve-neden-kullanilir)
     * [OpenAIClient Nasıl Kullanılır?](baslarken.md#openaiclient-nasil-kullanilir)
 
-* OpenAIClient Sınıfını Kullanma
+* Sohbet Tamamlama İşlemleri
     * [Sohbet Tamamlamada Streaming Kullanımı](sohbettamamlama.md#Sohbet-Tamamlama-İşlemleri)
     * [Neden Streaming Kullanılmalı?](sohbettamamlama.md#Neden-Streaming-Kullanılmalı)
 
