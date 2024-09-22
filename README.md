@@ -37,6 +37,7 @@ https://kardelruveyda.github.io/openai-dotnet-turkish-book
    * [API Anahtarının Okunması](./docs/araclarlasohbettamamlama.md#api-anahtarının-okunması)
    * [ChatClient Oluşturma](./docs/araclarlasohbettamamlama.md#chatclient-oluşturma)
    * [Döngü ile Model Yanıtını İşleme](./docs/araclarlasohbettamamlama.md#döngü-ile-model-yanıtını-i̇şleme)
+   * [Modelin Yanıtına Göre İşlemler](./docs/araclarlasohbettamamlama.md#modelin-yanıtına-göre-İşlemler)
    * [Araç Çağrısı Yapıldığında](./docs/araclarlasohbettamamlama.md#araç-çağrısı-yapıldığında)
    * [Hata Durumları](./docs/araclarlasohbettamamlama.md#hata-durumları)
    * [Mesajları Konsola Yazdırma](./docs/araclarlasohbettamamlama.md#mesajları-konsola-yazdırma)
