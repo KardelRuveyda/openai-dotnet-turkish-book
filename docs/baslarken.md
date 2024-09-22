@@ -1,5 +1,7 @@
 # Başlarken
 
+* Bu kitap kapsamında yapılan tüm örneklere [bu repodan](https://github.com/KardelRuveyda/openai-dotnet-exercises) ulaşabilirsiniz!
+
 ## Ön Koşullar
 
 OpenAI REST API'yi kullanabilmek için bir API anahtarına ihtiyacınız oluyor. Aman diyeyim Open AI key'i projelerinizde kullanırken Github'a göndermeyiniz. LangChain ile geliştirme yaparken **.env** dosyasını **.gitignore**'ye eklemiştim. DotNet tarafında ise **secret.json** kavramından faydalanarak hassas verilerinizi koruyabilirsiniz.Secret Protection kavramı ile [ilgili makaleyi görüntüleyebilirsiniz](https://medium.com/@ruveydakardelcetin/asp-net-core-projelerinde-güvenlik-secret-protection-2d0c48654a1b) 
