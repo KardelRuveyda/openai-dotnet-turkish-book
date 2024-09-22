@@ -1,6 +1,6 @@
 ## Yapılandırılmış Çıktılar Nasıl Kullanılır?
 
-GPT-4 modelleriyle (örneğin, gpt-4o-mini, gpt-4o-mini-2024-07-18 ve gpt-4o-2024-08-06) yapılandırılmış çıktılar, hem üst düzey yanıt içerikleri hem de araç çağrıları için kullanılabilir hale geldi. Bu yapılandırılmış çıktı özelliği, yanıtların belirli bir formatta döndürülmesini sağlar ve özellikle karmaşık veya çok adımlı işlemler için büyük fayda sunar.
+GPT-4 modelleriyle (örneğin, **gpt-4o-mini**, **gpt-4o-mini-2024-07-18** ve **gpt-4o-2024-08-06**) yapılandırılmış çıktılar, hem üst düzey yanıt içerikleri hem de araç çağrıları için kullanılabilir hale geldi. Bu yapılandırılmış çıktı özelliği, yanıtların belirli bir formatta döndürülmesini sağlar ve özellikle karmaşık veya çok adımlı işlemler için büyük fayda sunar.
 
 ## Yapılandırılmış Çıktıların Kullanımı
 Bir sohbette (chat completion) yapılandırılmış çıktı kullanmak istiyorsanız, yanıt formatını belirlemek için **ChatResponseFormat** kullanabilirsiniz. Aşağıdaki örnekte, matematiksel bir problemi çözme adımlarını içeren bir JSON şeması tanımlanmıştır. Bu şema, bir yanıtın **"steps" (adımlar)** ve **"final_answer" (nihai cevap)** olmak üzere iki anahtar özellik içermesini sağlar. Her bir adım ise açıklama **("explanation")** ve çıktıyı **("output")** içeren bir alt nesne olur.
@@ -40,11 +40,11 @@ ChatCompletionOptions options = new()
         strictSchemaEnabled: true)
 };
 ```
-Bu şemada, modelin yanıtı iki ana bileşenden oluşur: steps (adımlar) ve final_answer (nihai sonuç). Steps, modelin yanıtını adım adım açıklayan bir dizi içerir. Bu dizi, her bir adımı açıklayan ve sonucu (çıktıyı) gösteren nesnelerden oluşur. Her adımda iki anahtar özellik bulunur: "explanation" (açıklama) ve "output" (çıktı). "Explanation", adımın neden ve nasıl yapıldığını açıklarken, "output" o adımdan elde edilen sonucu gösterir. Örneğin, matematiksel bir problem çözümünde, her bir adım modelin problemi nasıl çözdüğünü açıklayan ve o adımdaki sonucu gösteren verilerle sunulacaktır. Bu yapı, modelin yanıtını yalnızca nihai bir sonuçla sınırlamaz, aynı zamanda bu sonuca nasıl ulaşıldığını adım adım açıklar. Final_answer ise modelin ürettiği nihai sonucu içerir. Bu, tüm adımlar tamamlandıktan sonra elde edilen son cevaptır ve yanıtın en kritik kısmını temsil eder. Bu yapı, kullanıcının modeli yalnızca bir yanıt almak için değil, aynı zamanda o yanıtın mantığını ve çözüm sürecini anlayabilmesi için de kullanmasına olanak tanır.
+Bu şemada, modelin yanıtı iki ana bileşenden oluşur: **steps (adımlar)** ve **final_answer (nihai sonuç)**. **Steps**, modelin yanıtını adım adım açıklayan bir dizi içerir. Bu dizi, her bir adımı açıklayan ve sonucu (çıktıyı) gösteren nesnelerden oluşur. Her adımda iki anahtar özellik bulunur: **"explanation"** **(açıklama) **ve **"output" (çıktı)**. **"Explanation"**, adımın neden ve nasıl yapıldığını açıklarken, "output" o adımdan elde edilen sonucu gösterir. Örneğin, matematiksel bir problem çözümünde, her bir adım modelin problemi nasıl çözdüğünü açıklayan ve o adımdaki sonucu gösteren verilerle sunulacaktır. Bu yapı, modelin yanıtını yalnızca nihai bir sonuçla sınırlamaz, aynı zamanda bu sonuca nasıl ulaşıldığını adım adım açıklar. **Final_answer** ise modelin ürettiği nihai sonucu içerir. Bu, tüm adımlar tamamlandıktan sonra elde edilen son cevaptır ve yanıtın en kritik kısmını temsil eder. Bu yapı, kullanıcının modeli yalnızca bir yanıt almak için değil, aynı zamanda o yanıtın mantığını ve çözüm sürecini anlayabilmesi için de kullanmasına olanak tanır.
 
 ## Sohbet Tamamlama ve Yapılandırılmış Yanıtın Kullanımı
 
-Bu yapılandırılmış yanıtı kullanarak modelden bir problem çözümü istiyoruz. Aşağıdaki kod, "8x + 7 = -23 nasıl çözülür?" sorusunu modelin yanıtlamasını sağlar:
+Bu yapılandırılmış yanıtı kullanarak modelden bir problem çözümü istiyoruz. Aşağıdaki kod,** "8x + 7 = -23 nasıl çözülür?"** sorusunu modelin yanıtlamasını sağlar:
 
 ```csharp
 ChatCompletion chatCompletion = await client.CompleteChatAsync(
