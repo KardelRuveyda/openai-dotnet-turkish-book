@@ -50,7 +50,6 @@ https://kardelruveyda.github.io/openai-dotnet-turkish-book
 * [Yapılandırılmış Çıktıların Avantajları](./docs/yapilandirilmiscikti.md#yapılandırılmış-çıktıların-avantajları)
 
 4. [Metin Gömmeleri (Text Embeddings)](./docs/textembedding.md#metin-gömmeleri-text-embeddings)
-* [Metin Gömmeleri (Text Embeddings)](./docs/textembedding.md#metin-gömmeleri-text-embeddings)
 * [Metin Gömmelerinin Kullanımı](./docs/textembedding.md#metin-gömmelerinin-kullanımı)
 * [Embedding Boyutlarını Ayarlama](./docs/textembedding.md#embedding-boyutlarını-ayarlama)
 
