@@ -27,7 +27,7 @@ https://kardelruveyda.github.io/openai-dotnet-turkish-book
 3.[Araçlar ve işlev çağrısıyla sohbet tamamlamaları nasıl kullanılır?](./docs/araclarlasohbettamamlama.md#araçlar-ve-işlev-çağrısıyla-sohbet-tamamlamaları-nasıl-kullanılır)
    - [Adım 1: Fonksiyonları Tanımlama](./docs/araclarlasohbettamamlama.md#adım-1-fonksiyonları-tanımlama)
    - [Adım 2: Araçları Tanımlama](./docs/araclarlasohbettamamlama.md#adım-2-araçları-tanımlama)
-   - [Adım 3: Chat Tamamlayıcı Seçeneklerini Oluşturma](./docs/raclarlasohbettamamlama.md#adım-3-chat-tamamlayıcı-seçeneklerini-oluşturma)
+   - [Adım 3: Chat Tamamlayıcı Seçeneklerini Oluşturma](./docs/araclarlasohbettamamlama.md#adım-3-chat-tamamlayıcı-seçeneklerini-oluşturma)
    - [Adım 4: Fonksiyon Çağrısı ve Yanıt Döngüsü](./docs/araclarlasohbettamamlama.md#adım-4-fonksiyon-çağrısı-ve-yanıt-döngüsü)
    - [Adım 5 Yaptıklarımızı Konsol Uygulmasına Dönüştürelim!](./docs/araclarlasohbettamamlama.md#adım-5-yaptıklarımızı-konsol-uygulmasına-dönüştürelim)
    - [Run() fonksiyonu oluşturalım!](./docs/araclarlasohbettamamlama.md#run-fonksiyonu-oluşturalım)
