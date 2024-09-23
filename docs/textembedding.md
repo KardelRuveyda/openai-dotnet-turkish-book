@@ -56,3 +56,7 @@ Metin embeddingleri, kullanıcıların yazdığı açıklamaların ilişkili iç
 
 
 
+
+
+
+
