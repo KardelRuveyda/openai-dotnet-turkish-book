@@ -60,7 +60,7 @@ https://kardelruveyda.github.io/openai-dotnet-turkish-book
 * [Metin Gömmelerinin Kullanımı](./docs/textembedding.md#metin-gömmelerinin-kullanımı)
 * [Embedding Boyutlarını Ayarlama](./docs/textembedding.md#embedding-boyutlarını-ayarlama)
 
-6. []
+6. [Görüntü Üretme İşlemleri](./docs/goruntuolusturma.md#görüntü-üretimi)
 
 * [Görüntü Üretimi Nasıl Yapılır?](./docs/goruntuolusturma.md#görüntü-üretimi-nasıl-yapılır)
 * [Görüntü Üretmek için Gerekenler](./docs/goruntuolusturma.md#görüntü-üretmek-için-gerekenler)
