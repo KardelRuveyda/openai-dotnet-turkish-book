@@ -73,6 +73,8 @@ https://kardelruveyda.github.io/openai-dotnet-turkish-book
 
 7. [Sesi Yazıya Dökme](./docs/sesiyaziyadokme.md#sesi-yazıya-dökme)
 
+* [Speech-to-Text (STT) Araştırmaları](./docs/sesiyaziyadokme.md#speech-to-text-stt-araştırmaları)
+* [Text-to-Speech (TTS) Araştırmaları](./docs/sesiyaziyadokme.md#text-to-speech-tts-araştırmaları)
 * [1. Gerekli Kütüphaneler ve Çevresel Değişkenler](./docs/sesiyaziyadokme.md#2-ses-dosyasını-belirlemek)
 * [2. Ses Dosyasını Belirlemek](./docs/sesiyaziyadokme.md#2-ses-dosyasını-belirlemek)
 * [3. Transkripsiyon Seçenekleri](./docs/sesiyaziyadokme.md#3-transkripsiyon-seçenekleri)
