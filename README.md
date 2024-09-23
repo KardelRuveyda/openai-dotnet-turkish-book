@@ -9,7 +9,9 @@ https://kardelruveyda.github.io/openai-dotnet-turkish-book
 
 # İçindekiler
 
+
 1. [Başlarken](./docs/baslarken.md)
+   
 * [Ön Koşullar](./docs/baslarken.md#Ön-koşullar)
 * [NuGet Paketini Kurma](./docs/baslarken.md#nuget-paketini-kurma)
 * [İstemci Kütüphanesini Kullanma](./docs/baslarken.md#İstemci-Kutuphanesini-Kullanma)
@@ -21,10 +23,12 @@ https://kardelruveyda.github.io/openai-dotnet-turkish-book
      
 
 2. [Sohbet Tamamlama İşlemleri](./docs/sohbettamamlama.md#sohbet-tamamlama-islemleri)
+
 * [Sohbet Tamamlamada Streaming Kullanımı](./docs/sohbettamamlama.md#sohbet-tamamlamada-streaming-kullanimi)
 * [Neden Streaming Kullanılmalı?](./docs/sohbettamamlama.md#neden-streaming-kullanılmalı)
   
 3.[Araçlar ve işlev çağrısıyla sohbet tamamlamaları nasıl kullanılır?](./docs/araclarlasohbettamamlama.md#araçlar-ve-işlev-çağrısıyla-sohbet-tamamlamaları-nasıl-kullanılır)
+
 * [Adım 1: Fonksiyonları Tanımlama](./docs/araclarlasohbettamamlama.md#adım-1-fonksiyonları-tanımlama)
 * [Adım 2: Araçları Tanımlama](./docs/araclarlasohbettamamlama.md#adım-2-araçları-tanımlama)
 * [Adım 3: Chat Tamamlayıcı Seçeneklerini Oluşturma](./docs/araclarlasohbettamamlama.md#adım-3-chat-tamamlayıcı-seçeneklerini-oluşturma)
@@ -43,13 +47,16 @@ https://kardelruveyda.github.io/openai-dotnet-turkish-book
    * [Mesajları Konsola Yazdırma](./docs/araclarlasohbettamamlama.md#mesajları-konsola-yazdırma)
    * [Ve ta daa bütün kod!](./docs/araclarlasohbettamamlama.md#ve-ta-daa-bütün-kod)
 
+
 4. [Yapılandırılmış Çıktılar Nasıl Kullanılır](./docs/yapilandirilmiscikti.md#yapılandırılmış-çıktılar-nasıl-kullanılır)
+
 * [Yapılandırılmış Çıktıların Kullanımı](./docs/yapilandirilmiscikti.md#yapılandırılmış-çıktıların-kullanımı)
 * [Yapılandırılmış Çıktı Örneği](./docs/yapilandirilmiscikti.md#yapılandırılmış-çıktı-örneği)
 * [Sohbet Tamamlama ve Yapılandırılmış Yanıtın Kullanımı](./docs/yapilandirilmiscikti.md#sohbet-tamamlama-ve-yapılandırılmış-yanıtın-kullanımı)
 * [Yapılandırılmış Çıktıların Avantajları](./docs/yapilandirilmiscikti.md#yapılandırılmış-çıktıların-avantajları)
 
-4. [Metin Gömmeleri (Text Embeddings)](./docs/textembedding.md#metin-gömmeleri-text-embeddings)
+5. [Metin Gömmeleri (Text Embeddings)](./docs/textembedding.md#metin-gömmeleri-text-embeddings)
+
 * [Metin Gömmelerinin Kullanımı](./docs/textembedding.md#metin-gömmelerinin-kullanımı)
 * [Embedding Boyutlarını Ayarlama](./docs/textembedding.md#embedding-boyutlarını-ayarlama)
 
