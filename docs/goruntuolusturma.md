@@ -46,7 +46,7 @@ Görüntünün kalitesi, boyutu ve stili gibi özellikler burada belirlenir:
 - **Style:** Görüntünün stili (örneğin, canlı renkler).
 - **ResponseFormat:** Görüntü çıktısı PNG formatında ve byte dizisi olarak döndürülecek. Bu, yerel depolamaya daha kolay kaydedilmesi için seçilebilir.
 
-### Adım 5 :Görüntü Üretme
+### Adım 5 : Görüntü Üretme
 ```csharp
 using FileStream stream = File.OpenWrite($"{Guid.NewGuid()}.png");
 bytes.ToStream().CopyTo(stream);
