@@ -44,3 +44,13 @@
    * [Metin Gömmeleri (Text Embeddings)](textembedding.md#metin-gömmeleri-text-embeddings)
    * [Metin Gömmelerinin Kullanımı](textembedding.md#metin-gömmelerinin-kullanımı)
    * [Embedding Boyutlarını Ayarlama](textembedding.md#embedding-boyutlarını-ayarlama)
+ 
+* Görüntü Üretme İşlemleri
+  * [Görüntü Üretimi Nasıl Yapılır?](goruntuolusturma.md#görüntü-üretimi-nasıl-yapılır)
+  * [Görüntü Üretmek için Gerekenler](goruntuolusturma.md#görüntü-üretmek-için-gerekenler)
+  * [Adım 1 : Kütüphanenin Kullanılması](goruntuolusturma.md#adım-1--kütüphanenin-kullanılması)7
+  * [Adım 2 : ImageClient Oluşturma](goruntuolusturma.md#adım-1--kütüphanenin-kullanılması)
+  * [Adım 3 : Prompt Tanımlama](goruntuolusturma.md#adım-3--prompt-tanımlama)
+  * [Adım 4 : Görüntü Üretim Seçeneklerini Tanımlama](goruntuolusturma.md#adım-4--görüntü-üretim-seçeneklerini-tanımlama)
+  * [Adım 5 :Görüntü Üretme](goruntuolusturma.md#adım-5-görüntü-üretme)
+  * [Görüntü Üretiminin Önemi](goruntuolusturma.md#görüntü-üretiminin-önemi)
