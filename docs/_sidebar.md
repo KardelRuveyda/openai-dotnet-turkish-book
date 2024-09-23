@@ -48,7 +48,7 @@
 * Görüntü Üretme İşlemleri
   * [Görüntü Üretimi Nasıl Yapılır?](goruntuolusturma.md#görüntü-üretimi-nasıl-yapılır)
   * [Görüntü Üretmek için Gerekenler](goruntuolusturma.md#görüntü-üretmek-için-gerekenler)
-  * [Adım 1 : Kütüphanenin Kullanılması](goruntuolusturma.md#adım-1--kütüphanenin-kullanılması)7
+  * [Adım 1 : Kütüphanenin Kullanılması](goruntuolusturma.md#adım-1--kütüphanenin-kullanılması)
   * [Adım 2 : ImageClient Oluşturma](goruntuolusturma.md#adım-1--kütüphanenin-kullanılması)
   * [Adım 3 : Prompt Tanımlama](goruntuolusturma.md#adım-3--prompt-tanımlama)
   * [Adım 4 : Görüntü Üretim Seçeneklerini Tanımlama](goruntuolusturma.md#adım-4--görüntü-üretim-seçeneklerini-tanımlama)
