@@ -55,6 +55,8 @@
   * [Görüntü Üretiminin Önemi](goruntuolusturma.md#görüntü-Üretiminin-Önemi)
  
 * Sesi Yazıya Dökme
+   * [Speech-to-Text (STT) Araştırmaları](sesiyaziyadokme.md#speech-to-text-stt-araştırmaları)
+   * [Text-to-Speech (TTS) Araştırmaları](sesiyaziyadokme.md#text-to-speech-tts-araştırmaları)
    * [1. Gerekli Kütüphaneler ve Çevresel Değişkenler](sesiyaziyadokme.md#1-gerekli-kütüphaneler-ve-çevresel-değişkenler)
    * [2. Ses Dosyasını Belirlemek](sesiyaziyadokme.md#2-ses-dosyasını-belirlemek)
    * [3. Transkripsiyon Seçenekleri](sesiyaziyadokme.md#3-transkripsiyon-seçenekleri)
