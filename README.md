@@ -70,5 +70,18 @@ https://kardelruveyda.github.io/openai-dotnet-turkish-book
 * [Adım 4 : Görüntü Üretim Seçeneklerini Tanımlama](./docs/goruntuolusturma.md#adım-4--görüntü-üretim-seçeneklerini-tanımlama)
 * [Adım 5 :Görüntü Üretme](./docs/goruntuolusturma.md#adım-5-görüntü-üretme)
 
+
+7. [Sesi Yazıya Dökme](./docs/sesiyaziyadokme.md#sesi-yazıya-dökme)
+
+* [1. Gerekli Kütüphaneler ve Çevresel Değişkenler](./docs/sesiyaziyadokme.md#2-ses-dosyasını-belirlemek)
+* [2. Ses Dosyasını Belirlemek](./docs/sesiyaziyadokme.md#2-ses-dosyasını-belirlemek)
+* [3. Transkripsiyon Seçenekleri](./docs/sesiyaziyadokme.md#3-transkripsiyon-seçenekleri)
+* [4. Transkripsiyon İşlemi](./docs/sesiyaziyadokme.md#4-transkripsiyon-i̇şlemi)
+* [5. Transkripsiyon Sonucunu Yazdırmak](./docs/sesiyaziyadokme.md#6-kelime-bazlı-zaman-damgalarını-yazdırmak)
+* [6. Kelime Bazlı Zaman Damgalarını Yazdırmak](./docs/sesiyaziyadokme.md#6-kelime-bazlı-zaman-damgalarını-yazdırmak)
+* [7. Segment Bazlı Zaman Damgalarını Yazdırmak](./docs/sesiyaziyadokme.md#7-segment-bazlı-zaman-damgalarını-yazdırmak)
+* [Yapılan Örneğin Önemi](./docs/sesiyaziyadokme.md#yapılan-örneğin-önemi)
+
+
 ![image](https://github.com/user-attachments/assets/9a71d76d-15a7-45e9-8bf9-78f6ead3a3cc)
 
