@@ -32,7 +32,6 @@
       * [Mesajları Konsola Yazdırma](araclarlasohbettamamlama.md#mesajları-konsola-yazdırma)
       * [Ve ta daa bütün kod!](araclarlasohbettamamlama.md#ve-ta-daa-bütün-kod)
 
-
 * Yapılandırılmış Çıktılar
    * [Yapılandırılmış Çıktılar Nasıl Kullanılır?](yapilandirilmiscikti.md#yapılandırılmış-Çıktılar-nasıl-kullanılır)
    * [Yapılandırılmış Çıktıların Kullanımı](yapilandirilmiscikti.md#yapılandırılmış-Çıktıların-kullanımı)
@@ -54,3 +53,13 @@
   * [Adım 4 : Görüntü Üretim Seçeneklerini Tanımlama](goruntuolusturma.md#adım-4-görüntü-Üretim-seçeneklerini-tanımlama)
   * [Adım 5 :Görüntü Üretme](goruntuolusturma.md#adım-5-görüntü-üretme)
   * [Görüntü Üretiminin Önemi](goruntuolusturma.md#görüntü-Üretiminin-Önemi)
+ 
+* Sesi Yazıya Dökme
+   * [1. Gerekli Kütüphaneler ve Çevresel Değişkenler]()
+   * [2. Ses Dosyasını Belirlemek]()
+   * [3. Transkripsiyon Seçenekleri]()
+   * [4. Transkripsiyon İşlemi]()
+   * [5. Transkripsiyon Sonucunu Yazdırmak]()
+   * [6. Kelime Bazlı Zaman Damgalarını Yazdırmak]()
+   * [7. Segment Bazlı Zaman Damgalarını Yazdırmak]()
+   * [Yapılan Örneğin Önemi]()
