@@ -54,6 +54,50 @@ bytes.ToStream().CopyTo(stream);
 Üretilen görüntü yerel diske kaydedilir. **Guid.NewGuid()** kullanılarak rastgele bir dosya adı oluşturulur ve bu isimle PNG formatında görüntü kaydedilir. Bu adım, uygulamanın ürettiği görüntülerin depolanmasına olanak tanır.
 
 
+## Kodunu birlikte yazalım!
+
+```csharp
+        public static void Run()
+        {
+            // API anahtarını ConfigReader sınıfından alma işlemi
+            string apiKey = ConfigReader.ReadApiKeyFromConfig();
+
+            // API anahtarı alınamazsa işlemi sonlandır
+            if (string.IsNullOrEmpty(apiKey))
+            {
+                Console.WriteLine("API key not found in config.json");
+                return;
+            }
+
+            ImageClient client = new(model: "dall-e-3", apiKey);
+            string prompt = "İskandinav sadeliğini Japon minimalizmiyle harmanlayan bir oturma odası konsepti.";
+
+            ImageGenerationOptions options = new()
+            {
+                Quality = GeneratedImageQuality.High,
+                Size = GeneratedImageSize.W1792xH1024,
+                Style = GeneratedImageStyle.Vivid,
+                ResponseFormat = GeneratedImageFormat.Bytes
+            };
+            Console.WriteLine("Fotoğraf oluşturuluyor..");
+            GeneratedImage image = client.GenerateImage(prompt, options);
+            BinaryData bytes = image.ImageBytes;
+
+            using FileStream stream = File.OpenWrite($"{Guid.NewGuid()}.png");
+            bytes.ToStream().CopyTo(stream);
+
+            Console.WriteLine("Fotoğraf oluşturuldu...");
+
+        }
+```
+
+## Konsol Bilgisi ve Oluşturulan Fotoğraf
+
+![image](https://github.com/user-attachments/assets/13e6af9e-fdef-485c-b959-1243fb9bd24a)
+
+![{8A10B568-281B-4395-93C1-989FC4F420FD}](https://github.com/user-attachments/assets/8a57a296-d8d5-4253-a05d-bf0f892372f1)
+
+
 ## Görüntü Üretiminin Önemi
 
 Görüntü üretimi, özellikle iç mimarlık, moda tasarımı ve yaratıcı sanatlar gibi alanlarda tasarımcıların hayal güçlerini görselleştirmelerine ve bu fikirleri daha somut hale getirmelerine büyük olanak sağlar. Bu teknolojinin en önemli yönlerinden biri, tasarımcılara ve sanatçılara yalnızca kelimelerle betimledikleri bir sahneyi, ürünü veya konsepti yüksek kaliteli görsellere dönüştürme imkânı vermesidir. Bu sayede, bir tasarımcının aklında canlanan fikrin, müşteri ya da ekip üyeleriyle paylaşılması kolaylaşır ve projelerin hızla hayata geçirilmesi mümkün olur. Ayrıca, bu üretim sürecinde kullanılan yapay zeka destekli algoritmalar, sahnelerin veya ürünlerin tüm detaylarına odaklanabilir. Renk paletleri, ışıklandırma, dokular, stil gibi öğeler özelleştirilebilir ve kullanıcıya en ideal sonucu sunmak için kalite ayarları da yapılabilir. Örneğin, kullanıcılar yüksek çözünürlük, daha canlı veya doğal tonlar gibi ayarlarla görselin estetiğini ve duygusal etkisini kendi ihtiyaçlarına göre şekillendirebilirler.
