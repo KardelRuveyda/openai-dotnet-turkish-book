@@ -52,6 +52,8 @@
   * [Adım 3 : Prompt Tanımlama](goruntuolusturma.md#adım-3-prompt-tanımlama)
   * [Adım 4 : Görüntü Üretim Seçeneklerini Tanımlama](goruntuolusturma.md#adım-4-görüntü-Üretim-seçeneklerini-tanımlama)
   * [Adım 5 :Görüntü Üretme](goruntuolusturma.md#adım-5-görüntü-üretme)
+  * [Kodunu Birlikte Yazalım](goruntuolusturma.md#kodunu-birlikte-yazalım)
+  * [Konsol Bilgisi ve Oluşturulan Fotoğraf](goruntuolusturma.md#konsol-bilgisi-ve-oluşturulan-fotoğraf)
   * [Görüntü Üretiminin Önemi](goruntuolusturma.md#görüntü-Üretiminin-Önemi)
  
 * Sesi Yazıya Dökme
