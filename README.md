@@ -69,6 +69,8 @@ https://kardelruveyda.github.io/openai-dotnet-turkish-book
 * [Adım 3 : Prompt Tanımlama](./docs/goruntuolusturma.md#adım-3--prompt-tanımlama)
 * [Adım 4 : Görüntü Üretim Seçeneklerini Tanımlama](./docs/goruntuolusturma.md#adım-4--görüntü-üretim-seçeneklerini-tanımlama)
 * [Adım 5 :Görüntü Üretme](./docs/goruntuolusturma.md#adım-5-görüntü-üretme)
+* [Kodunu Birlikte Yazalım](./docs/goruntuolusturma.md#kodunu-birlikte-yazalım)
+* [Konsol Bilgisi ve Oluşturulan Fotoğraf](./docs/goruntuolusturma.md#konsol-bilgisi-ve-oluşturulan-fotoğraf)
 
 
 7. [Sesi Yazıya Dökme](./docs/sesiyaziyadokme.md#sesi-yazıya-dökme)
