@@ -64,7 +64,7 @@ https://kardelruveyda.github.io/openai-dotnet-turkish-book
 
 * [Görüntü Üretimi Nasıl Yapılır?](./docs/goruntuolusturma.md#görüntü-üretimi-nasıl-yapılır)
 * [Görüntü Üretmek için Gerekenler](./docs/goruntuolusturma.md#görüntü-üretmek-için-gerekenler)
-* [Adım 1 : Kütüphanenin Kullanılması](./docs/goruntuolusturma.md#adım-1--kütüphanenin-kullanılması)7
+* [Adım 1 : Kütüphanenin Kullanılması](./docs/goruntuolusturma.md#adım-1--kütüphanenin-kullanılması)
 * [Adım 2 : ImageClient Oluşturma](./docs/goruntuolusturma.md#adım-1--kütüphanenin-kullanılması)
 * [Adım 3 : Prompt Tanımlama](./docs/goruntuolusturma.md#adım-3--prompt-tanımlama)
 * [Adım 4 : Görüntü Üretim Seçeneklerini Tanımlama](./docs/goruntuolusturma.md#adım-4--görüntü-üretim-seçeneklerini-tanımlama)
