@@ -1,6 +1,6 @@
-## Yardımcıları Kullanarak RAG (Bilgi Getirme ile Zenginleştirilmiş Üretim) Nasıl Kullanılır?
+## Asistanları Kullanarak RAG (Bilgi Getirme ile Zenginleştirilmiş Üretim) Nasıl Kullanılır?
 
-Bu örnekte, Euro 2024'e katılan takımların maç sonuçlarını içeren bir JSON belgeniz olduğunu ve bu verileri analiz edebilecek ve hakkında sorulara cevap verebilecek bir yardımcı oluşturmak istediğinizi varsayalım.Bu amaca ulaşmak için, **OpenAI.Files** ad alanından **FileClient** ve **OpenAI.Assistants** ad alanından **AssistantClient** kullanılır.
+Bu örnekte, Euro 2024'e katılan takımların maç sonuçlarını içeren bir JSON belgeniz olduğunu ve bu verileri analiz edebilecek ve hakkında sorulara cevap verebilecek bir asistan oluşturmak istediğinizi varsayalım.Bu amaca ulaşmak için, **OpenAI.Files** ad alanından **FileClient** ve **OpenAI.Assistants** ad alanından **AssistantClient** kullanılır.
 
 
 **Önemli: Assistants REST API'si şu anda beta aşamasındadır. Dolayısıyla, detaylar değişebilir ve buna bağlı olarak AssistantClient de [Deneysel] olarak etiketlenmiştir. Bu API'yi kullanmak için, ya proje seviyesinde ya da aşağıda kod içerisinde OPENAI001 uyarısını devre dışı bırakmanız gerekmektedir.**
@@ -46,7 +46,7 @@ using Stream document = BinaryData.FromString("""
 """).ToStream();
 ```
 
-Bu belgeyi OpenAI sistemine yüklemek için **FileClient**'in **UploadFile** metodunu kullanın. Belgeler üzerinde yardımcıların erişimini sağlamak için **FileUploadPurpose.Assistants** parametresi kullanılmalıdır:
+Bu belgeyi OpenAI sistemine yüklemek için **FileClient**'in **UploadFile** metodunu kullanın. Belgeler üzerinde asistanların erişimini sağlamak için **FileUploadPurpose.Assistants** parametresi kullanılmalıdır:
 
 
 ```csharp
@@ -57,19 +57,16 @@ OpenAIFile matchesFile = fileClient.UploadFile(
 ```
 
 
-## Yeni Bir Yardımcı Oluşturmak
+## Yeni Bir Asistan Oluşturmak
 
-Yeni bir yardımcıyı, **AssistantCreationOptions** sınıfını kullanarak özelleştirebilirsiniz. Aşağıda örnek bir yardımcı oluşturulmuştur:
-
-Yardımcıya Playground’da gösterilecek bir **"isim"**
-Maç sonuçlarını işlemek için **FileSearchToolDefinition** ve verileri analiz etmek ve görselleştirmek için **CodeInterpreterToolDefinition** araçları
-Yardımcı araçlarının kullanacağı kaynaklar, burada **VectorStoreCreationHelper** ile otomatik olarak maç dosyasını indeksleyen yeni bir **vektör deposu** oluşturulmuştur.
+Yeni bir asistanı, **AssistantCreationOptions** sınıfını kullanarak özelleştirebilirsiniz. Aşağıda örnek ile bir asistan oluşturulmuştur. Asistana Playground’da gösterilecek bir **"isim"**, Maç sonuçlarını işlemek için **FileSearchToolDefinition** ve verileri analiz etmek ve görselleştirmek için **CodeInterpreterToolDefinition** araçları kullanılmıştır.
+Asistan araçlarının kullanacağı kaynaklar, burada **VectorStoreCreationHelper** ile otomatik olarak maç dosyasını indeksleyen yeni bir **vektör deposu** oluşturulmuştur.
 
 ```csharp
 AssistantCreationOptions assistantOptions = new()
 {
     Name = "Örnek: Euro 2024 Maç Sonuçları RAG",
-    Instructions = "Sen, kullanıcı sorgularına dayanarak Euro 2024 maç verilerini arayan ve analiz eden bir yardımcısın. Grafik, tablo ya da başka bir görselleştirme istenirse, kod yorumlayıcı aracını kullan.",
+    Instructions = "Sen, kullanıcı sorgularına dayanarak Euro 2024 maç verilerini arayan ve analiz eden bir asistansın.",
     Tools =
     {
         new FileSearchToolDefinition(),
@@ -92,7 +89,7 @@ Assistant assistant = assistantClient.CreateAssistant("gpt-4o", assistantOptions
 
 ## Bir İleti Dizisi Oluşturmak
 
-Bir kullanıcı mesajı ile yardımcıya başlamak için yeni bir ileti dizisi oluşturabilir ve bunu çalıştırmak için **CreateThreadAndRun** metodunu kullanabilirsiniz. Aşağıda bir örnek verilmiştir:
+Bir kullanıcı mesajı ile asistana başlamak için yeni bir ileti dizisi oluşturabilir ve bunu çalıştırmak için **CreateThreadAndRun** metodunu kullanabilirsiniz. Aşağıda bir örnek verilmiştir:
 
 ```csharp
 ThreadCreationOptions threadOptions = new()
@@ -103,7 +100,7 @@ ThreadCreationOptions threadOptions = new()
 ThreadRun threadRun = assistantClient.CreateThreadAndRun(assistant.Id, threadOptions);
 ```
 
-İşlem sırasında yardımcının durumunu izlemek için **GetRun** metodunu kullanarak süreci izleyebilirsiniz:
+İşlem sırasında asistanın durumunu izlemek için **GetRun** metodunu kullanarak süreci izleyebilirsiniz:
 
 ```csharp
 do
@@ -118,7 +115,7 @@ Eğer işlem başarılı geçtiyse, işlem durumu **RunStatus.Completed** olacak
 
 ## Yanıt Mesajlarını Almak
 
-Son olarak, yardımcıya gönderilen mesajları almak için **GetMessages** metodunu kullanabilirsiniz. Bu yöntem, kullanıcının ilk mesajına yanıt olarak oluşturulan tüm mesajları döndürecektir.
+Son olarak, asistana gönderilen mesajları almak için **GetMessages** metodunu kullanabilirsiniz. Bu yöntem, kullanıcının ilk mesajına yanıt olarak oluşturulan tüm mesajları döndürecektir.
 
 ```csharp
 CollectionResult<ThreadMessage> messages = assistantClient.GetMessages(threadRun.ThreadId, new MessageCollectionOptions() { Order = MessageCollectionOrder.Ascending });
@@ -131,22 +128,8 @@ foreach (ThreadMessage message in messages)
         if (!string.IsNullOrEmpty(contentItem.Text))
         {
             Console.WriteLine($"{contentItem.Text}");
-            
-            // İçerikteki açıklamaları ve dosya bilgilerini yazdırma.
-            foreach (TextAnnotation annotation in contentItem.TextAnnotations)
-            {
-                if (!string.IsNullOrEmpty(annotation.InputFileId))
-                {
-                    Console.WriteLine($"* Dosya referansı, dosya ID: {annotation.InputFileId}");
-                }
-                if (!string.IsNullOrEmpty(annotation.OutputFileId))
-                {
-                    Console.WriteLine($"* Çıkış dosyası, yeni dosya ID: {annotation.OutputFileId}");
-                }
-            }
         }
     }
-    Console.WriteLine();
 }
 
 ```
