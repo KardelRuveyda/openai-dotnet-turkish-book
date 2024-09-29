@@ -252,7 +252,7 @@ foreach (ThreadMessage message in messages)
     }
 ```
 
-Tüm kodu aşağıdaki gibi paylaşıyorum. Ancak gelin biz detaylı bir şekilde bu kodu ele alalım!
+Tüm kodu yukarıdaki gibi paylaşıyorum. Ancak gelin biz detaylı bir şekilde bu kodu ele alalım!
 
 * Bu kod, Euro 2024 maç sonuçlarına dayalı bir bot oluşturmak için yazılmış. Amacı, bir kullanıcıya konsoldan sorduğu sorulara yanıt vermek. Bot, Euro 2024'te hangi takımların hangi maçları oynadığını bilerek sorulara yanıt verebiliyor.
 * **OpenAI.Assistants** ve **OpenAI.Files** isimli kütüphaneler (yani kod parçaları) programa ekleniyor. Bu kütüphaneler, **OpenAI (GPT-4)** modelini kullanarak bot oluşturmak ve dosyalarla işlem yapmak için gerekli.
