@@ -1,3 +1,103 @@
+## RAG (Retrieval-Augmented Generation) Temel Kavramları
+
+RAG, dil modelleri (örneğin **GPT-4** gibi) ile bilgiye dayalı yanıtlar üretme sürecini optimize eden bir yöntemdir. Bu yöntemde iki ana aşama vardır:
+- **Retrieval (Bilgi Getirme):** Bir bilgi kaynağından (örneğin bir belge seti) en alakalı bilgiyi bulmak.
+- **Generation (Üretim):** Bu bilgilere dayanarak anlamlı ve doğru bir yanıt üretmek.
+Ancak dil modelleri, özellikle büyük ve yapılandırılmamış veri kümeleri üzerinde çalışırken, her zaman doğru bilgiyi bulamayabilir. Bu yüzden, RAG yaklaşımı bilginin daha etkili ve anlamlı bir şekilde bulunmasını sağlar.
+
+## Dil Modelleri ve Vektörler
+
+Dil modelleri, metinleri anlamak için kelimeleri veya cümleleri vektör adı verilen sayısal temsillere dönüştürür. Bu temsiller, bir cümlenin ya da kelimenin anlamını içerir.
+
+Örneğin:
+
+**"Türkiye’nin Gürcistan ile yaptığı maç ne zaman oynandı?"** sorusu, **vektör** olarak ifade edilir. Bu vektör, sorunun içeriğini ve anlamını **sayılarla** temsil eder.
+**"10 Haziran 2024’te oynandı"** cevabı da **başka bir vektör** olarak temsil edilir.
+İki vektörün yakınlığı (yani aralarındaki mesafe), bu iki ifadenin anlamca ne kadar benzer olduğunu gösterir. Anlamca yakın ifadelerin vektörleri, matematiksel olarak birbirine daha yakın olacaktır.
+
+## Vektörlerin Amacı Nedir?
+
+Vektörlerin amacı, metinleri anlam düzeyinde temsil etmektir. Yani:
+
+* Aynı anlama gelen iki farklı ifade, vektörlerde birbirine yakın olur. Örneğin:
+    * "Türkiye maçı ne zaman oynandı?" ve "Türkiye’nin maçı hangi tarihteydi?" gibi iki farklı cümle, kelimeler farklı olsa bile benzer anlamlar taşır ve vektörlerde yakın olur.
+* Kelimelerin sıraları veya küçük farklılıklar, anlamı değiştirmeden vektörler aracılığıyla yakalanır.
+
+Bu yüzden, vektör temelli yaklaşım, metinler arasındaki anlamsal benzerlikleri yakalayarak daha doğru sonuçlar bulmamıza yardımcı olur.
+
+## Vektör Depolama Nedir?
+
+**Vektör Depolama (Vector Store)**, çok sayıda metni (veya diğer veri türlerini) vektörler halinde saklayan bir veri yapısıdır. Vektör depolama şunları yapmamıza olanak tanır:
+
+1- **Verileri vektör olarak saklama:** Her bir metin parçası (örneğin bir cümle, paragraf veya belge), bir vektör olarak temsil edilir ve bu vektörler vektör deposuna kaydedilir.
+2- **Sorguları vektör olarak ifade etme:** Kullanıcının soruları da vektör olarak ifade edilir.
+3- **En benzer vektörleri bulma:** Vektör deposu, sorgunun vektörünü, depo içindeki vektörlerle karşılaştırarak en yakın (yani anlamca en alakalı) vektörleri bulur.
+
+## Neden Vektör Depolama Kullanıyoruz?
+
+Vektör depolama, RAG’ın bilgi getirme aşamasını güçlendirir ve şunları sağlar:
+
+**a) Anlamsal (Semantik) Arama**
+Anahtar kelimelere dayalı klasik metin aramaları, sadece kelimelerin aynısının geçtiği yerleri bulur. Ancak, bu yaklaşım bazen yeterli değildir. Çünkü:
+
+- Aynı anlamı farklı kelimelerle ifade edebiliriz.
+- Anlamca alakalı olan verileri bulmak, kelime bazında arama yaparken zor olabilir.
+
+**Vektör depolama**, kelimelerin değil, anlamın arandığı bir sistemdir. Bu, kelimeler farklı olsa bile anlamca en uygun olan yanıtları bulmamıza olanak tanır. Örneğin:
+
+- Kullanıcı sorusu: "Türkiye’nin Gürcistan ile yaptığı maç hangi tarihte oynandı?"
+- Veri: "Türkiye, Gürcistan ile 10 Haziran 2024’te oynadı."
+Bu iki ifade, kelimeler farklı olsa bile anlamca benzerdir. Vektör depolama sayesinde bu anlamlı benzerlik fark edilir ve doğru sonuç döndürülür.
+
+**b) Verimlilik ve Hız**
+Büyük veri kümeleri üzerinde geleneksel metin arama yöntemleriyle çalışmak çok zaman alabilir. Metin arama, her bir kelimeyi tek tek kontrol etmek zorunda olduğu için yavaştır. Ancak vektör depolama, matematiksel olarak vektörler arasındaki mesafeleri hesaplayarak çok daha hızlı bir arama işlemi yapar. Bu, milyonlarca veri parçası arasında bile hızlı sonuçlar almamıza yardımcı olur.
+
+**c) Hassasiyet ve Doğruluk**
+Vektör temelli arama sayesinde, anahtar kelimeye değil, anlama odaklanırız. Bu, daha doğru ve daha alakalı sonuçlar bulmamızı sağlar. Çünkü dil modelleri, sadece kelimelerin değil, tüm ifadenin anlamını anlayabilir.
+
+## Vektör Depolama Süreci Detaylı İnceleme
+
+**a) Veriyi Gömme (Embedding)**
+Her bir veri parçası (**örneğin Euro 2024 maç sonuçları**), bir **vektör** haline getirilir. Bu, dil modeli tarafından yapılır. Verinin anlamını taşıyan bu vektör, **sayısal** bir dizi halindedir. Vektörler, dil modeli tarafından anlam açısından ilişkilendirilir.
+
+Örnek: **"Türkiye 3-1 Gürcistan"** gibi bir sonuç, bir dizi sayıya (vektör) dönüştürülür. Aynı şekilde, **"Almanya 1-1 Fransa"** gibi başka bir sonuç da başka bir vektörle temsil edilir. Bu vektörler anlamlarına göre sayısal olarak birbirlerine yakın veya uzak olabilir.
+
+**b) Vektörleri Depolamak**
+Bu vektörler, bir vektör deposunda saklanır. Vektör deposu, tüm veri setinin vektör temsillerini içerir. Bir veri deposu gibi düşünülebilir, ancak veriler burada sayısal temsiller olarak saklanır. Vektörler daha sonra sorgularla karşılaştırılır.
+
+**c) Sorguyu Gömme**
+Kullanıcının sorduğu soru da benzer şekilde bir vektöre dönüştürülür. Yani, kullanıcı "Türkiye’nin Gürcistan ile yaptığı maç ne zaman oynandı?" diye sorduğunda, bu soru da anlamına göre sayısal bir vektör olarak ifade edilir.
+
+**d) En Uygun Vektörleri Bulma**
+Sorgunun vektörü, vektör deposundaki vektörlerle karşılaştırılır. Bu karşılaştırma, vektörler arasındaki mesafeyi ölçerek yapılır. En yakın mesafeye sahip vektörler, anlamca en benzer olan verilerdir.
+
+Örnek: "**Türkiye maçı ne zaman oynandı?"** sorusunun vektörü, **"Türkiye 3-1 Gürcistan"** verisinin vektörü ile yakınsa, bu verinin bulunduğu belge ilgili sonuç olarak getirilir.
+
+## Koddaki Vektör Depolama Örneği
+```csharp
+ToolResources = new()
+{
+    FileSearch = new()
+    {
+        NewVectorStores =
+        {
+            new VectorStoreCreationHelper([matchesFile.Id]),
+        }
+    }
+}
+
+```
+
+- **NewVectorStores**: Yeni bir vektör deposu oluşturuyoruz. Bu, Euro 2024 maç sonuçlarının vektör olarak saklanacağı yer.
+- **VectorStoreCreationHelper([matchesFile.Id]):** Yüklediğimiz matchesFile (Euro 2024 maç sonuçları dosyası) bir vektör deposuna dönüştürülüyor. Yani bu dosyadaki her veri, birer vektör haline getiriliyor ve vektör deposunda saklanıyor. Kullanıcı bir soru sorduğunda, bu vektörler arasında en uygun olanlar bulunup cevap olarak döndürülecek.
+
+## Vektör Depolamanın Gerçek Hayattaki Uygulaması
+
+**Büyük veri setleri:** Milyonlarca belge içeren bir veri setinde arama yaparken, klasik metin aramaları yetersiz kalabilir. Ancak vektör depolama ile bu işlemler çok daha hızlı ve anlamlı sonuçlarla yapılabilir.
+**Anlam odaklı sorgular:** Anahtar kelimelere dayalı aramaların eksik kaldığı durumlarda, anlam açısından en uygun sonuçları getirmek için vektör depolama kullanılır.
+
+Vektör depolama, RAG sistemlerinde dil modellerinin veri bulma yeteneklerini artırmak için kullanılır. Vektörler, metinlerin sayısal temsilleri olup, anlam bazlı arama yapmamıza olanak tanır. Bu sayede hem hızlı hem de doğru sonuçlar elde edebiliriz. Vektör depolama kullanarak, dil modeline büyük veri kümeleri üzerinde daha doğru sonuçlar üretme imkanı tanırız.
+
 ## Asistanları Kullanarak RAG (Bilgi Getirme ile Zenginleştirilmiş Üretim) Nasıl Kullanılır?
 
 Bu örnekte, Euro 2024'e katılan takımların maç sonuçlarını içeren bir JSON belgeniz olduğunu ve bu verileri analiz edebilecek ve hakkında sorulara cevap verebilecek bir asistan oluşturmak istediğinizi varsayalım.Bu amaca ulaşmak için, **OpenAI.Files** ad alanından **FileClient** ve **OpenAI.Assistants** ad alanından **AssistantClient** kullanılır.
