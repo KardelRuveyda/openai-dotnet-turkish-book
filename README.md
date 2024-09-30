@@ -87,5 +87,20 @@ https://kardelruveyda.github.io/openai-dotnet-turkish-book
 * [Yapılan Örneğin Önemi](./docs/sesiyaziyadokme.md#yapılan-örneğin-önemi)
 
 
+7. [Open AI API Rag Kullanımı](./docs/rag.md#sesi-yazıya-dökme)
+   * [RAG (Retrieval-Augmented Generation) Temel Kavramları](rag.md#rag-retrieval-augmented-generation-temel-kavramları)
+   * [Dil Modelleri ve Vektörler](rag.md#)
+   * [Vektörlerin Amacı Nedir?](rag.md#)
+   * [Vektör Depolama Nedir?](rag.md#)
+   * [Neden Vektör Depolama Kullanıyoruz?](rag.md#)
+   * [Vektör Depolama Süreci Detaylı İnceleme](rag.md#)
+   * [Koddaki Vektör Depolama Örneği](rag.md#)
+   * [Vektör Depolamanın Gerçek Hayattaki Uygulaması](rag.md#)
+   * [Asistanları Kullanarak RAG (Bilgi Getirme ile Zenginleştirilmiş Üretim) Nasıl Kullanılır?](rag.md#)
+   * [Yeni Bir Asistan Oluşturmak](rag.md#)
+   * [Bir İleti Dizisi Oluşturmak](rag.md#)
+   * [Yanıt Mesajlarını Almak](rag.md#)
+   * [Birlikte Uygulama Yapalım!](rag.md#)
+
 ![image](https://github.com/user-attachments/assets/9a71d76d-15a7-45e9-8bf9-78f6ead3a3cc)
 
