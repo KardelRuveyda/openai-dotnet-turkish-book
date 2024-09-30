@@ -1,4 +1,4 @@
-* Başlarken
+![{B4C9E643-5A9A-41A9-9A57-3B41759A597B}](https://github.com/user-attachments/assets/4b4d702b-bc34-4979-bfc4-4445650e2c12)* Başlarken
     * [Ön Koşullar](baslarken.md#Ön-koşullar)
     * [NuGet Paketini Kurma](baslarken.md#nuget-paketini-kurma)
     * [İstemci Kütüphanesini Kullanma](baslarken.md#İstemci-kutuphanesini-kullanma)
@@ -83,4 +83,9 @@
    * [Bir İleti Dizisi Oluşturmak](rag.md#bir-İleti-dizisi-oluşturmak)
    * [Yanıt Mesajlarını Almak](rag.md#yanıt-mesajlarını-almak)
    * [Birlikte Uygulama Yapalım!](rag.md#birlikte-uygulama-yapalım)
+ 
+* Asistanlarla akış ve GPT-4o görüşü nasıl kullanılır?
+   * [Vision Teknolojisinin Amacı ve Faydaları](vision.md#asistanlarla-akış-ve-gpt-4o-görüşü-nasıl-kullanılır)
+   * [GPT-4o Vision'un Özellikleri ve Kullanım Alanları](vision.md#)
+   * [Bir örnekle pekiştirelim!](vision.md#)
      
