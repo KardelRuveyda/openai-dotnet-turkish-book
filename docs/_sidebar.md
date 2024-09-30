@@ -70,7 +70,7 @@
    * [Text to Speech Örneği](sesiyaziyadokme.md#text-to-speech-Örneği)
    * [Yapılan Örneğin Önemi](sesiyaziyadokme.md#yapılan-Örneğin-Önemi)
 * Open AI API Rag Kullanımı
-   * [RAG (Retrieval-Augmented Generation) Temel Kavramları](rag.md#)
+   * [RAG (Retrieval-Augmented Generation) Temel Kavramları](rag.md#rag-retrieval-augmented-generation-temel-kavramları)
    * [Dil Modelleri ve Vektörler](rag.md#)
    * [Vektörlerin Amacı Nedir?](rag.md#)
    * [Vektör Depolama Nedir?](rag.md#)
