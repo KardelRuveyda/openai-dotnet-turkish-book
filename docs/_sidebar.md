@@ -69,3 +69,18 @@
       * [7. Segment Bazlı Zaman Damgalarını Yazdırmak](sesiyaziyadokme.md#_7-segment-bazlı-zaman-damgalarını-yazdırmak)
    * [Text to Speech Örneği](sesiyaziyadokme.md#text-to-speech-Örneği)
    * [Yapılan Örneğin Önemi](sesiyaziyadokme.md#yapılan-Örneğin-Önemi)
+* Open AI API Rag Kullanımı
+   * [RAG (Retrieval-Augmented Generation) Temel Kavramları](rag.md#)
+   * [Dil Modelleri ve Vektörler](rag.md#)
+   * [Vektörlerin Amacı Nedir?](rag.md#)
+   * [Vektör Depolama Nedir?](rag.md#)
+   * [Neden Vektör Depolama Kullanıyoruz?](rag.md#)
+   * [Vektör Depolama Süreci Detaylı İnceleme](rag.md#)
+   * [Koddaki Vektör Depolama Örneği](rag.md#)
+   * [Vektör Depolamanın Gerçek Hayattaki Uygulaması](rag.md#)
+   * [Asistanları Kullanarak RAG (Bilgi Getirme ile Zenginleştirilmiş Üretim) Nasıl Kullanılır?](rag.md#)
+   * [Yeni Bir Asistan Oluşturmak](rag.md#)
+   * [Bir İleti Dizisi Oluşturmak](rag.md#)
+   * [Yanıt Mesajlarını Almak](rag.md#)
+   * [Birlikte Uygulama Yapalım!](rag.md#)
+     
