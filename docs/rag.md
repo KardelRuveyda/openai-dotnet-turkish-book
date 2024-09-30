@@ -30,7 +30,9 @@ Bu yüzden, vektör temelli yaklaşım, metinler arasındaki anlamsal benzerlikl
 **Vektör Depolama (Vector Store)**, çok sayıda metni (veya diğer veri türlerini) vektörler halinde saklayan bir veri yapısıdır. Vektör depolama şunları yapmamıza olanak tanır:
 
 1- **Verileri vektör olarak saklama:** Her bir metin parçası (örneğin bir cümle, paragraf veya belge), bir vektör olarak temsil edilir ve bu vektörler vektör deposuna kaydedilir.
+
 2- **Sorguları vektör olarak ifade etme:** Kullanıcının soruları da vektör olarak ifade edilir.
+
 3- **En benzer vektörleri bulma:** Vektör deposu, sorgunun vektörünü, depo içindeki vektörlerle karşılaştırarak en yakın (yani anlamca en alakalı) vektörleri bulur.
 
 ## Neden Vektör Depolama Kullanıyoruz?
@@ -94,6 +96,7 @@ ToolResources = new()
 ## Vektör Depolamanın Gerçek Hayattaki Uygulaması
 
 **Büyük veri setleri:** Milyonlarca belge içeren bir veri setinde arama yaparken, klasik metin aramaları yetersiz kalabilir. Ancak vektör depolama ile bu işlemler çok daha hızlı ve anlamlı sonuçlarla yapılabilir.
+
 **Anlam odaklı sorgular:** Anahtar kelimelere dayalı aramaların eksik kaldığı durumlarda, anlam açısından en uygun sonuçları getirmek için vektör depolama kullanılır.
 
 Vektör depolama, RAG sistemlerinde dil modellerinin veri bulma yeteneklerini artırmak için kullanılır. Vektörler, metinlerin sayısal temsilleri olup, anlam bazlı arama yapmamıza olanak tanır. Bu sayede hem hızlı hem de doğru sonuçlar elde edebiliriz. Vektör depolama kullanarak, dil modeline büyük veri kümeleri üzerinde daha doğru sonuçlar üretme imkanı tanırız.
