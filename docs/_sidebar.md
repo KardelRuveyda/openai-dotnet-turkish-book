@@ -1,4 +1,4 @@
-![{B4C9E643-5A9A-41A9-9A57-3B41759A597B}](https://github.com/user-attachments/assets/4b4d702b-bc34-4979-bfc4-4445650e2c12)* Başlarken
+* Başlarken
     * [Ön Koşullar](baslarken.md#Ön-koşullar)
     * [NuGet Paketini Kurma](baslarken.md#nuget-paketini-kurma)
     * [İstemci Kütüphanesini Kullanma](baslarken.md#İstemci-kutuphanesini-kullanma)
