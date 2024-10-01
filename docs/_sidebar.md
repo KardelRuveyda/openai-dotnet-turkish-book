@@ -86,6 +86,6 @@
  
 * Asistanlarla akış ve GPT-4o görüşü nasıl kullanılır?
    * [Vision Teknolojisinin Amacı ve Faydaları](vision.md#asistanlarla-akış-ve-gpt-4o-görüşü-nasıl-kullanılır)
-   * [GPT-4o Vision'un Özellikleri ve Kullanım Alanları](vision.md#)
-   * [Bir örnekle pekiştirelim!](vision.md#)
+   * [GPT-4o Vision'un Özellikleri ve Kullanım Alanları](vision.md#gpt-4o-vision39un-Özellikleri-ve-kullanım-alanları)
+   * [Bir örnekle pekiştirelim!](vision.md#bir-örnekle-pekiştirelim)
      
