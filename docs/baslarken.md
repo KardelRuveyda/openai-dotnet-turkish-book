@@ -1,6 +1,7 @@
 # Başlarken
 
 * Bu kitap kapsamında yapılan tüm örneklere [bu repodan](https://github.com/KardelRuveyda/openai-dotnet-exercises) ulaşabilirsiniz!
+* Bu satırları yazarken **OpenAI-2.0.0-beta.13** sürümü dahilindeki tüm güncellemeleri de kapsayan bir kitap oluşturmaya çalıştım. Ama tabii orjinal repo üzerindeki geliştirmeler devam edecektir. Önemli olan bu geliştirmeler kapsamında kitabı güncelleyebilmek. Bu kısımda sizlerin de yardımları pek değerli olur :)
 
 ## Ön Koşullar
 
@@ -49,6 +50,9 @@ Hesabınızda, ne kadar kullanım yaptığınızı ve aylık olarak oluşacak fa
 
 6. **Anahtarı Projenizle Kullanma**
    - API anahtarını aldıktan sonra, OpenAI API'ye erişmek için bu anahtarı kullanabilirsiniz. Örneğin, bir .NET uygulamasında API anahtarını bir yapılandırma dosyasına ekleyebilir ve bu anahtarı kullanarak API çağrıları yapabilirsiniz.
+  
+
+**Not:** _Ben bu kitaptaki örnekleri yapabilmek için hesabıma 10$ yüklemiştim. Tüm örnekleri yapmama rağmen hala 9.74$ dolarım kalmış. Çok fazla bir harcama olmuyor. Onu belirtmek isterim sayın bu satırları okuyan kişiler :)_
 
 ### Örnek API Anahtarı Kullanımı (C#)
 
@@ -85,11 +89,11 @@ dotnet add package OpenAI --prerelease
 
 ```
 
-Kod örnekleri [Open AI Dotnet API Dokümanında](https://github.com/openai/openai-dotnet). .NET 8 kullanılarak yazılmıştır. OpenAI .NET kütüphanesi tüm .NET Standard 2.0 uygulamaları ile uyumludur, ancak bazı kod örnekleri daha yeni dil özelliklerine bağlı olabilir.
+Kod örnekleri [Open AI Dotnet API Dokümanında](https://github.com/openai/openai-dotnet). **.NET 8** kullanılarak yazılmıştır. **OpenAI .NET** kütüphanesi tüm **.NET Standard 2.0** uygulamaları ile uyumludur, ancak bazı kod örnekleri daha yeni dil özelliklerine bağlı olabilir.
 
 ## İstemci Kutuphanesini Kullanma
 
-Bu örnek, OpenAI'nin chat API'sini kullanarak bir sohbet tamamlaması gerçekleştirir. Kod parçacığını inceleyerek temel bir kullanım senaryosunu görebilirsiniz.
+Bu örnek, **OpenAI**'nin chat API'sini kullanarak bir sohbet tamamlaması gerçekleştirir. Kod parçacığını inceleyerek temel bir kullanım senaryosunu görebilirsiniz.
 
 ```csharp
 using OpenAI.Chat;
@@ -109,16 +113,16 @@ Console.WriteLine($"[ASİSTAN]: {completion}");
 using OpenAI.Chat;
 ```
 
-- OpenAI.Chat ad alanını içe aktarır, böylece ChatClient ve diğer chat ile ilgili sınıflara erişim sağlanır.Kurduğumuz paketi burada ekliyoruz. 
+- **OpenAI.Chat** ad alanını içe aktarır, böylece **ChatClient** ve diğer chat ile ilgili sınıflara erişim sağlanır.Kurduğumuz paketi burada ekliyoruz. 
 
 
 ```csharp
 ChatClient client = new(model: "gpt-4o", Environment.GetEnvironmentVariable("OPENAI_API_KEY"));
 ```
 
-- ChatClient sınıfından bir client nesnesi oluşturur.
+- **ChatClient** sınıfından bir **client** nesnesi oluşturur.
 - **model:** **"gpt-4o"** parametresi, kullanılacak **OpenAI** modelini belirtir.
-- Environment.GetEnvironmentVariable("OPENAI_API_KEY") ifadesi, API anahtarını bir ortam değişkeninden alır.
+- **Environment.GetEnvironmentVariable("OPENAI_API_KEY")** ifadesi, API anahtarını bir ortam değişkeninden alır.
 
 ```csharp
 ChatCompletion completion = client.CompleteChat("Şu cümleyi söyle: 'bu bir test.'");
@@ -135,7 +139,7 @@ Ve mutlu son! Ekrana yazdırma işlemi gerçekleşir. Ama tekrardan hatırlatmak
 
 ## Namespace Organizasyonu
 
-`OpenAI` kütüphanesi, OpenAI'nin çeşitli özellik alanlarını yönetmek için bir dizi isim alanına ayrılmıştır. Her bir isim alanı, belirli bir işlevi yerine getiren bir istemci sınıfı içerir. Ben aşağıdaki namespacelerden çoğunu kullandım diyebilirim. Bunları aşağıdaki gibi açıklayabiliriz:
+**`OpenAI`** kütüphanesi, **OpenAI**'nin çeşitli özellik alanlarını yönetmek için bir dizi isim alanına ayrılmıştır. Her bir isim alanı, belirli bir işlevi yerine getiren bir istemci sınıfı içerir. Ben aşağıdaki namespacelerden çoğunu kullandım diyebilirim. Bunları aşağıdaki gibi açıklayabiliriz:
 
 ### `OpenAI.Assistants`
 - **Sınıf:** `AssistantClient`
@@ -144,7 +148,7 @@ Ve mutlu son! Ekrana yazdırma işlemi gerçekleşir. Ama tekrardan hatırlatmak
 ### `OpenAI.Audio`
 - **Sınıf:** `AudioClient`
 - **Açıklama:** Sesle ilgili işlemleri yönetir. Ses verilerini işlemek veya analiz etmek için kullanılır. **`AudioClient`**, sesle ilgili API çağrılarını yönetir.
-[buradan ses örneklerine ulaşabliirsiniz]( https://platform.openai.com/docs/guides/text-to-speech/overview). Oyun seslendirme gibi işlemlerde özellikle kullanılabilir gibi geldi.
+[buradan ses örneklerine ulaşabilirsiniz]( https://platform.openai.com/docs/guides/text-to-speech/overview). Oyun seslendirme gibi işlemlerde özellikle kullanılabilir gibi geldi.
 
 ### `OpenAI.Batch`
 - **Sınıf:** `BatchClient`
@@ -180,7 +184,7 @@ Ve mutlu son! Ekrana yazdırma işlemi gerçekleşir. Ama tekrardan hatırlatmak
 
 ### `OpenAI.VectorStores`
 - **Sınıf:** `VectorStoreClient`
-- **Açıklama:** Vektör verilerini depolama ve yönetme işlemleri için kullanılır. Vektör tabanlı veri yapıları ve sorgulamalar için kullanılır. `VectorStoreClient`, bu tür verileri yönetmek için kullanılır. Ancak web sitesinde hala`[Deneysel]` etiketi ile yer alıyor o yüzden şu anda deneysel olarak kullanıldığını belirtebiliriz.
+- **Açıklama:** Vektör verilerini depolama ve yönetme işlemleri için kullanılır. Vektör tabanlı veri yapıları ve sorgulamalar için kullanılır. **`VectorStoreClient`**, bu tür verileri yönetmek için kullanılır. Ancak web sitesinde hala**`[Deneysel]`** etiketi ile yer alıyor o yüzden şu anda deneysel olarak kullanıldığını belirtebiliriz.
 
 
 ## Async API Kullanma
@@ -262,36 +266,36 @@ public async Task GetWeatherDataAsync()
     Console.WriteLine(response);
 }
 ```
-GetStringAsync kodda ise await anahtar kelimesi kullanılarak veri alınıncaya kadar arka planda beklenir. Bu, uygulamanın diğer işlemleri yapmaya devam etmesini sağlar ve kullanıcı arayüzü donmaz.
+**GetStringAsync** kodda ise await anahtar kelimesi kullanılarak veri alınıncaya kadar arka planda beklenir. Bu, uygulamanın diğer işlemleri yapmaya devam etmesini sağlar ve kullanıcı arayüzü donmaz.
 
 
 ## OpenAIClient Sınıfını Kullanma
 
-OpenAI kütüphanesinin farklı bölümlerini ele alırken, bazen birden fazla alanda işlem yapabilmek için farklı client'larla çalışmak gerekebilir. Ancak, bu client'ların her birini ayrı ayrı yönetmek hem zaman alıcı olabilir hem de verimlilik açısından dezavantaj yaratabilir. Bu noktada OpenAI'nin sunduğu OpenAIClient sınıfı devreye giriyor ve bu süreci önemli ölçüde basitleştiriyor.
+OpenAI kütüphanesinin farklı bölümlerini ele alırken, bazen birden fazla alanda işlem yapabilmek için farklı client'larla çalışmak gerekebilir. Ancak, bu client'ların her birini ayrı ayrı yönetmek hem zaman alıcı olabilir hem de verimlilik açısından dezavantaj yaratabilir. Bu noktada OpenAI'nin sunduğu **OpenAIClient** sınıfı devreye giriyor ve bu süreci önemli ölçüde basitleştiriyor.
 
 ## OpenAIClient Nedir ve Neden Kullanılır?
 
-**OpenAIClient**, temel olarak **OpenAI API** ile etkileşim kurmak için kullanılan merkezi bir nesne gibidir. Birden fazla API alanında çalışırken, aynı uygulama ayrıntılarını birden çok client arasında paylaşarak işlemleri daha verimli hale getirir. Yani, OpenAI’nin farklı özelliklerini (örneğin dil işleme, ses tanıma, vb.) kullanırken her seferinde aynı ayarları yeniden yapmanıza gerek kalmaz. Tüm client'lar ortak bir altyapı üzerinden yönetilir, bu da kodunuzu daha temiz ve yönetilebilir hale getirir.
+**OpenAIClient**, temel olarak **OpenAI API** ile etkileşim kurmak için kullanılan merkezi bir nesne gibidir. Birden fazla API alanında çalışırken, aynı uygulama ayrıntılarını birden çok client arasında paylaşarak işlemleri daha verimli hale getirir. Yani, OpenAI’nin farklı özelliklerini **(örneğin dil işleme, ses tanıma, vb.)** kullanırken her seferinde aynı ayarları yeniden yapmanıza gerek kalmaz. Tüm client'lar ortak bir altyapı üzerinden yönetilir, bu da kodunuzu daha temiz ve yönetilebilir hale getirir.
 
 Örneğin, birden fazla modeli hedefleyen farklı client'lar kullanmanız gerektiğinde, **OpenAIClient** tek bir API anahtarı ve aynı uygulama yapılandırması ile bu client'ları oluşturabilir. Bu, her client için aynı adımları tekrar tekrar yapmaktan kaçınmanızı sağlar ve geliştirici açısından iş yükünü azaltır.
 
 ## OpenAIClient Nasıl Kullanılır?
 
-OpenAIClient oluşturmak oldukça basit bir işlemdir. İhtiyacınız olan şey yalnızca OpenAI API anahtarınızı sağlamak. Çoğu projede bu anahtar çevresel değişkenlerde saklanılarak kullanılabilir.
+**OpenAIClient** oluşturmak oldukça basit bir işlemdir. İhtiyacınız olan şey yalnızca OpenAI API anahtarınızı sağlamak. Çoğu projede bu anahtar çevresel değişkenlerde saklanılarak kullanılabilir.
 
 ```csharp
 OpenAIClient client = new(Environment.GetEnvironmentVariable("OPENAI_API_KEY"));
 ```
 
-Burada, Environment.GetEnvironmentVariable("OPENAI_API_KEY") ifadesi, işletim sisteminizde tanımlı olan bir ortam değişkeninden API anahtarını alır ve bu anahtarı kullanarak bir OpenAIClient nesnesi oluşturur. Bu nesne, artık OpenAI ile etkileşim kurabilen diğer client'ları üretmek için kullanılabilir.
+Burada, **Environment.GetEnvironmentVariable("OPENAI_API_KEY")** ifadesi, işletim sisteminizde tanımlı olan bir ortam değişkeninden API anahtarını alır ve bu anahtarı kullanarak bir **OpenAIClient** nesnesi oluşturur. Bu nesne, artık **OpenAI** ile etkileşim kurabilen diğer client'ları üretmek için kullanılabilir.
 
-Diyelim ki OpenAI'nin sesle ilgili hizmetlerini kullanarak bir bot geliştiriyorsunuz. Bu noktada, metni sese dönüştürmek veya ses tanıma işlemleri yapmak için **AudioClient** sınıfına ihtiyacınız olacak. İşte bu noktada, OpenAIClient'ın size sunduğu avantajlardan biri devreye girer. Bir AudioClient oluşturmak için, OpenAIClient nesnesinin **GetAudioClient** metodunu kullanabilirsiniz. Bu metod, hangi modeli kullanacağınızı belirterek size bir AudioClient döndürür.
+Diyelim ki **OpenAI**'nin sesle ilgili hizmetlerini kullanarak bir bot geliştiriyorsunuz. Bu noktada, metni sese dönüştürmek veya ses tanıma işlemleri yapmak için **AudioClient** sınıfına ihtiyacınız olacak. İşte bu noktada, OpenAIClient'ın size sunduğu avantajlardan biri devreye girer. Bir **AudioClient** oluşturmak için, OpenAIClient nesnesinin **GetAudioClient** metodunu kullanabilirsiniz. Bu metod, hangi modeli kullanacağınızı belirterek size bir AudioClient döndürür.
 
 ```csharp
 AudioClient ttsClient = client.GetAudioClient("tts-1");
 ```
 
-Yukarıdaki örnek, tts-1 modelini kullanarak bir sesli metin (Text-to-Speech) client'ı oluşturur. Bu sayede, yazdığınız metinleri bu client üzerinden sese dönüştürebilirsiniz.
+Yukarıdaki örnek, **tts-1** modelini kullanarak bir sesli metin (Text-to-Speech) client'ı oluşturur. Bu sayede, yazdığınız metinleri bu client üzerinden sese dönüştürebilirsiniz.
 
 Benzer şekilde, OpenAI'nin diğer ses modellerini kullanmak için de aynı yapıyı kullanabilirsiniz. Örneğin, OpenAI’nin Whisper modeli ile bir ses tanıma client'ı oluşturmak için şu şekilde bir kod yazabilirsiniz:
 
@@ -299,9 +303,9 @@ Benzer şekilde, OpenAI'nin diğer ses modellerini kullanmak için de aynı yap�
 AudioClient whisperClient = client.GetAudioClient("whisper-1");
 ```
 
-Bu yaklaşım, her model için ayrı bir AudioClient oluşturmanıza olanak tanır, böylece farklı kullanım senaryolarına göre çeşitli ses modelleriyle çalışabilirsiniz.
+Bu yaklaşım, her model için ayrı bir **AudioClient** oluşturmanıza olanak tanır, böylece farklı kullanım senaryolarına göre çeşitli ses modelleriyle çalışabilirsiniz.
 
-OpenAIClient, özellikle birden fazla alanda API'yi kullanırken işlerinizi oldukça kolaylaştırır. Farklı client'larla çalışırken her birini ayrı ayrı oluşturmak yerine, OpenAIClient ile merkezi bir yönetim sağlayabilirsiniz. Bu yapı, hem daha temiz bir kod yapısı oluşturmanıza yardımcı olur hem de performansı optimize eder.
+**OpenAIClient**, özellikle birden fazla alanda API'yi kullanırken işlerinizi oldukça kolaylaştırır. Farklı client'larla çalışırken her birini ayrı ayrı oluşturmak yerine, OpenAIClient ile merkezi bir yönetim sağlayabilirsiniz. Bu yapı, hem daha temiz bir kod yapısı oluşturmanıza yardımcı olur hem de performansı optimize eder.
 
 Bu nedenle, eğer OpenAI’nin sunduğu çeşitli hizmetleri tek bir projede kullanmayı planlıyorsanız, OpenAIClient sınıfını tercih etmek, uzun vadede işlerinizi hızlandıracak ve yönetimi kolaylaştıracaktır. Özellikle ses, dil işleme veya diğer alanlarda sıkça OpenAI API kullanıyorsanız, bu yaklaşım sizin için ideal olacaktır.
 
