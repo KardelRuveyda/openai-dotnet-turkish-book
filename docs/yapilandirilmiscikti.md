@@ -107,6 +107,8 @@ Bu kod, OpenAI API'den gelen yapılandırılmış bir JSON yanıtı alır ve bu 
 
 
 **Çıktı:**
+
+
 ![ezgif-4-e1effd4b1e](https://github.com/user-attachments/assets/a0785e65-8608-4e66-9b5e-21d6172732fb)
 
 
