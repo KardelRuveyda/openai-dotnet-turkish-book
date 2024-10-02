@@ -41,11 +41,11 @@ Bir sohbette (chat completion) yapılandırılmış çıktı kullanmak istiyorsa
 
         };
 ```
-Bu şemada, modelin yanıtı iki ana bileşenden oluşur: **steps (adımlar)** ve **final_answer (nihai sonuç)**. **Steps**, modelin yanıtını adım adım açıklayan bir dizi içerir. Bu dizi, her bir adımı açıklayan ve sonucu (çıktıyı) gösteren nesnelerden oluşur. Her adımda iki anahtar özellik bulunur: **"explanation"** **(açıklama) **ve **"output" (çıktı)**. **"Explanation"**, adımın neden ve nasıl yapıldığını açıklarken, "output" o adımdan elde edilen sonucu gösterir. Örneğin, matematiksel bir problem çözümünde, her bir adım modelin problemi nasıl çözdüğünü açıklayan ve o adımdaki sonucu gösteren verilerle sunulacaktır. Bu yapı, modelin yanıtını yalnızca nihai bir sonuçla sınırlamaz, aynı zamanda bu sonuca nasıl ulaşıldığını adım adım açıklar. **Final_answer** ise modelin ürettiği nihai sonucu içerir. Bu, tüm adımlar tamamlandıktan sonra elde edilen son cevaptır ve yanıtın en kritik kısmını temsil eder. Bu yapı, kullanıcının modeli yalnızca bir yanıt almak için değil, aynı zamanda o yanıtın mantığını ve çözüm sürecini anlayabilmesi için de kullanmasına olanak tanır.
+Bu şemada, modelin yanıtı iki ana bileşenden oluşur: **steps (adımlar)** ve **final_answer (nihai sonuç)**. **Steps**, modelin yanıtını adım adım açıklayan bir dizi içerir. Bu dizi, her bir adımı açıklayan ve sonucu (çıktıyı) gösteren nesnelerden oluşur. Her adımda iki anahtar özellik bulunur: **"explanation"** **(açıklama) **ve **"output" (çıktı)**. **"Explanation"**, adımın neden ve nasıl yapıldığını açıklarken, **"output"** o adımdan elde edilen sonucu gösterir. Örneğin, matematiksel bir problem çözümünde, her bir adım modelin problemi nasıl çözdüğünü açıklayan ve o adımdaki sonucu gösteren verilerle sunulacaktır. Bu yapı, modelin yanıtını yalnızca nihai bir sonuçla sınırlamaz, aynı zamanda bu sonuca nasıl ulaşıldığını adım adım açıklar. **Final_answer** ise modelin ürettiği nihai sonucu içerir. Bu, tüm adımlar tamamlandıktan sonra elde edilen son cevaptır ve yanıtın en kritik kısmını temsil eder. Bu yapı, kullanıcının modeli yalnızca bir yanıt almak için değil, aynı zamanda o yanıtın mantığını ve çözüm sürecini anlayabilmesi için de kullanmasına olanak tanır.
 
 * **ChatCompletionOptions** sınıfı, dil modeline yapılacak sohbet tamamlama isteği için çeşitli ayarları yapılandırmanıza olanak tanır. Bu örnekte, options değişkeni yanıtın formatını ve içeriğini belirleyen ayarları içerir.
-* Bu ayar, dil modelinin yanıtının hangi formatta döneceğini belirler. Burada **ChatResponseFormat.CreateJsonSchemaFormat** kullanılarak yanıtın belirli bir JSON şemasına uygun olarak döndürülmesi isteniyor.
-* CreateJsonSchemaFormat fonksiyonu içine, yanıtın belirli bir şemaya uygun olması gerektiği belirtmemiz gerekiyor. Şema da şu kuralları içeriyor:
+* Bu ayar, dil modelinin yanıtının hangi formatta döneceğini belirler. Burada **ChatResponseFormat.CreateJsonSchemaFormat** kullanılarak yanıtın belirli bir **JSON** şemasına uygun olarak döndürülmesi isteniyor.
+* **CreateJsonSchemaFormat** fonksiyonu içine, yanıtın belirli bir şemaya uygun olması gerektiği belirtmemiz gerekiyor. Şema da şu kuralları içeriyor:
     *  JSON Şeması İsmi: **"math_reasoning"** adında bir şema kullanılıyor. Bu isim, matematiksel bir problemin adım adım çözülmesi için bir yapı olduğunu ifade ediyor.
     *  **steps**: Bir dizi (array) olup, her adım bir nesne (object) olarak tanımlanmıştır. Her nesne, iki zorunlu özelliğe sahip:
         * **explanation**: Bu, bir açıklama metni olacaktır ve string türündedir.
@@ -53,9 +53,9 @@ Bu şemada, modelin yanıtı iki ana bileşenden oluşur: **steps (adımlar)** v
     * **final_answer**: Nihai cevabı temsil eden bir string'dir.
 
 **Şema ayrıca şu kuralları belirler:**
-* **required:** Bu kısım, hangi özelliklerin zorunlu olduğunu belirtir. Yanıtın, mutlaka steps ve final_answer özelliklerini içermesi gerekir.
-* **additionalProperties:** false: Yanıtta şemada tanımlanmayan başka özelliklerin yer almasına izin verilmediğini ifade eder. Yani yanıt sadece steps ve final_answer özelliklerini içerebilir.
-* **BinaryData.FromBytes()** ile JSON şeması, byte dizisine çevrilerek BinaryData.FromBytes metoduyla API'ye gönderilir. Bu, modelin yanıtının belirli bir formatta döndürülmesini sağlar.
+* **required:** Bu kısım, hangi özelliklerin zorunlu olduğunu belirtir. Yanıtın, mutlaka **steps** ve **final_answer** özelliklerini içermesi gerekir.
+* **additionalProperties:** false: Yanıtta şemada tanımlanmayan başka özelliklerin yer almasına izin verilmediğini ifade eder. Yani yanıt sadece **steps** ve **final_answer** özelliklerini içerebilir.
+* **BinaryData.FromBytes()** ile **JSON** şeması, byte dizisine çevrilerek **BinaryData.FromBytes** metoduyla API'ye gönderilir. Bu, modelin yanıtının belirli bir formatta döndürülmesini sağlar.
 * **jsonSchemaIsStrict:** true ayarı ile yanıtın şemaya tam olarak uymasını zorunlu kılar. Yani model, şemada belirtilen özelliklerden herhangi birini atlayamaz ya da ekstra özellik ekleyemez.
 
 
