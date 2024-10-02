@@ -95,7 +95,7 @@ foreach (JsonElement stepElement in structuredJson.RootElement.GetProperty("step
     Console.WriteLine($"  - Explanation: {stepElement.GetProperty("explanation").GetString()}");
     Console.WriteLine($"    Output: {stepElement.GetProperty("output").GetString()}");
 }
-```
+``` 
 
 **GetProperty("steps"):** JSON yanıtındaki **steps** (adımlar) özelliğine erişir. Bu özellik, çözümün her adımını açıklayan bir dizi içerir.
 **EnumerateArray():** **steps** alanı bir dizi olduğu için her bir adımı tek tek ele almak için bu metot kullanılır.
