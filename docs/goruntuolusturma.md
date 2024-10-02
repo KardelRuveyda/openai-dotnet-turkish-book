@@ -93,7 +93,9 @@ bytes.ToStream().CopyTo(stream);
 
 ## Konsol Bilgisi ve Oluşturulan Fotoğraf
 
-![image](https://github.com/user-attachments/assets/13e6af9e-fdef-485c-b959-1243fb9bd24a)
+
+![ezgif-5-bac5703c47](https://github.com/user-attachments/assets/fcb45260-a76a-478f-a57a-c6fbc4a16520)
+
 
 ![{8A10B568-281B-4395-93C1-989FC4F420FD}](https://github.com/user-attachments/assets/8a57a296-d8d5-4253-a05d-bf0f892372f1)
 
