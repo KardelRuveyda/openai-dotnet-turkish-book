@@ -597,6 +597,7 @@ namespace MyOpenAIProject.Examples
 ```
 
 ## Çıktı : 
-![ezgif-3-a623f6e4c7](https://github.com/user-attachments/assets/dac6cc4d-1cce-450a-88f1-b5e875a71172)
+
+![ezgif-1-fe3f5653db](https://github.com/user-attachments/assets/644493fa-de72-4c22-b0ed-66a736663725)
 
 
