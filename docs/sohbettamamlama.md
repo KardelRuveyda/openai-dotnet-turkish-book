@@ -37,7 +37,7 @@ Asenkron programlama ile, akışlı bir yanıtı CompleteChatStreamingAsync meto
 
 ```csharp
 AsyncCollectionResult<StreamingChatCompletionUpdate> updates
-    = client.CompleteChatStreamingAsync("Bu bir testtir.");
+    = client.CompleteChatStreamingAsync("This is a test.");
 
 Console.WriteLine($"[ASİSTAN]:");
 await foreach (StreamingChatCompletionUpdate update in updates)
@@ -48,6 +48,8 @@ await foreach (StreamingChatCompletionUpdate update in updates)
     }
 }
 ```
+![ezgif-4-a24c6381c2](https://github.com/user-attachments/assets/39ce444d-fb18-4e32-860c-935651baaac1)
+
 Bu örnekte, await foreach yapısı kullanılarak her bir kısmi yanıt asenkron olarak işlenir ve ekrana yazdırılır. Bu sayede yanıtlar hem asenkron olarak işlenir hem de hızlı bir şekilde kullanıcıya sunulabilir. İlk olarak, **CompleteChatStreamingAsync** metodu kullanılarak **"Bu bir testtir."** ifadesiyle bir sohbet tamamlama isteği asenkron olarak gönderilir ve yanıtlar **AsyncCollectionResult<StreamingChatCompletionUpdate>** türünde updates değişkenine atanır. Ardından, **"[ASİSTAN]:"** başlığı ekrana yazdırılır. Bu noktadan sonra, await foreach yapısıyla updates koleksiyonundaki her bir StreamingChatCompletionUpdate nesnesi asenkron olarak işlenir. Her bir güncelleme içinde yer alan ContentUpdate koleksiyonundaki her bir **ChatMessageContentPart** nesnesinin **Text** özelliği, yani yanıtın içeriği, ekrana sırayla yazdırılır. Bu süreç, gelen yanıtları anlık olarak ekrana yazdırarak kullanıcının asistanın yanıtını gerçek zamanlı görmesini sağlar.
 
 ## Neden Streaming Kullanılmalı?
