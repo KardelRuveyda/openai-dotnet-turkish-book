@@ -147,6 +147,8 @@ Eğer birden fazla dosya üzerinde çalışmayı planlıyorsan, her dosya için 
 
 Bu kod, OpenAI'nin **Text-to-Speech (TTS)** işlevselliğini kullanarak belirli bir metni sese dönüştüren ve bu sesi bir **.mp3** dosyasına kaydeden bir uygulamadır. İlk olarak, **ConfigReader.ReadApiKeyFromConfig()** fonksiyonu ile API anahtarı yapılandırma dosyasından okunarak, OpenAI hizmetlerine erişim sağlanır. **AudioClient** sınıfı, OpenAI'nin TTS modelini ("tts-1") kullanmak için bir istemci olarak tanımlanır ve bu istemci, kullanıcı tarafından sağlanan metni sese dönüştürmek için kullanılır. Burada kullanılan metin, Türkçe bir içerik olup, OpenAI API ile ilgili çevrimiçi bir kitabın Developer Summit için hazırlandığından bahsetmektedir. **client.GenerateSpeech()** fonksiyonu, metni **GeneratedSpeechVoice.Alloy** sesiyle sese dönüştürür ve sonuç, ham ses verisi olan BinaryData formatında saklanır. Bu ses verisi daha sonra FileStream kullanılarak yerel diske kaydedilir. Dosya adı olarak **Guid.NewGuid()** kullanılarak benzersiz bir kimlik oluşturulur, bu sayede her çalıştırmada farklı bir dosya adı elde edilir. Son olarak, **speech.ToStream().CopyTo(stream)** işlemi ile oluşturulan ses verisi, açılan dosya akışına kopyalanır ve **MP3** formatında kaydedilir. Bu işlem, verilen metni hızlıca sese dönüştürerek bir ses dosyasına dönüştürmek için kullanılır, ve bu dosya yerel diskte saklanır.
 
+[Ses dosyasını dinleyin]([https://github.com/kullanici-adi/proje-adi/raw/main/assets/ornek.mp3](https://github.com/KardelRuveyda/openai-dotnet-turkish-book/blob/main/docs/audio/bef2b700-4995-47f4-a7f3-38146776b5dd.mp3))
+
 
 ## Yapılan Örneğin Önemi
 
