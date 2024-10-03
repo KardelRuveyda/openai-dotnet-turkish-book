@@ -121,7 +121,7 @@ Bu örnekte bir ses dosyasını **Whisper** modeli ile metne dönüştürüp hem
 
 Eğer birden fazla dosya üzerinde çalışmayı planlıyorsan, her dosya için benzer bir yapı oluşturabilir ve transkripsiyon işlemlerini bu yapı içinde yönetebilirsin.
 
-![image](https://github.com/user-attachments/assets/8467cc3d-0671-4fb7-9097-efd823dd8995)
+[Ses dosyasını dinleyin](https://github.com/user-attachments/assets/8467cc3d-0671-4fb7-9097-efd823dd8995)
 
 ## Text to Speech Örneği
 
