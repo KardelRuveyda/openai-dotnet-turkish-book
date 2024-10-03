@@ -310,7 +310,7 @@ Bu yaklaşım, her model için ayrı bir **AudioClient** oluşturmanıza olanak 
 Bu nedenle, eğer OpenAI’nin sunduğu çeşitli hizmetleri tek bir projede kullanmayı planlıyorsanız, OpenAIClient sınıfını tercih etmek, uzun vadede işlerinizi hızlandıracak ve yönetimi kolaylaştıracaktır. Özellikle ses, dil işleme veya diğer alanlarda sıkça OpenAI API kullanıyorsanız, bu yaklaşım sizin için ideal olacaktır.
 
 
-
+[Kod örneği için tıklayınız](https://github.com/KardelRuveyda/openai-dotnet-exercises/tree/master/Examples/01)
 
 
 
