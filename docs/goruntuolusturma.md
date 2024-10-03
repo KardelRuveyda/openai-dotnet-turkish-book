@@ -107,6 +107,7 @@ Görüntü üretimi, özellikle iç mimarlık, moda tasarımı ve yaratıcı san
 Bunun yanı sıra, bu tür görsellerin yerel depolama birimlerine kaydedilmesi büyük bir esneklik sağlar. Tasarımcılar, ürettikleri görselleri daha sonra projelerinde kullanmak üzere arşivleyebilir, müşterilerle paylaşabilir veya gelecekteki projelere ilham vermek için saklayabilirler. Ayrıca, bu görseller çeşitli platformlarda kolayca paylaşılabilir ve uygulamanın sonucunu daha geniş kitlelere sunmak için etkili bir araç haline gelir. Bu özellikler, tasarım sürecini daha verimli, esnek ve yaratıcı hale getirir. Görüntülerin hızlı bir şekilde üretilebilmesi, projelerin deneme aşamasında bile görsel sunumların yapılabilmesine olanak tanır ve tasarım sürecinde geribildirimlerin daha hızlı alınmasını sağlar. Bu da, projelerin müşterilere daha iyi sunulmasını ve nihai ürünün geliştirilmesini büyük ölçüde kolaylaştırır.
 
 
+[Kodu incelemek için buraya tıklayabilirsiniz](https://github.com/KardelRuveyda/openai-dotnet-exercises/tree/master/Examples/06)
 
 
 
