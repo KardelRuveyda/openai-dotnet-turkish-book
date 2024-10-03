@@ -519,4 +519,5 @@ foreach (ThreadMessage message in messages)
 
 ![image](https://github.com/user-attachments/assets/aa063e0d-dfb5-4ec2-94c1-c6fdbdfd9b26)
 
+[Kodu incelemek için buraya tıklayabilirsiniz](https://github.com/KardelRuveyda/openai-dotnet-exercises/tree/master/Examples/08)
 
