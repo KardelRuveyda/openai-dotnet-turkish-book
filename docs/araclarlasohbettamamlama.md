@@ -601,3 +601,5 @@ namespace MyOpenAIProject.Examples
 ![ezgif-1-fe3f5653db](https://github.com/user-attachments/assets/644493fa-de72-4c22-b0ed-66a736663725)
 
 
+[Kodu incelemek için buraya tıklayabilirsiniz.](https://github.com/KardelRuveyda/openai-dotnet-exercises/tree/master/Examples/03)
+
