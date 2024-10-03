@@ -517,5 +517,6 @@ foreach (ThreadMessage message in messages)
 
 **Çıktı:**
 
-![rag](https://github.com/user-attachments/assets/081143e0-3c33-498f-887b-b0b473e81b46)
+![image](https://github.com/user-attachments/assets/aa063e0d-dfb5-4ec2-94c1-c6fdbdfd9b26)
+
 
