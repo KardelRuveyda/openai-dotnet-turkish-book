@@ -119,7 +119,7 @@ Yapılandırılmış çıktılar, karmaşık problemlerin çözümünde düzenli
 
 
 
-
+[Kodu incelemek için buraya tıklayabilirsiniz.](https://github.com/KardelRuveyda/openai-dotnet-exercises/tree/master/Examples/04)
 
 
 
