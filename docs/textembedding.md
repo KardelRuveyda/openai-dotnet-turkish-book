@@ -187,5 +187,4 @@ Embedding, ham verileri (örneğin metinleri) düşük boyutlu, yoğun (dense) v
 
 
 
-
-
+[Kodu incelemek için buraya tıklayabilirsiniz.](https://github.com/KardelRuveyda/openai-dotnet-exercises/tree/master/Examples/05)
