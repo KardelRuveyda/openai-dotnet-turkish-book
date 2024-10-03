@@ -4,56 +4,190 @@ Metin embeddingleri, metin dizelerinin birbirleriyle ne kadar ilişkili olduğun
 
 ## Metin Gömmelerinin Kullanımı
 
-Metin gömmeleri sürecinde, her bir metin (örneğin bir otel açıklaması ya da kullanıcının aradığı otel tipiyle ilgili yazdığı bir metin) sayısal bir dizi olarak temsil edilir. Bu sayısal temsil, "gömme" (embedding) olarak adlandırılır ve her metin için oluşturulur. Gömmeler, genellikle **uzun sayılar dizisi (vektör)** şeklindedir ve bu vektörler, metinlerin içeriklerini birbirleriyle karşılaştırmamıza olanak tanır. Örneğin, otel açıklamaları için oluşturulan gömmeler, her bir otelin açıklamasındaki kelimelerin anlamını ve bağlamını sayısal olarak ifade eder. Aynı şekilde, kullanıcı bir otel tanımlaması yaptığında (örneğin, "lüks otel, havuzlu ve şehir merkezinde" gibi), bu tanımlamadan da bir gömme oluşturulur. Kullanıcının bu tanımlaması, otel açıklamalarıyla ilişkili olarak bir arama sorgusuna dönüştürülür. Metin gömmelerinin vektör tabanlı yapısı sayesinde, kullanıcı tarafından girilen açıklama ile otel açıklamaları arasında bir kıyaslama yapılır. Gömmeler, aralarındaki benzerliği ölçerek, kullanıcının isteğine en yakın otel açıklamalarını bulmamıza olanak tanır. Bu benzerlik, vektörlerin birbirlerine olan uzaklıklarıyla ölçülür; vektörler ne kadar yakınsa, metinler o kadar ilişkili demektir. Bu süreç, büyük ölçekte otel arama ve öneri sistemleri gibi uygulamalarda kullanıcılara daha kişiselleştirilmiş ve anlamlı sonuçlar sunmak için güçlü bir yöntem sunar. Gömmelerin boyutu, modelin karmaşıklığına göre değişir; daha büyük gömmeler genellikle daha doğru sonuçlar sağlasa da, daha fazla hesaplama kaynağı gerektirebilir. Bu nedenle, gömmenin boyutlarını optimize ederek sistemin performansını dengelemek mümkündür.
+Metin gömmeleri sürecinde, her bir metin (örneğin bir otel açıklaması ya da kullanıcının aradığı otel tipiyle ilgili yazdığı bir metin) **sayısal bir dizi** olarak temsil edilir. Bu sayısal temsil, **"gömme" (embedding)** olarak adlandırılır ve her metin için oluşturulur. Gömmeler, genellikle **uzun sayılar dizisi (vektör)** şeklindedir ve bu vektörler, metinlerin içeriklerini birbirleriyle karşılaştırmamıza olanak tanır. Örneğin, otel açıklamaları için oluşturulan gömmeler, her bir otelin açıklamasındaki kelimelerin anlamını ve bağlamını **sayısal** olarak ifade eder. Aynı şekilde, kullanıcı bir otel tanımlaması yaptığında (örneğin, "lüks otel, havuzlu ve şehir merkezinde" gibi), bu tanımlamadan da bir gömme oluşturulur. Kullanıcının bu tanımlaması, otel açıklamalarıyla ilişkili olarak bir arama sorgusuna dönüştürülür. Metin gömmelerinin vektör tabanlı yapısı sayesinde, kullanıcı tarafından girilen açıklama ile otel açıklamaları arasında bir kıyaslama yapılır. Gömmeler, aralarındaki benzerliği ölçerek, kullanıcının isteğine en yakın otel açıklamalarını bulmamıza olanak tanır. Bu benzerlik, vektörlerin birbirlerine olan uzaklıklarıyla ölçülür; **vektörler ne kadar yakınsa**, metinler o kadar ilişkili demektir. Bu süreç, büyük ölçekte otel arama ve öneri sistemleri gibi uygulamalarda kullanıcılara daha kişiselleştirilmiş ve anlamlı sonuçlar sunmak için güçlü bir yöntem sunar. Gömmelerin boyutu, modelin karmaşıklığına göre değişir; daha büyük gömmeler genellikle daha doğru sonuçlar sağlasa da, daha fazla hesaplama kaynağı gerektirebilir. Bu nedenle, gömmenin boyutlarını optimize ederek sistemin performansını dengelemek mümkündür.
 
-Örneğin, **OpenAI**’nın **EmbeddingClient** sınıfı kullanılarak, aşağıdaki gibi bir otel açıklaması için metin embeddingsi oluşturabilirsiniz:
-
-```csharp
-using OpenAI.Embeddings;
-
-EmbeddingClient client = new(model: "text-embedding-3-small", Environment.GetEnvironmentVariable("OPENAI_API_KEY"));
-
-string description = "Best hotel in town if you like luxury hotels. They have an amazing infinity pool, a spa,"
-    + " and a really helpful concierge. The location is perfect -- right downtown, close to all the tourist"
-    + " attractions. We highly recommend this hotel.";
-
-Embedding embedding = client.GenerateEmbedding(description);
-ReadOnlyMemory<float> vector = embedding.Vector;
-```
-Yukarıdaki kod, **"luxury hotel"** ile ilgili açıklamayı alır ve bunun için bir (embedding) oluşturur. **GenerateEmbedding** fonksiyonu, bu metni alıp sayısal bir temsil olan embedding vektörüne dönüştürür. Bu embedding, ReadOnlyMemory<float> türünde bir vektör olup, modelin boyutuna bağlı olarak vektörün uzunluğu değişir. Örneğin:
-- **text-embedding-3-small** modelinde bu vektörün uzunluğu **1536**,
-- **text-embedding-3-large** modelinde ise **3072** olabilir.
-
-Bu sayısal temsil (vektör) metinlerin birbiriyle ne kadar ilişkili olduğunu ölçmek için kullanılır. Örneğin, kullanıcının aradığı otelin tanımı ile veritabanında saklanan otel açıklamaları karşılaştırılır ve en yakın sonuçlar önerilir.
-
-Bu kod parçası, OpenAI’nin metin gömmeleri (text embeddings) kullanarak bir metni sayısal bir vektör formatına dönüştürmek için tasarlanmıştır. Bu vektör, metnin anlamını ve yapısını matematiksel olarak temsil eder.
-
-- OpenAI’nin gömme (embedding) işlemi için gereken **OpenAI.Embeddings** ad alanını kullanıma dahil edilmelidir. Bu ad alanı, metin gömmeleri oluşturmak için gereken sınıfları ve metodları içerir.
-- **EmbeddingClient:** Bu sınıf, metinleri vektörlere (gömmeler) dönüştürmek için kullanılır.
-- **model: "text-embedding-3-small"**: **text-embedding-3-small** modelini kullanarak gömme oluşturulacağını belirtir. Bu model, her metni **1536** boyutlu bir vektörle temsil eder. Daha büyük model olan **text-embedding-3-large**, her metni **3072** boyutlu bir vektörle temsil eder.
-- **GenerateEmbedding**: **EmbeddingClient** sınıfının bir metodudur ve verilen metni bir gömme vektörüne dönüştürür.
-- **embedding.Vector:** Gömme işlemi sonucunda üretilen vektörü içerir. Bu vektör, otel açıklamasını temsil eden bir sayılar dizisidir.
-- **ReadOnlyMemory<float>:** Vektör, float türünde sayılardan oluşan bir dizidir ve bu dizinin salt okunur (read-only) olması sağlanır. Bu sayede, dışarıdan yapılan müdahalelerle değiştirilmesi önlenir.
-- **text-embedding-3-small** modelini kullandığınız için, bu vektör **1536** boyutlu olacaktır. Her float değeri, açıklamanın belirli bir özelliğini temsil eden bir sayısal değeri içerir. Bu vektör, gömmenin bir dijital temsili olduğu için metinler arasındaki benzerlikleri ölçmek için kullanılabilir. Örneğin, iki otel açıklamasının gömme vektörleri arasındaki mesafe, bu iki otelin birbirine ne kadar benzediğini gösterir.
-- Daha büyük modeller (örneğin text-embedding-3-large) daha yüksek boyutlu gömmeler (3072) üretir ve bu genellikle daha iyi performans sağlar. Ancak, büyük vektörler daha fazla hesaplama, bellek ve depolama maliyeti gerektirir. Bu yüzden uygulamaya ve ihtiyaçlara göre daha küçük bir model seçmek de mantıklı olabilir.
-
-## Embedding Boyutlarını Ayarlama
-
-Büyük embeddingler (örneğin, 3072 boyutundaki vektörler), daha yüksek doğruluk sağlayabilir, ancak aynı zamanda daha fazla hesaplama gücü, bellek ve depolama alanı gerektirir. Eğer daha düşük boyutlu bir embedding kullanmak isterseniz, EmbeddingGenerationOptions sınıfını kullanarak boyutları ayarlayabilirsiniz:
+Örneğin, **OpenAI**’nın **EmbeddingClient** sınıfı kullanılarak, aşağıdaki gibi bir otel açıklaması için **metin embeddingsi** oluşturabilirsiniz:
 
 ```csharp
-EmbeddingGenerationOptions options = new() { Dimensions = 512 };
-Embedding embedding = client.GenerateEmbedding(description, options);
+        private readonly string apiKey  = ConfigReader.ReadApiKeyFromConfig();
+
+        private readonly string description = "Bu otobüs firmasıyla yaptığım yolculuk oldukça keyifliydi. Koltuklar rahat ve genişti, ayrıca"
+                                          + " personel çok nazikti. İkramlar yeterliydi ve zamanında varış sağlandı. Güvenli bir yolculuk için kesinlikle"
+                                          + " tavsiye ederim.";
+        private readonly string category = "Lüks";
 ```
 
-Bu örnekte, 512 boyutlu bir embedding oluşturulmuştur. Bu, hesaplama maliyetlerini azaltırken yine de yeterli performans sağlayabilir.
+```csharp
+        public void SimpleEmbedding()
+        {
+            EmbeddingClient client = new("text-embedding-3-small", apiKey);
+            OpenAIEmbedding embedding = client.GenerateEmbedding(description);
+            ReadOnlyMemory<float> vector = embedding.ToFloats();
 
-Metin embeddingleri, kullanıcıların yazdığı açıklamaların ilişkili içeriklerle eşleşmesini sağlar. embeddingler kullanılarak, bir metni sayısal bir forma dönüştürüp, bu sayılar arasındaki ilişkiler ölçülerek en uygun sonuçlar sunulabilir. Özellikle arama ve öneri sistemlerinde bu teknik, metinler arasındaki benzerliği ölçmek için oldukça etkili bir yöntemdir.
+            Console.WriteLine($"Boyut(Dimension): {vector.Length}");
+            Console.WriteLine($"Kayan Noktalı Sayılar(Float): ");
+            for (int i = 0; i < vector.Length; i++)
+            {
+                Console.WriteLine($"  [{i,4}] = {vector.Span[i]}");
+            }
+        }
+```
+
+* **SimpleEmbedding()** fonskiyonu ile amaç tek bir metni embedding'e dönüştürmek ve vektörleri konsola yazdırmak.
+* **EmbeddingClient** sınıfı ile apiKey kullanılarak bir istemci oluşturulur.
+* Sabit bir Türkçe açıklama metni (description) embedding'e tabi tutulur.
+* Embedding sonucu olan vektör elde edilir ve her elemanı konsola yazdırılır.
+* Text embedding ile yapılmak istenen: Tek bir metnin (bir otobüs yolculuğu incelemesi) vektör halinde makine tarafından anlaşılabilir bir biçime getirilmesi.
+
+```csharp
+        public async Task SimpleEmbeddingAsync()
+        {
+            EmbeddingClient client = new("text-embedding-3-small", apiKey);
+
+            string description = "Bu otobüs firmasıyla yaptığım yolculuk oldukça keyifliydi. Koltuklar rahat ve genişti, ayrıca"
+                + " personel çok nazikti. İkramlar yeterliydi ve zamanında varış sağlandı. Güvenli bir yolculuk için kesinlikle"
+                + " tavsiye ederim.";
+
+            OpenAIEmbedding embedding = await client.GenerateEmbeddingAsync(description);
+            ReadOnlyMemory<float> vector = embedding.ToFloats();
+
+            Console.WriteLine($"Boyut(Dimension): {vector.Length}");
+            Console.WriteLine($"Kayan Noktalı Sayılar(Float): ");
+            for (int i = 0; i < vector.Length; i++)
+            {
+                Console.WriteLine($"  [{i,4}] = {vector.Span[i]}");
+            }
+        }
+```
+
+**SimpleEmbeddingAsync** metotu ile asenkron bir işlemle embedding yapılır; bu, uygulamanın performansını artırabilir, çünkü işlemler arka planda çalışır.
+
+```csharp
+        public void EmbeddingWithOptions()
+        {
+            EmbeddingClient client = new("text-embedding-3-small", apiKey);
+
+            EmbeddingGenerationOptions options = new() { Dimensions = 512 };
+
+            OpenAIEmbedding embedding = client.GenerateEmbedding(description, options);
+            ReadOnlyMemory<float> vector = embedding.ToFloats();
+
+            Console.WriteLine($"Boyut: {vector.Length}");
+            Console.WriteLine($"Kayan Noktalı Sayılar: ");
+            for (int i = 0; i < vector.Length; i++)
+            {
+                Console.WriteLine($"  [{i,3}] = {vector.Span[i]}");
+            }
+        }
+```
+
+* **EmbeddingWithOptions** fonksiyonu ile Amaç: Tek bir metni embedding'e belirli boyut seçenekleri ile dönüştürmek.
+* **EmbeddingClient** oluşturulur.
+* Embedding işlemi için **EmbeddingGenerationOptions** sınıfı kullanılarak boyut (dimension) **512** olarak ayarlanır.
+* Verilen metin embedding'e tabi tutulur ve sonuç vektör konsola yazdırılır.
+* Text embedding ile yapılmak istenen: Belirli bir boyutta embedding oluşturmak, daha hassas sonuçlar üretmek veya belirli bir uygulama için daha iyi performans elde etmek amacıyla yapılır.
+
+```csharp
+        public async Task EmbeddingWithOptionsAsync()
+        {
+            EmbeddingClient client = new("text-embedding-3-small", apiKey);
+            EmbeddingGenerationOptions options = new() { Dimensions = 512 };
+
+            OpenAIEmbedding embedding = await client.GenerateEmbeddingAsync(description, options);
+            ReadOnlyMemory<float> vector = embedding.ToFloats();
+
+            Console.WriteLine($"Boyut: {vector.Length}");
+            Console.WriteLine($"Kayan Noktalı Sayılar: ");
+            for (int i = 0; i < vector.Length; i++)
+            {
+                Console.WriteLine($"  [{i,3}] = {vector.Span[i]}");
+            }
+        }
+```
+
+**EmbeddingWithOptionsAsync** fonksiyonu ile yapılmak istenen: Daha hızlı ve belirli boyut seçenekleriyle embedding işlemini asenkron olarak yapmak.
+
+```csharp
+        public void MultipleEmbeddings()
+        {
+            EmbeddingClient client = new("text-embedding-3-small", Environment.GetEnvironmentVariable("OPENAI_API_KEY"));
+
+            List<string> inputs = new() { category, description };  // Birden fazla girdi ile liste oluşturma
+
+            // Her iki metin için embedding oluşturur
+            OpenAIEmbeddingCollection collection = client.GenerateEmbeddings(inputs);
+
+            // Her embedding'i ayrı ayrı işler ve sonuçları konsola yazdırır
+            foreach (OpenAIEmbedding embedding in collection)
+            {
+                ReadOnlyMemory<float> vector = embedding.ToFloats();
+
+                Console.WriteLine($"Boyut: {vector.Length}");
+                Console.WriteLine("Kayan Noktalı Sayılar: ");
+                for (int i = 0; i < vector.Length; i++)
+                {
+                    Console.WriteLine($"  [{i,4}] = {vector.Span[i]}");
+                }
+
+                Console.WriteLine(); // Her embedding'in sonucunu ayırmak için boş satır ekleniyor
+            }
+        }
+```
+* **MultipleEmbeddings** fonksiyonu ile amaç: Birden fazla metni embedding'e dönüştürmektir.
+* EmbeddingClient oluşturulur.
+* Bir kategori ve açıklamadan oluşan iki metin içeren bir **liste (inputs)** oluşturulur.
+* Bu metinler topluca embedding işlemine tabi tutulur ve bir **OpenAIEmbeddingCollection** döndürülür.
+* Her embedding ayrı ayrı işlenir ve vektör sonuçları konsola yazdırılır.
+* Text embedding ile yapılmak istenen: Birden fazla metni aynı anda embedding'e tabi tutarak performansı artırmak ve farklı metinlerin sayısal karşılıklarını elde etmek.
+
+```csharp
+        public async Task MultipleEmbeddingsAsync()
+        {
+            EmbeddingClient client = new("text-embedding-3-small", apiKey);
+
+            List<string> inputs = new() { category, description };  // Girdi listesini oluşturuyoruz
+
+            // Asenkron olarak embedding'leri topluca oluşturur
+            OpenAIEmbeddingCollection collection = await client.GenerateEmbeddingsAsync(inputs);
+
+            // Her embedding'i ayrı ayrı işler ve sonuçları konsola yazdırır
+            foreach (OpenAIEmbedding embedding in collection)
+            {
+                ReadOnlyMemory<float> vector = embedding.ToFloats();
+
+                Console.WriteLine($"Boyut: {vector.Length}");
+                Console.WriteLine("Kayan Noktalı Sayılar: ");
+                for (int i = 0; i < vector.Length; i++)
+                {
+                    Console.WriteLine($"  [{i,4}] = {vector.Span[i]}");
+                }
+
+                Console.WriteLine(); // Her embedding'in sonucunu ayırmak için boş bir satır
+            }
+        }
+```
+**MultipleEmbeddingsAsync** metotu ile yapılmak istenen: Birden fazla metni aynı anda asenkron şekilde embedding'e tabi tutmak, böylece işlem süresini düşürmek ve performansı artırmaktır.
+
+Bu kod, verilen metinlerin embedding'leri ile metinleri makine öğrenimi ve yapay zeka uygulamalarında kullanılabilir hale getiriyor. Her bir embedding işlemi, metinleri vektör formuna dönüştürür. Bu vektörler, benzerlik ölçümleri, sınıflandırma ve diğer NLP uygulamalarında kullanılır.
 
 
 
+## Embedding Neden Bu Kadar Önemli?
 
 
+Embedding, ham verileri (örneğin metinleri) düşük boyutlu, yoğun (dense) ve sürekli değerlerle temsil eden matematiksel bir yöntemdir. Genellikle bu işlemin amacı, insan diliyle ifade edilen karmaşık kavramları makine öğrenimi modelleri tarafından işlenebilecek sayısal bir biçime dönüştürmektir.
+
+Örneğin, bir cümle veya kelimeyi ele alalım: Makine bu kelimeyi anlayamaz, ancak bu kelimenin anlamını bir dizi sayı (vektör) olarak temsil edebilirsek, bu sayısal temsil üzerinden kelimenin ilişkilerini ve anlamını modelleyebiliriz. İşte embedding tam olarak bunu yapar: Metinleri ya da daha genel anlamda ham verileri vektörler halinde temsil eder.
+
+## Embedding Neden Bu Kadar Önemli?
+
+* **Veriyi Sayısal Hale Getirme:** Makine öğrenimi algoritmaları yalnızca sayılar üzerinde işlem yapabilir. Ham verileri, özellikle metin verilerini, sayısal bir formata dönüştürmeden kullanmamız imkansızdır. Embedding, dilsel ya da başka türdeki verileri düşük boyutlu sayısal bir formata dönüştürerek, bu verileri makine öğrenimi modellerinde kullanılabilir hale getirir.
+* **Anlamsal İlişkileri Koruma:** Embedding'ler yalnızca sayısal bir temsil sunmaz, aynı zamanda bu temsil anlamsal ilişkileri de korur. Örneğin, "kedi" ve "köpek" gibi iki kelimenin embedding'leri birbirine yakın olacaktır çünkü bu iki kelime anlam bakımından birbirine yakındır. Benzer şekilde, "kral" ve "kraliçe" gibi kelimelerin embedding'leri de benzer bir yapıya sahip olacaktır. Bu anlamsal yakınlık, birçok doğal dil işleme (NLP) ve bilgi çıkarma uygulamasının temelini oluşturur.
+* **Boyutun Düşürülmesi ve Verimlilik:** Embedding'ler genellikle düşük boyutlu vektörler olarak kullanılır. Örneğin, bir kelimeyi tek başına bir kelime dağarcığında (vocabulary) temsil etmek için büyük boyutlu bir vektör yerine, embedding sayesinde kelimenin anlamını taşıyan daha küçük boyutlu bir vektör kullanabiliriz. Bu hem bellekte tasarruf sağlar hem de işlem hızını artırır. Bu yöntem özellikle büyük veri setlerinde çok kritiktir.
+* **Genelleştirilebilirlik:** Embedding'ler, eğitim sırasında öğrenilen bilgileri genelleştirebilir. Örneğin, bir model, daha önce hiç görmediği bir kelimenin embedding'ini çıkarıp, o kelimenin benzer anlam taşıyan başka kelimelerle olan ilişkilerini kullanarak yeni tahminler yapabilir. Bu, özellikle dil modellerinde önemli bir avantajdır çünkü diller sürekli genişler ve değişir.
+* **Makine Öğreniminde Kullanım Kolaylığı:** Embedding'ler sayesinde ham metinler gibi karmaşık veriler doğrudan sınıflandırma, kümeleme, regresyon gibi makine öğrenimi algoritmalarında kullanılabilir. Örneğin:
+* **Sınıflandırma:** Bir e-posta spam mi yoksa normal mi? Embedding'lerle e-postaları sayısal bir vektöre dönüştürerek, bu vektörler üzerinden spam olup olmadığını sınıflandırabiliriz.
+* **Kümeleme:** Benzer ürünleri bulmak için embedding'leri kullanabiliriz. Bir e-ticaret sitesinde ürünlerin embedding'leri sayesinde, benzer ürünlerin birbirine yakın olduğu kümeleri oluşturabiliriz.
 
 
 
