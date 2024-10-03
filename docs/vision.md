@@ -96,3 +96,6 @@ namespace OpenAI.Examples
 **Çıktı**
 
 **[ASİSTAN]: Bu görüntüde bir köpek ve bir kedi birlikte yan yana duruyor. Köpek beyaz renkte ve kırmızı bir tasması var. Kedi ise kahverengi ve siyah çizgili kürke sahip. Her iki hayvan da oldukça sevimli görünüyor ve objektife doğru bakıyorlar.**
+
+
+[Kodu incelemek için buraya tıklayabilirsiniz.](https://github.com/KardelRuveyda/openai-dotnet-exercises/tree/master/Examples/09)
