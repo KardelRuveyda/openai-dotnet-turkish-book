@@ -42,7 +42,7 @@ Bu işlem sonucunda dönen değer, her biri akış sırasında gelen yanıt par�
            Console.ReadLine();
 ```
 
-Yukarıdaki kod parçası, asistanın verdiği yanıtları parça parça ekrana yazdırmaktadır. Yanıt tamamen oluşmadan, gelen her bir parçayı anında işleyebilir ve kullanıcıya gösterebilirsiniz. Her bir **StreamingChatCompletionUpdate** nesnesi içinde bulunan **ContentUpdate** adlı içerik parçalarını döngü ile ekrana yazdıran bir yapıdır; önce **"[ASİSTAN]:"** başlığı yazılır, ardından updates koleksiyonundaki her güncelleme için, içindeki **ChatMessageContentPart** öğeleri sırasıyla ekrana yazdırılır.
+Bu kod, **GPT-4o** modelinden gelen sohbet güncellemelerini konsola yazdırmak için bir döngüyle çalışır. İlk olarak, konsola **[ASSISTANT]:** ifadesi yazılarak, asistanın yanıtlarını gösterecek bir başlık atanır. Daha sonra, **completionUpdates** adlı güncelleme koleksiyonu üzerinde bir **foreach** döngüsü başlatılır. Bu döngü, her bir **StreamingChatCompletionUpdate** nesnesini kontrol eder. Eğer güncellemenin **ContentUpdate** listesinde en az bir içerik varsa **(Count > 0)**, bu durumda ilk içerik (**ContentUpdate[0]**) alınır ve **Text** özelliği konsola yazdırılır. Böylece, **OpenAI** modelinden gelen her bir yanıt parçacığı gerçek zamanlı olarak ekranda görünür. Son olarak, Console.ReadLine() komutu ile kullanıcıdan bir giriş beklenir, bu da programın sonlanmadan önce ekranda kalmasını sağlar.
 
 ### Asenkron Streaming(Akış) Kullanımı
 
