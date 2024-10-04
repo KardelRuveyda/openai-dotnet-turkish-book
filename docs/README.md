@@ -13,13 +13,13 @@ https://kardelruveyda.github.io/openai-dotnet-turkish-book
 1. [Başlarken](./docs/baslarken.md)
    
 * [Ön Koşullar](./docs/baslarken.md#Ön-koşullar)
-* [NuGet Paketini Kurma](./docs/baslarken.md#nuget-paketini-kurma)
-* [İstemci Kütüphanesini Kullanma](./docs/baslarken.md#İstemci-Kutuphanesini-Kullanma)
-* [Namespace Organizasyonu](./docs/baslarken.md#Namespace-Organizasyonu)
-* [Async API'yi Kullanma](./docs/baslarken.md#Async-API-Kullanma)
-* [OpenAIClient Sınıfını Kullanma](./docs/baslarken.md#openaiclient-sinifini-kullanma)
-* [OpenAIClient Nedir ve Neden Kullanılır?](./docs/baslarken.md#OpenAIClient-Nedir-Ve-Neden-Kullanilir)
-* [OpenAIClient Nasıl Kullanılır?](./docs/baslarken.md#openaiclient-nasil-kullanilir)
+* [NuGet Paketini Kurma](.baslarken.md#nuget-paketini-kurma)
+* [İstemci Kütüphanesini Kullanma](baslarken.md#İstemci-Kutuphanesini-Kullanma)
+* [Namespace Organizasyonu](baslarken.md#Namespace-Organizasyonu)
+* [Async API'yi Kullanma](baslarken.md#Async-API-Kullanma)
+* [OpenAIClient Sınıfını Kullanma](baslarken.md#openaiclient-sinifini-kullanma)
+* [OpenAIClient Nedir ve Neden Kullanılır?](baslarken.md#OpenAIClient-Nedir-Ve-Neden-Kullanilir)
+* [OpenAIClient Nasıl Kullanılır?](baslarken.md#openaiclient-nasil-kullanilir)
      
 
 2. [Sohbet Tamamlama İşlemleri](sohbettamamlama.md#sohbet-tamamlama-islemleri)
