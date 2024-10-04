@@ -11,21 +11,51 @@ Standart **CompleteChat** metodunun aksine, akış ile çalışan **CompleteChat
 Akışlı bir chat tamamlama işlemi başlatmak için önce **CompleteChatStreaming** metodunu çağırmalısınız. Aşağıdaki örnekte, **“Bu bir testtir.”** ifadesini söylemesi istenen bir akış başlatılmaktadır.
 
 ```csharp
-CollectionResult<StreamingChatCompletionUpdate> updates
-    = client.CompleteChatStreaming("Bu bir testtir.");
+            // API anahtarını ConfigReader sınıfından alma işlemi
+            string apiKey = ConfigReader.ReadApiKeyFromConfig();
+
+            // API anahtarı alınamazsa işlemi sonlandır
+            if (string.IsNullOrEmpty(apiKey))
+            {
+                Console.WriteLine("API key not found in config.json");
+                return;
+            }
+
+            // OpenAI ChatClient oluşturun
+            ChatClient client = new(model: "gpt-4o", apiKey);
+
+            CollectionResult<StreamingChatCompletionUpdate> updates
+                = client.CompleteChatStreaming("Bu bir testtir.");
 ```
 
 Bu işlem sonucunda dönen değer, her biri akış sırasında gelen yanıt parçalarını içeren **CollectionResult<StreamingChatCompletionUpdate>** türünde bir nesnedir. Gelen bu kısmi yanıtlar bir döngü içinde işlenebilir.
 
 ```csharp
-Console.WriteLine($"[ASİSTAN]:");
-foreach (StreamingChatCompletionUpdate update in updates)
-{
-    foreach (ChatMessageContentPart updatePart in update.ContentUpdate)
-    {
-        Console.Write(updatePart);
-    }
-}
+            // API anahtarını ConfigReader sınıfından alma işlemi
+            string apiKey = ConfigReader.ReadApiKeyFromConfig();
+
+            // API anahtarı alınamazsa işlemi sonlandır
+            if (string.IsNullOrEmpty(apiKey))
+            {
+                Console.WriteLine("API key not found in config.json");
+                return;
+            }
+
+            // OpenAI ChatClient oluşturun
+            ChatClient client = new(model: "gpt-4o", apiKey);
+
+            // Sohbet tamamlama işlemini gerçekleştirin
+            CollectionResult<StreamingChatCompletionUpdate> updates
+                = client.CompleteChatStreaming("Bu bir testtir.'");
+
+            Console.WriteLine($"[ASİSTAN]:");
+            foreach (StreamingChatCompletionUpdate update in updates)
+            {
+                foreach (ChatMessageContentPart updatePart in update.ContentUpdate)
+                {
+                    Console.Write(updatePart);
+                }
+            }
 ```
 
 Yukarıdaki kod parçası, asistanın verdiği yanıtları parça parça ekrana yazdırmaktadır. Yanıt tamamen oluşmadan, gelen her bir parçayı anında işleyebilir ve kullanıcıya gösterebilirsiniz. Her bir **StreamingChatCompletionUpdate** nesnesi içinde bulunan **ContentUpdate** adlı içerik parçalarını döngü ile ekrana yazdıran bir yapıdır; önce **"[ASİSTAN]:"** başlığı yazılır, ardından updates koleksiyonundaki her güncelleme için, içindeki **ChatMessageContentPart** öğeleri sırasıyla ekrana yazdırılır.
@@ -36,6 +66,22 @@ Asenkron programlama ile, akışlı bir yanıtı CompleteChatStreamingAsync meto
 
 
 ```csharp
+            // API anahtarını ConfigReader sınıfından alma işlemi
+            string apiKey = ConfigReader.ReadApiKeyFromConfig();
+
+            // API anahtarı alınamazsa işlemi sonlandır
+            if (string.IsNullOrEmpty(apiKey))
+            {
+                Console.WriteLine("API key not found in config.json");
+                return;
+            }
+
+            // OpenAI ChatClient oluşturun
+            ChatClient client = new(model: "gpt-4o", apiKey);
+
+            AsyncCollectionResult<StreamingChatCompletionUpdate> completionUpdates = 
+                client.CompleteChatStreamingAsync("Bu bir testtir.'");
+
             Console.Write($"[ASSISTANT]: ");
 
             await foreach (StreamingChatCompletionUpdate completionUpdate in completionUpdates)
@@ -50,7 +96,7 @@ Asenkron programlama ile, akışlı bir yanıtı CompleteChatStreamingAsync meto
 
 Bu örnekte, await foreach yapısı kullanılarak her bir kısmi yanıt asenkron olarak işlenir ve ekrana yazdırılır. Bu sayede yanıtlar hem asenkron olarak işlenir hem de hızlı bir şekilde kullanıcıya sunulabilir. İlk olarak, **CompleteChatStreamingAsync** metodu kullanılarak **"Bu bir testtir."** ifadesiyle bir sohbet tamamlama isteği asenkron olarak gönderilir ve yanıtlar **AsyncCollectionResult<StreamingChatCompletionUpdate>** türünde updates değişkenine atanır. Ardından, **"[ASİSTAN]:"** başlığı ekrana yazdırılır. 
 
- Gelen her bir güncelleme (**StreamingChatCompletionUpdate**) bir döngüde asenkron olarak işlenir. Eğer güncellemenin içerik kısmında yeni bir metin varsa, bu metin anında konsola yazdırılır. Böylece GPT-4'ün oluşturduğu yanıtları adım adım görebilirsiniz. Bu işlem, yanıtın tamamı gelene kadar devam eder ve modelden gelen her bir içerik parçası anında ekrana yansıtılır.
+ Gelen her bir güncelleme (**StreamingChatCompletionUpdate**) bir döngüde asenkron olarak işlenir. Eğer güncellemenin içerik kısmında yeni bir metin varsa, bu metin anında konsola yazdırılır. Böylece **GPT-4o**'ün oluşturduğu yanıtları adım adım görebilirsiniz. Bu işlem, yanıtın tamamı gelene kadar devam eder ve modelden gelen her bir içerik parçası anında ekrana yansıtılır.
 
 ## Neden Streaming Kullanılmalı?
 
