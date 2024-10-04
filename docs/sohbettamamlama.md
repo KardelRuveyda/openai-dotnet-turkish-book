@@ -31,23 +31,6 @@ Akışlı bir chat tamamlama işlemi başlatmak için önce **CompleteChatStream
 Bu işlem sonucunda dönen değer, her biri akış sırasında gelen yanıt parçalarını içeren **CollectionResult<StreamingChatCompletionUpdate>** türünde bir nesnedir. Gelen bu kısmi yanıtlar bir döngü içinde işlenebilir.
 
 ```csharp
-            // API anahtarını ConfigReader sınıfından alma işlemi
-            string apiKey = ConfigReader.ReadApiKeyFromConfig();
-
-            // API anahtarı alınamazsa işlemi sonlandır
-            if (string.IsNullOrEmpty(apiKey))
-            {
-                Console.WriteLine("API key not found in config.json");
-                return;
-            }
-
-            // OpenAI ChatClient oluşturun
-            ChatClient client = new(model: "gpt-4o", apiKey);
-
-            // Sohbet tamamlama işlemini gerçekleştirin
-            CollectionResult<StreamingChatCompletionUpdate> updates
-                = client.CompleteChatStreaming("Bu bir testtir.'");
-
             Console.WriteLine($"[ASİSTAN]:");
             foreach (StreamingChatCompletionUpdate update in updates)
             {
