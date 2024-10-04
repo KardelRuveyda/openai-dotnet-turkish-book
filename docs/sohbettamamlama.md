@@ -31,14 +31,15 @@ Akışlı bir chat tamamlama işlemi başlatmak için önce **CompleteChatStream
 Bu işlem sonucunda dönen değer, her biri akış sırasında gelen yanıt parçalarını içeren **CollectionResult<StreamingChatCompletionUpdate>** türünde bir nesnedir. Gelen bu kısmi yanıtlar bir döngü içinde işlenebilir.
 
 ```csharp
-            Console.WriteLine($"[ASİSTAN]:");
-            foreach (StreamingChatCompletionUpdate update in updates)
-            {
-                foreach (ChatMessageContentPart updatePart in update.ContentUpdate)
-                {
-                    Console.Write(updatePart);
-                }
-            }
+           Console.Write($"[ASSISTANT]: ");
+           foreach (StreamingChatCompletionUpdate completionUpdate in completionUpdates)
+           {
+               if (completionUpdate.ContentUpdate.Count > 0)
+               {
+                   Console.Write(completionUpdate.ContentUpdate[0].Text);
+               }
+           }
+           Console.ReadLine();
 ```
 
 Yukarıdaki kod parçası, asistanın verdiği yanıtları parça parça ekrana yazdırmaktadır. Yanıt tamamen oluşmadan, gelen her bir parçayı anında işleyebilir ve kullanıcıya gösterebilirsiniz. Her bir **StreamingChatCompletionUpdate** nesnesi içinde bulunan **ContentUpdate** adlı içerik parçalarını döngü ile ekrana yazdıran bir yapıdır; önce **"[ASİSTAN]:"** başlığı yazılır, ardından updates koleksiyonundaki her güncelleme için, içindeki **ChatMessageContentPart** öğeleri sırasıyla ekrana yazdırılır.
