@@ -103,7 +103,7 @@ Vektör depolama, RAG sistemlerinde dil modellerinin veri bulma yeteneklerini ar
 
 ## Asistanları Kullanarak RAG (Bilgi Getirme ile Zenginleştirilmiş Üretim) Nasıl Kullanılır?
 
-Bu örnekte, Euro 2024'e katılan takımların maç sonuçlarını içeren bir JSON belgeniz olduğunu ve bu verileri analiz edebilecek ve hakkında sorulara cevap verebilecek bir asistan oluşturmak istediğinizi varsayalım.Bu amaca ulaşmak için, **OpenAI.Files** ad alanından **FileClient** ve **OpenAI.Assistants** ad alanından **AssistantClient** kullanılır.
+Bu örnekte, Euro 2024'e katılan takımların maç sonuçlarını içeren bir JSON belgeniz olduğunu ve bu verileri analiz edebilecek ve hakkında sorulara cevap verebilecek bir asistan oluşturmak istediğinizi varsayalım.Bu amaca ulaşmak için, **OpenAI.Files** ad alanından **GetOpenAIFileClient** ve **OpenAI.Assistants** ad alanından **AssistantClient** kullanılır.
 
 
 **Önemli: Assistants REST API'si şu anda beta aşamasındadır. Dolayısıyla, detaylar değişebilir ve buna bağlı olarak AssistantClient de [Deneysel] olarak etiketlenmiştir. Bu API'yi kullanmak için, ya proje seviyesinde ya da aşağıda kod içerisinde OPENAI001 uyarısını devre dışı bırakmanız gerekmektedir.**
@@ -115,7 +115,7 @@ using OpenAI.Files;
 // Assistants API'si beta aşamasında olduğu için deneysel olduğunu kabul ediyoruz ve uyarıyı devre dışı bırakıyoruz.
 #pragma warning disable OPENAI001
 OpenAIClient openAIClient = new(Environment.GetEnvironmentVariable("OPENAI_API_KEY"));
-FileClient fileClient = openAIClient.GetFileClient();
+OpenAIFileClient fileClient = openAIClient.GetOpenAIFileClient();
 AssistantClient assistantClient = openAIClient.GetAssistantClient();
 
 ```
