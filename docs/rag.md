@@ -149,7 +149,7 @@ using Stream document = BinaryData.FromString("""
 """).ToStream();
 ```
 
-Bu belgeyi OpenAI sistemine yüklemek için **FileClient**'in **UploadFile** metodunu kullanın. Belgeler üzerinde asistanların erişimini sağlamak için **FileUploadPurpose.Assistants** parametresi kullanılmalıdır:
+Bu belgeyi OpenAI sistemine yüklemek için **OpenAIFileClient**'in **UploadFile** metodunu kullanın. Belgeler üzerinde asistanların erişimini sağlamak için **FileUploadPurpose.Assistants** parametresi kullanılmalıdır:
 
 
 ```csharp
