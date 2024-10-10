@@ -254,7 +254,7 @@ foreach (ThreadMessage message in messages)
         }
 
         OpenAIClient openAIClient = new(apiKey);
-        FileClient fileClient = openAIClient.GetFileClient();
+         OpenAIFileClient fileClient = openAIClient.GetOpenAIFileClient();
         AssistantClient assistantClient = openAIClient.GetAssistantClient();
 
         // JSON belgesini oluştur ve dosyaya yükle
@@ -367,7 +367,10 @@ if (string.IsNullOrEmpty(apiKey))
     return;
 }
 ```
-* **OpenAIClient:** OpenAI sunucusuyla iletişim kurmak için kullanılır. **FileClient:** Dosyaları yüklemek için gerekli araçtır. **AssistantClient:** Soruları yanıtlayacak olan yardımcıyı oluşturmak için kullanılır.
+
+* **OpenAIClient:** OpenAI sunucusuyla iletişim kurmak için kullanılır.
+* **OpenAIFileClient:** Dosyaları yüklemek için gerekli araçtır.
+* **AssistantClient:** Soruları yanıtlayacak olan yardımcıyı oluşturmak için kullanılır.
 
 ```csharp
 OpenAIClient openAIClient = new(apiKey);
@@ -508,12 +511,12 @@ foreach (ThreadMessage message in messages)
 
 **Özetle;**
 
-- Döngü başlar: Kullanıcıdan soru alırız.
-- Çıkış kontrol edilir: Eğer kullanıcı "exit" yazarsa program biter.
-- Soruyu yardımcıya göndeririz: Kullanıcı soruyu girince, bu soru yardımcıya gönderilir.
-- Cevabı bekleriz: Yardımcı cevabını hazırlayana kadar program bekler.
-- Cevabı alırız: Yardımcı botun verdiği yanıtı alır ve ekrana yazarız.
-- Döngü devam eder: Bir sonraki soruya geçeriz veya çıkış komutu verilene kadar program çalışmaya devam eder.
+- **Döngü başlar:** Kullanıcıdan soru alırız.
+- **Çıkış kontrol edilir:** Eğer kullanıcı "exit" yazarsa program biter.
+- **Soruyu yardımcıya göndeririz:** Kullanıcı soruyu girince, bu soru yardımcıya gönderilir.
+- **Cevabı bekleriz:** Yardımcı cevabını hazırlayana kadar program bekler.
+- **Cevabı alırız:** Yardımcı botun verdiği yanıtı alır ve ekrana yazarız.
+- **Döngü devam eder:** Bir sonraki soruya geçeriz veya çıkış komutu verilene kadar program çalışmaya devam eder.
 
 **Çıktı:**
 
