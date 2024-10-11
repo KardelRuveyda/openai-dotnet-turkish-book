@@ -463,6 +463,8 @@ while (true)
 * **ThreadCreationOptions** nesnesi oluşturulur ve kullanıcının sorduğu soru (**userQuestion**), yardımcıya iletilecek ilk mesaj olarak ayarlanır.
 * **InitialMessages = { userQuestion }:** Kullanıcı tarafından girilen soru, bu yardımcıya iletilmek üzere kaydedilir.
 * **CreateThreadAndRun** fonksiyonu, soruyu OpenAI'ye gönderir ve işlem başlamış olur.
+
+* Bu sayede, botun cevabının ne zaman hazır olduğunu öğrenmiş oluruz.
 ```csharp
 ThreadCreationOptions threadOptions = new()
 {
@@ -472,11 +474,10 @@ ThreadCreationOptions threadOptions = new()
 ThreadRun threadRun = assistantClient.CreateThreadAndRun(assistant.Id, threadOptions);
 ```
 
-* Aşağıdaki kısım, botun cevabı hazır olana kadar beklememizi sağlar.
 * **Döngü**: Yardımcının cevabını hazır hale getirmesi biraz zaman alabilir, bu yüzden bu döngü botun cevabı işleyip bitirmesini bekler.
 * **Thread.Sleep(TimeSpan.FromSeconds(1)):** Her saniyede bir program durur ve botun cevabını kontrol eder.
 * **GetRun**: Botun cevabı tamamlanana kadar (status "**Terminal**" olana kadar) tekrar tekrar kontrol eder.
-* Bu sayede, botun cevabının ne zaman hazır olduğunu öğrenmiş oluruz.
+
 
 ```csharp
 do
