@@ -10,7 +10,7 @@ https://kardelruveyda.github.io/openai-dotnet-turkish-book
 # İçindekiler
 
 
-1. [Başlarken](./docs/baslarken.md)
+1. [Başlarken](baslarken.md)
    
 * [Ön Koşullar](baslarken.md#Ön-koşullar)
 * [NuGet Paketini Kurma](baslarken.md#nuget-paketini-kurma)
