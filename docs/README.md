@@ -12,8 +12,8 @@ https://kardelruveyda.github.io/openai-dotnet-turkish-book
 
 1. [Başlarken](./docs/baslarken.md)
    
-* [Ön Koşullar](./docs/baslarken.md#Ön-koşullar)
-* [NuGet Paketini Kurma](.baslarken.md#nuget-paketini-kurma)
+* [Ön Koşullar](baslarken.md#Ön-koşullar)
+* [NuGet Paketini Kurma](baslarken.md#nuget-paketini-kurma)
 * [İstemci Kütüphanesini Kullanma](baslarken.md#İstemci-Kutuphanesini-Kullanma)
 * [Namespace Organizasyonu](baslarken.md#Namespace-Organizasyonu)
 * [Async API'yi Kullanma](baslarken.md#Async-API-Kullanma)
