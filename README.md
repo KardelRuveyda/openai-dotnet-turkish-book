@@ -7,6 +7,8 @@ Bu kitap, https://github.com/openai/openai-dotnet ve https://learn.microsoft.com
 https://kardelruveyda.github.io/openai-dotnet-turkish-book
 
 
+
+
      
 
 
