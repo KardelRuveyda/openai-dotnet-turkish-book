@@ -73,8 +73,8 @@
 * Open AI LLM Kulanımı
    * [OPEN AI ile Büyük Dil Modeli(LLM)](OPENAIwithLLM.md#open-ai-ile-büyük-dil-modelillm)
    * [OPEN AI Neden LLM Kullanır?](OPENAIwithLLM.md#open-ai-neden-llm-kullanır)
-   * [Büyük Dil Modeli (LLM) Nasıl Çalışır?](OPENAIwithLLM.md#büyük-dil-modeli-llm-nasıl-çalışır)
-   * [OPEN AI'da LLM Kullanımı](OPENAIwithLLM.md#open-aida-llm-kullanımı)
+   * [Büyük Dil Modeli (LLM) Nasıl Çalışır?](OPENAIwithLLM.md#büyük-dil-modeli-llm-nasıl-Çalışır)
+   * [OPEN AI'da LLM Kullanımı](OPENAIwithLLM.md#open-ai39da-llm-kullanımı)
 * Open AI API Rag Kullanımı
    * [RAG (Retrieval-Augmented Generation) Temel Kavramları](rag.md#rag-retrieval-augmented-generation-temel-kavramları)
    * [Dil Modelleri ve Vektörler](rag.md#dil-modelleri-ve-vektörler)
