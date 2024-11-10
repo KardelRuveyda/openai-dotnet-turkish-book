@@ -103,16 +103,16 @@ https://kardelruveyda.github.io/openai-dotnet-turkish-book
 * [Yanıt Mesajlarını Almak](rag.md#yanıt-mesajlarını-almak)
 * [Birlikte Uygulama Yapalım!](rag.md#birlikte-uygulama-yapalım)
 
-9. [Asistanlarla akış ve GPT-4o görüşü nasıl kullanılır?](vision.md#asistanlarla-akış-ve-gpt-4o-görüşü-nasıl-kullanılır)
-* [Vision Teknolojisinin Amacı ve Faydaları](vision.md#vision-teknolojisinin-amacı-ve-faydaları)
-* [GPT-4o Vision'un Özellikleri ve Kullanım Alanları](vision.md#gpt-4o-visionun-özellikleri-ve-kullanım-alanları)
-* [Bir örnekle pekiştirelim!](vision.md#bir-örnekle-pekiştirelim)
-
-
-10. [OPEN AI ile Büyük Dil Modeli(LLM)](OPENAIwithLLM.md#open-ai-ile-büyük-dil-modeli-(llm)
+9. [OPEN AI ile Büyük Dil Modeli(LLM)](OPENAIwithLLM.md#open-ai-ile-büyük-dil-modeli-(llm)
 * [OPEN AI Neden LLM Kullanır?](OPENAIwithLLM.md#open-ai-neden-llm-kullanır?)
 * [Büyük Dil Modeli (LLM) Nasıl Çalışır?](OPENAIwithLLM.md#büyük-dil-modeli-(llm)-nasıl-çalışır?)
 * [OPEN AI'da LLM Kullanımı](OPENAIwithLLM.md#open-ai'da-llm-kullanımı)
 
 ![image](https://github.com/user-attachments/assets/9a71d76d-15a7-45e9-8bf9-78f6ead3a3cc)
+
+
+10. [Asistanlarla akış ve GPT-4o görüşü nasıl kullanılır?](vision.md#asistanlarla-akış-ve-gpt-4o-görüşü-nasıl-kullanılır)
+* [Vision Teknolojisinin Amacı ve Faydaları](vision.md#vision-teknolojisinin-amacı-ve-faydaları)
+* [GPT-4o Vision'un Özellikleri ve Kullanım Alanları](vision.md#gpt-4o-visionun-özellikleri-ve-kullanım-alanları)
+* [Bir örnekle pekiştirelim!](vision.md#bir-örnekle-pekiştirelim)
 
