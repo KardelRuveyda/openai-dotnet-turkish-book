@@ -69,6 +69,12 @@
       * [7. Segment Bazlı Zaman Damgalarını Yazdırmak](sesiyaziyadokme.md#_7-segment-bazlı-zaman-damgalarını-yazdırmak)
    * [Text to Speech Örneği](sesiyaziyadokme.md#text-to-speech-Örneği)
    * [Yapılan Örneğin Önemi](sesiyaziyadokme.md#yapılan-Örneğin-Önemi)
+ 
+* Open AI LLM Kulanımı
+   * [OPEN AI ile Büyük Dil Modeli(LLM)](OPENAIwithLLM.md#open-ai-ile-büyük-dil-modelillm)
+   * [OPEN AI Neden LLM Kullanır?](OPENAIwithLLM.md#open-ai-neden-llm-kullanır)
+   * [Büyük Dil Modeli (LLM) Nasıl Çalışır?](OPENAIwithLLM.md#büyük-dil-modeli-llm-nasıl-çalışır)
+   * [OPEN AI'da LLM Kullanımı](OPENAIwithLLM.md#open-aida-llm-kullanımı)
 * Open AI API Rag Kullanımı
    * [RAG (Retrieval-Augmented Generation) Temel Kavramları](rag.md#rag-retrieval-augmented-generation-temel-kavramları)
    * [Dil Modelleri ve Vektörler](rag.md#dil-modelleri-ve-vektörler)
