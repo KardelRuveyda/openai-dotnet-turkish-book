@@ -137,6 +137,10 @@ Console.WriteLine($"[ASİSTAN]: {completion}");
 
 Ve mutlu son! Ekrana yazdırma işlemi gerçekleşir. Ama tekrardan hatırlatmak gerekirse API anahtarını doğrudan kodda kullanmak yerine, güvenli bir yerde saklayarak ortam değişkeni veya yapılandırma dosyası aracılığıyla erişmek önemlidir. Bu, API anahtarının kaybolmasını veya kötüye kullanılmasını önler.
 
+![ezgif-7-9870428eac](https://github.com/user-attachments/assets/8584651d-6f27-426f-a848-b603f5b4747c)
+
+
+
 ## Namespace Organizasyonu
 
 **`OpenAI`** kütüphanesi, **OpenAI**'nin çeşitli özellik alanlarını yönetmek için bir dizi isim alanına ayrılmıştır. Her bir isim alanı, belirli bir işlevi yerine getiren bir istemci sınıfı içerir. Ben aşağıdaki namespacelerden çoğunu kullandım diyebilirim. Bunları aşağıdaki gibi açıklayabiliriz:
