@@ -92,13 +92,13 @@ Akış, genellikle API’nin asenkron yöntemleriyle kullanılır, yani program 
 
 **Asenkron kullanımı** sayesinde, akışlı yanıtlar **await** ve **async** yapılarıyla işlenir. Yani, dil modelinden yanıtlar akış halinde gelirken uygulama yanıtların tamamını beklemeden gelen kısmi sonuçları anında kullanıcıya sunabilir. Bu da daha hızlı ve verimli bir deneyim sağlar. Asenkron kullanımı, **CPU** kaynaklarını daha verimli kullanarak sistem performansını artırır ve aynı anda birden fazla işlemi yönetmeye yardımcı olur.
 
+
+
 [Kod örneği için tıklayınız.](https://github.com/KardelRuveyda/openai-dotnet-exercises/tree/master/Examples/02)
 
 
 
-
-
-
+![stremainggif](https://github.com/user-attachments/assets/779d98b0-91ca-49aa-bc57-b9b3fb878fc4)
 
 
 
