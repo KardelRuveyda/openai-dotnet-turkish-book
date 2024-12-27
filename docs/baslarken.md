@@ -1,7 +1,7 @@
 # Başlarken
 
 * Bu kitap kapsamında yapılan tüm örneklere [bu repodan](https://github.com/KardelRuveyda/openai-dotnet-exercises) ulaşabilirsiniz!
-* Bu satırları yazarken **OpenAI-2.0.0-beta.13** sürümü dahilindeki tüm güncellemeleri de kapsayan bir kitap oluşturmaya çalıştım. Ama tabii orjinal repo üzerindeki geliştirmeler devam edecektir. Önemli olan bu geliştirmeler kapsamında kitabı güncelleyebilmek. Bu kısımda sizlerin de yardımları pek değerli olur :)
+* Bu satırları yazarken **OpenAI-2.1.0-beta.13** sürümü dahilindeki tüm güncellemeleri de kapsayan bir kitap oluşturmaya çalıştım. Ama tabii orjinal repo üzerindeki geliştirmeler devam edecektir. Önemli olan bu geliştirmeler kapsamında kitabı güncelleyebilmek. Bu kısımda sizlerin de yardımları pek değerli olur :)
 
 ## Ön Koşullar
 
@@ -89,7 +89,7 @@ dotnet add package OpenAI --prerelease
 
 ```
 
-Kod örnekleri [Open AI Dotnet API Dokümanında](https://github.com/openai/openai-dotnet). **.NET 8** kullanılarak yazılmıştır. **OpenAI .NET** kütüphanesi tüm **.NET Standard 2.0** uygulamaları ile uyumludur, ancak bazı kod örnekleri daha yeni dil özelliklerine bağlı olabilir.
+Kod örnekleri [Open AI Dotnet API Dokümanında](https://github.com/openai/openai-dotnet). **.NET 9** kullanılarak yazılmıştır. **OpenAI .NET** kütüphanesi tüm **.NET Standard 2.0** uygulamaları ile uyumludur, ancak bazı kod örnekleri daha yeni dil özelliklerine bağlı olabilir.
 
 ## İstemci Kutuphanesini Kullanma
 
