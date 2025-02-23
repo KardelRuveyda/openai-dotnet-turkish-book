@@ -96,9 +96,9 @@
    * [Bir örnekle pekiştirelim!](vision.md#bir-örnekle-pekiştirelim)
  
 * Azure OpenAI Kullanımı
-   * [OpenAI ile Azure Arasındaki İlişki](OpenAIwithAzure.md#openai-ile-azure-arasındaki-i̇lişki)
-   * [Azure OpenAI Servisi Nedir?](OpenAIwithAzure.md#azure-openai-servisi-nedir)
-   * [Neden OpenAI ve Azure'u Birlikte Kullanmalıyız?](OpenAIwithAzure.md#azure-openai-servisi-nedir)
-   * [Azure OpenAI ile nasıl çalışır?](OpenAIwithAzure.md#azure-openai-servisi-nedir)
-   * [Azure Üzerinde OpenAI API'sini Kullanma](OpenAIwithAzure.md#azure-openai-servisi-nedir)
+   * [OpenAI ile Azure Arasındaki İlişki](OpenAIwithAzure?id=openai-ile-azure-arasındaki-İlişki)
+   * [Azure OpenAI Servisi Nedir?](OpenAIwithAzure?id=azure-openai-servisi-nedir)
+   * [Neden OpenAI ve Azure'u Birlikte Kullanmalıyız?](OpenAIwithAzure?id=neden-openai-ve-azure39u-birlikte-kullanmalıyız)
+   * [Azure OpenAI ile nasıl çalışır?](OpenAIwithAzure?id=azure-openai-ile-nasıl-çalışır)
+   * [Azure Üzerinde OpenAI API'sini Kullanma](OpenAIwithAzure?id=azure-Üzerinde-openai-api39sini-kullanma)
      
