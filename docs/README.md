@@ -115,11 +115,11 @@ https://kardelruveyda.github.io/openai-dotnet-turkish-book
 * [Bir örnekle pekiştirelim!](vision.md#bir-örnekle-pekiştirelim)
 
 
-11. [OpenAI ile Azure Arasındaki İlişki?](openaiwithazure.md#openai-ile-azure-arasındaki-ilişki?)
-* [Azure OpenAI Servisi Nedir?](openaiwithazure.md#azure-openai-servisi-nedir?)
-* [Neden OpenAI ve Azure'u Birlikte Kullanmalıyız?](openaiwithazure.md#neden-openai-ve-azure'u-birlikte-kullanmalıyız?)
-* [Azure OpenAI ile nasıl çalışır?](openaiwithazure.md#azure-openai-ile-nasıl-çalışır?)
-* [Azure Üzerinde OpenAI API'sini Kullanma](openaiwithazure.md#azure-üzerinde-openai-api'sini-kullanma)
+11. [OpenAI ile Azure Arasındaki İlişki?](OpenAIwithAzure.md#openai-ile-azure-arasındaki-i̇lişki)
+* [Azure OpenAI Servisi Nedir?](OpenAIwithAzure.md#azure-openai-servisi-nedir)
+* [Neden OpenAI ve Azure'u Birlikte Kullanmalıyız?](OpenAIwithAzure.md#azure-openai-servisi-nedir)
+* [Azure OpenAI ile nasıl çalışır?](OpenAIwithAzure.md#azure-openai-servisi-nedir)
+* [Azure Üzerinde OpenAI API'sini Kullanma](OpenAIwithAzure.md#azure-openai-servisi-nedir)
 
 ![image](https://github.com/user-attachments/assets/9a71d76d-15a7-45e9-8bf9-78f6ead3a3cc)
 
