@@ -94,4 +94,11 @@
    * [Vision Teknolojisinin Amacı ve Faydaları](vision.md#asistanlarla-akış-ve-gpt-4o-görüşü-nasıl-kullanılır)
    * [GPT-4o Vision'un Özellikleri ve Kullanım Alanları](vision.md#gpt-4o-vision39un-Özellikleri-ve-kullanım-alanları)
    * [Bir örnekle pekiştirelim!](vision.md#bir-örnekle-pekiştirelim)
+ 
+* Azure OpenAI Kullanımı
+   * [OpenAI ile Azure Arasındaki İlişki](OpenAIwithAzure.md#openai-ile-azure-arasındaki-i̇lişki)
+   * [Azure OpenAI Servisi Nedir?](OpenAIwithAzure.md#azure-openai-servisi-nedir)
+   * [Neden OpenAI ve Azure'u Birlikte Kullanmalıyız?](OpenAIwithAzure.md#azure-openai-servisi-nedir)
+   * [Azure OpenAI ile nasıl çalışır?](OpenAIwithAzure.md#azure-openai-servisi-nedir)
+   * [Azure Üzerinde OpenAI API'sini Kullanma](OpenAIwithAzure.md#azure-openai-servisi-nedir)
      
