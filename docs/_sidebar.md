@@ -66,11 +66,11 @@
       * [4. Transkripsiyon İşlemi](sesiyaziyadokme.md#_4-transkripsiyon-İşlemi)
       * [5. Transkripsiyon Sonucunu Yazdırmak](sesiyaziyadokme.md#_5-transkripsiyon-sonucunu-yazdırmak)
       * [6. Kelime Bazlı Zaman Damgalarını Yazdırmak](sesiyaziyadokme.md#_6-kelime-bazlı-zaman-damgalarını-yazdırmak)
-      * [7. Segment Bazlı Zaman Damgalarını Yazdırmak](sesiyaziyadokme.md#_7-segment-bazlı-zaman-damgalarını-yazdırmak)
-   * [Text to Speech Örneği](sesiyaziyadokme.md#text-to-speech-Örneği)
+      * [7. Segment Bazlı Zaman Damgalarını Yazdırmak](sesiyaziyadokme.md#_7-segment-bazlı-zaman-damgalarını-yazdırmak)   
+      * [Text to Speech Örneği](sesiyaziyadokme.md#text-to-speech-Örneği)
    * [Yapılan Örneğin Önemi](sesiyaziyadokme.md#yapılan-Örneğin-Önemi)
 
-* * Open AI LLM Kulanımı
+* Open AI LLM Kulanımı
    * [OPEN AI ile Büyük Dil Modeli(LLM)](OPENAIwithLLM.md#open-ai-ile-büyük-dil-modelillm)
    * [OPEN AI Neden LLM Kullanır?](OPENAIwithLLM.md#open-ai-neden-llm-kullanır)
    * [Büyük Dil Modeli (LLM) Nasıl Çalışır?](OPENAIwithLLM.md#büyük-dil-modeli-llm-nasıl-Çalışır)
