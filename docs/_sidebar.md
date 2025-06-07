@@ -66,7 +66,8 @@
       * [4. Transkripsiyon İşlemi](sesiyaziyadokme.md#_4-transkripsiyon-İşlemi)
       * [5. Transkripsiyon Sonucunu Yazdırmak](sesiyaziyadokme.md#_5-transkripsiyon-sonucunu-yazdırmak)
       * [6. Kelime Bazlı Zaman Damgalarını Yazdırmak](sesiyaziyadokme.md#_6-kelime-bazlı-zaman-damgalarını-yazdırmak)
-      * [7. Segment Bazlı Zaman Damgalarını Yazdırmak](sesiyaziyadokme.md#_7-segment-bazlı-zaman-damgalarını-yazdırmak)   * [Text to Speech Örneği](sesiyaziyadokme.md#text-to-speech-Örneği)
+      * [7. Segment Bazlı Zaman Damgalarını Yazdırmak](sesiyaziyadokme.md#_7-segment-bazlı-zaman-damgalarını-yazdırmak)
+   * [Text to Speech Örneği](sesiyaziyadokme.md#text-to-speech-Örneği)
    * [Yapılan Örneğin Önemi](sesiyaziyadokme.md#yapılan-Örneğin-Önemi)
 
 * Open AI LLM Kulanımı
