@@ -66,10 +66,9 @@
       * [4. Transkripsiyon İşlemi](sesiyaziyadokme.md#_4-transkripsiyon-İşlemi)
       * [5. Transkripsiyon Sonucunu Yazdırmak](sesiyaziyadokme.md#_5-transkripsiyon-sonucunu-yazdırmak)
       * [6. Kelime Bazlı Zaman Damgalarını Yazdırmak](sesiyaziyadokme.md#_6-kelime-bazlı-zaman-damgalarını-yazdırmak)
-      * [7. Segment Bazlı Zaman Damgalarını Yazdırmak](sesiyaziyadokme.md#_7-segment-bazlı-zaman-damgalarını-yazdırmak)
-   * [Text to Speech Örneği](sesiyaziyadokme.md#text-to-speech-Örneği)
+      * [7. Segment Bazlı Zaman Damgalarını Yazdırmak](sesiyaziyadokme.md#_7-segment-bazlı-zaman-damgalarını-yazdırmak)   * [Text to Speech Örneği](sesiyaziyadokme.md#text-to-speech-Örneği)
    * [Yapılan Örneğin Önemi](sesiyaziyadokme.md#yapılan-Örneğin-Önemi)
- 
+
 * Open AI LLM Kulanımı
    * [OPEN AI ile Büyük Dil Modeli(LLM)](OPENAIwithLLM.md#open-ai-ile-büyük-dil-modelillm)
    * [OPEN AI Neden LLM Kullanır?](OPENAIwithLLM.md#open-ai-neden-llm-kullanır)
@@ -101,4 +100,16 @@
    * [Neden OpenAI ve Azure Birlikte Kullanmalıyız?](OpenAIwithAzure?id=neden-openai-ve-azure39u-birlikte-kullanmalıyız)
    * [Azure OpenAI ile nasıl çalışır?](OpenAIwithAzure?id=azure-openai-ile-nasıl-çalışır)
    * [Azure Üzerinde OpenAI API'sini Kullanma](OpenAIwithAzure?id=azure-Üzerinde-openai-api39sini-kullanma)
-     
+
+* O1 Model Ailesi - Yeni Nesil Reasoning Modeller
+   * [O1 Modellerinin Temel Özellikleri](o1modeller.md#o1-modellerinin-temel-özellikleri)
+   * [Reasoning (Akıl Yürütme) Yetenekleri](o1modeller.md#reasoning-akıl-yürütme-yetenekleri)
+   * [Reasoning Tokens](o1modeller.md#reasoning-tokens)
+   * [Model Çeşitleri](o1modeller.md#model-çeşitleri)
+   * [O1 Modellerinin Kullanım Alanları](o1modeller.md#o1-modellerinin-kullanım-alanları)
+   * [.NET ile O1 Modellerini Kullanma](o1modeller.md#net-ile-o1-modellerini-kullanma)
+   * [Reasoning Effort (Akıl Yürütme Efor) Kontrolü](o1modeller.md#reasoning-effort-akıl-yürütme-efor-kontrolü)
+   * [Developer Messages (O1 için Sistem Mesajları)](o1modeller.md#developer-messages-o1-için-sistem-mesajları)
+   * [Kapsamlı Örnek: Matematik Problem Çözücü](o1modeller.md#kapsamlı-örnek-matematik-problem-çözücü)
+   * [O1 Modelleri ile İlgili Dikkat Edilmesi Gerekenler](o1modeller.md#o1-modelleri-ile-ilgili-dikkat-edilmesi-gerekenler)
+
