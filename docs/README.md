@@ -121,5 +121,18 @@ https://kardelruveyda.github.io/openai-dotnet-turkish-book
 * [Azure OpenAI ile nasıl çalışır?](OpenAIwithAzure.md#azure-openai-servisi-nedir)
 * [Azure Üzerinde OpenAI API'sini Kullanma](OpenAIwithAzure.md#azure-openai-servisi-nedir)
 
+12. [O1 Model Ailesi](o1modeller.md#o1-model-ailesi)
+
+* [O1 Model Ailesine Giriş](o1modeller.md#o1-model-ailesine-giriş)
+* [O1 Modellerinin Özellikleri](o1modeller.md#o1-modellerinin-özellikleri)
+* [Mevcut O1 Modelleri](o1modeller.md#mevcut-o1-modelleri)
+* [Reasoning Tokens Nedir](o1modeller.md#reasoning-tokens-nedir)
+* [Developer Messages ile Gelişmiş Prompting](o1modeller.md#developer-messages-ile-gelişmiş-prompting)
+* [O1 Modelleri ile Uygulama Geliştirme](o1modeller.md#o1-modelleri-ile-uygulama-geliştirme)
+* [Kod Örneği: Matematik Problemi Çözücü](o1modeller.md#kod-örneği-matematik-problemi-çözücü)
+* [O1 Modellerinin Performans Karşılaştırması](o1modeller.md#o1-modellerinin-performans-karşılaştırması)
+* [En İyi Uygulamalar ve İpuçları](o1modeller.md#en-iyi-uygulamalar-ve-ipuçları)
+* [Sonuç ve Gelecek Perspektifler](o1modeller.md#sonuç-ve-gelecek-perspektifler)
+
 ![image](https://github.com/user-attachments/assets/9a71d76d-15a7-45e9-8bf9-78f6ead3a3cc)
 
