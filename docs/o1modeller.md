@@ -1,4 +1,6 @@
-## O1 Model Ailesi - Yeni Nesil Reasoning Modeller
+## O1 Model Ailesi(DISABLED)
+
+( Aktif olarak open ai modellerinde kullanılmıyor. ) 
 
 **O1 model ailesi**, OpenAI'nin en son geliştirdiği ve **reasoning (akıl yürütme)** yetenekleri konusunda devrim yaratan model serisidir. Bu modeller, karmaşık problemleri çözmek için daha fazla zaman harcayarak, adım adım düşünme ve problem çözme yetenekleri sunmaktadır. O1 modelleri, özellikle matematik, kodlama, bilim ve mantık gerektiren görevlerde üstün performans gösterir.
 
