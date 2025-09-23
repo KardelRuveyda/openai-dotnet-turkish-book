@@ -113,4 +113,5 @@
    * [Developer Messages (O1 için Sistem Mesajları)](o1modeller.md#developer-messages-o1-için-sistem-mesajları)
    * [Kapsamlı Örnek: Matematik Problem Çözücü](o1modeller.md#kapsamlı-örnek-matematik-problem-çözücü)
    * [O1 Modelleri ile İlgili Dikkat Edilmesi Gerekenler](o1modeller.md#o1-modelleri-ile-ilgili-dikkat-edilmesi-gerekenler)
+   * [GÜNCELLEMELER](o1modeller.md#o1-model-ailesi-yeni-nesil-reasoning-modeller-güncelleme-·-23-eylül-2025)
 
