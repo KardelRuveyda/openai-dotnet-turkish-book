@@ -293,3 +293,117 @@ flowchart TD
 O1 model ailesi, özellikle **düşünme gerektiren** görevlerde oyunun kurallarını değiştiren bir teknoloji sunmaktadır. .NET geliştiricileri için bu güçlü yetenekleri kullanarak daha akıllı ve etkili uygulamalar geliştirmek mümkün hale gelmiştir.
 
 [Kod örnekleri için GitHub repository'sini ziyaret edebilirsiniz.](https://github.com/KardelRuveyda/openai-dotnet-exercises)
+
+
+## O1 Model Ailesi – Yeni Nesil Reasoning Modeller (Güncelleme · 23 Eylül 2025)
+
+> **Özet:** `o1-preview` artık birçok hesapta kullanılamıyor ve `model_not_found` hatası dönebiliyor.  
+> Güncel reasoning (akıl yürütme) için **`o3`** ve **`o3-mini`** modellerini kullanın.  
+> `o3-mini` hızlı ve ekonomik; `o3` ise daha zor problemler ve yüksek doğruluk için önerilir.
+
+### Neden O3 Ailesi?
+- **Desteklenen reasoning modelleri:** `o3`, `o3-mini`  
+- **Performans tercihi:** `o3-mini` (düşük maliyet, düşük gecikme)  
+- **Doğruluk tercihi:** `o3` (karmaşık problemlerde daha güçlü)  
+- **Responses API** ile reasoning effort (Low / Medium / High) ayarlanabilir.
+
+---
+
+### Hızlı Geçiş
+
+**Eski (O1):**
+```csharp
+using OpenAI.Chat;
+
+var apiKey = ConfigReader.ReadApiKeyFromConfig();
+var client = new ChatClient("o1-preview", apiKey); // ❌ Artık desteklenmiyor
+```
+
+
+
+**Yeni (O3-mini)::**
+
+```csharp
+using OpenAI.Chat;
+
+var apiKey = ConfigReader.ReadApiKeyFromConfig();
+var client = new ChatClient("o3-mini", apiKey);    // ✅ Güncel reasoning mini
+```
+
+**Önerilen Kullanım (Responses API)**
+
+```csharp
+        public static void Example_O1_MathProblemSolver()
+        {
+            // API anahtarını config'den oku
+            string apiKey = ConfigReader.ReadApiKeyFromConfig();
+
+            if (string.IsNullOrEmpty(apiKey))
+            {
+                Console.WriteLine("API anahtarı bulunamadı.");
+                return;
+            }
+
+            // O1-preview modeli ile ChatClient oluştur
+            ChatClient client = new("o3-mini", apiKey);
+
+            // Sistem talimatları için SystemChatMessage kullan
+            List<ChatMessage> messages = new()
+            {
+                ChatMessage.CreateSystemMessage(@"
+                    Sen bir matematik uzmanısın. Problemleri şu şekilde çöz:
+                    1. Problemi analiz et
+                    2. Hangi yöntemi kullanacağını belirle  
+                    3. Adım adım çözüm yap
+                    4. Sonucu doğrula
+                    5. Alternatif çözüm yolları varsa belirt
+                "),
+                ChatMessage.CreateUserMessage(@"
+                    Aşağıdaki matematik problemini çöz:
+                    
+                    Bir şirket, aylık satışlarının %15'ini reklam harcamalarına ayırıyor.
+                    Bu ay toplam 120.000 TL satış yaptılar ve reklam harcamaları
+                    geçen aya göre %20 arttı. Geçen ay reklam harcamaları
+                    ne kadardı?
+                ")
+            };
+
+            // O1 modeli için özel seçenekler
+            ChatCompletionOptions options = new()
+            {
+                MaxOutputTokenCount = 2000
+            };
+
+            try
+            {
+                Console.WriteLine("Problem çözülüyor... (O1 modeli düşünüyor)");
+
+                ChatCompletion completion = client.CompleteChat(messages, options);
+
+                // Reasoning token kullanımını göster
+                if (completion.Usage?.OutputTokenDetails != null)
+                {
+                    Console.WriteLine("\n=== TOKEN KULLANIMI ===");
+                    Console.WriteLine($"🧠 Reasoning Tokens: {completion.Usage.OutputTokenDetails.ReasoningTokenCount}");
+                    Console.WriteLine($"💬 Display Tokens: {completion.Usage.OutputTokenCount - completion.Usage.OutputTokenDetails.ReasoningTokenCount}");
+                    Console.WriteLine($"📊 Total Output Tokens: {completion.Usage.OutputTokenCount}");
+                    Console.WriteLine($"📥 Input Tokens: {completion.Usage.InputTokenCount}");
+                }
+
+                Console.WriteLine("\n=== ÇÖZÜM ===");
+                Console.WriteLine(completion.Content[0].Text);
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Hata oluştu: {ex.Message}");
+            }
+        }
+
+```
+
+
+**Sık Görülen Hata**
+
+* HTTP 404: model_not_found (o1-preview)
+* Model erişiminiz yok veya model kaldırıldı. o3-mini / o3 kullanın ve güncel model listesini doğrulayın.
